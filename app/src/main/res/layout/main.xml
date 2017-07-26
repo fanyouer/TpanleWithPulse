@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  
+    android:background="@drawable/background"
+    
+     >
+ <TextView 
+               android:id="@+id/tv_shoushu_id"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:typeface="monospace"
+               android:layout_x="55dp"
+               android:layout_y="237dp"
+               android:textSize="115px"
+               android:textStyle="bold"
+               android:text="00:00:00"      
+               android:textColor="#FFFFFF"
+        />
+    
+  <TextView 
+                   android:id="@+id/tv_beijing_id"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:typeface="monospace"
+                   android:layout_x="680dp"
+                   android:layout_y="237dp"
+                   android:textSize="115px"
+                   android:textStyle="bold"
+                   android:text="00:00:00"      
+                   android:textColor="#FFFFFF"
+        />
+  
+    <TextView 
+                  android:id="@+id/tv_mazui_id"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:typeface="monospace"
+                  android:layout_x="1300dp"
+                  android:layout_y="237dp"
+                  android:textSize="115px"
+                  android:textStyle="bold"
+                  android:text="00:00:00"      
+                  android:textColor="#FFFFFF"
+        />
+       
+    
+      <TextView 
+                  android:id="@+id/tv_calendar"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_x="755dp"
+                  android:layout_y="462dp"
+                  android:textSize="40px"
+               
+                  android:text="2016年11月28日  星期三"      
+                  android:textColor="#FFFFFF"
+        />
+    <!-- 手术时间按钮 -->
+       <Button
+             android:id="@+id/shuoshu_start_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="68dp"
+             android:layout_y="462dp"
+             android:background="@drawable/start_up" 
+           android:onClick="ButStart_shuoshu"   
+         />
+
+         <Button
+             android:id="@+id/shuoshu_stop_id"
+             android:layout_width="wrap_content" 
+             android:layout_height="wrap_content"
+             android:layout_x="273dp"
+             android:layout_y="462dp"
+             android:background="@drawable/stop_up" 
+             android:onClick="ButStop_shuoshu" 
+             
+             />
+
+         <Button
+             android:id="@+id/shuoshu_reset_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="476dp"
+             android:layout_y="462dp"
+             android:background="@drawable/reset_up" 
+             android:onClick="ButReset_shuoshu" 
+             
+             />
+             
+         <!-- 麻醉时间按钮-->
+         
+         <Button
+             android:id="@+id/mazui_start_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1320dp"
+             android:layout_y="462dp"
+             android:background="@drawable/start_up" 
+             android:onClick="ButStart_mazui"  
+               
+             />
+
+         <Button
+             android:id="@+id/mazui_stop_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1520dp"
+             android:layout_y="462dp"
+             android:background="@drawable/stop_up"
+             android:onClick="ButStop_mazui"  
+             
+              />
+
+         <Button
+             android:id="@+id/mazui_reset_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1720dp"
+             android:layout_y="462dp"
+             android:background="@drawable/reset_up"
+             android:onClick="ButReset_mazui"  
+             
+              />
+        
+         <!-- 温度调节按键 -->
+         
+               <Button  
+             android:id="@+id/wendu_down_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="75dp"
+             android:layout_y="655dp"
+             android:background="@drawable/up_dijian"
+             android:onClick="Butwendu_down" 
+                   
+              />
+               
+               
+               
+               
+               
+            <Button  
+                
+             android:id="@+id/wendu_up_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="360dp"
+             android:layout_y="655dp"
+             android:background="@drawable/up_dizeng"
+             android:onClick="Butwendu_up"                                    
+              />
+    
+           <TextView 
+                  android:id="@+id/tv_wendudisplay_id"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:typeface="monospace"
+                  android:layout_x="164dp"
+                  android:layout_y="632dp"
+                  android:textSize="45px"
+                  android:textStyle="bold"
+                  android:text="00.0"      
+                  android:textColor="#FFFFFF"
+        />  
+            
+            
+            
+            
+            
+            
+            <!-- 湿度调节按键 -->
+         
+               <Button  
+             android:id="@+id/shidu_down_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="75dp"
+             android:layout_y="732dp"
+             android:background="@drawable/up_dijian"
+             android:onClick="Butshidu_down"     
+               
+              />
+               
+               
+               
+               
+               
+            <Button  
+                
+             android:id="@+id/shidu_up_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="360dp"
+             android:layout_y="732dp"
+             android:background="@drawable/up_dizeng"
+             android:onClick="Butshidu_up"    
+                                            
+              />
+    
+            <TextView 
+                  android:id="@+id/tv_shidudisplay_id"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:typeface="monospace"
+                  android:layout_x="164dp"
+                  android:layout_y="712dp"
+                  android:textSize="45px"
+                  android:textStyle="bold"
+                  android:text="00.0"      
+                  android:textColor="#FFFFFF"
+        />     
+            
+            
+            
+                <!-- 压差调节按键 -->
+         
+               <Button  
+                   
+             android:id="@+id/yacha_down_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="75dp"
+             android:layout_y="810dp"
+             android:background="@drawable/up_dijian"
+             android:onClick="Butyacha_down"     
+               
+              />
+             
+            <Button               
+             android:id="@+id/yacha_up_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="360dp"
+             android:layout_y="810dp"
+             android:background="@drawable/up_dizeng"
+             android:onClick="Butyacha_up"  
+                                    
+              />
+               <TextView 
+                  android:id="@+id/tv_yachadisplay_id"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:typeface="monospace"
+                  android:layout_x="164dp"
+                  android:layout_y="790dp"
+                  android:textSize="45px"
+                  android:textStyle="bold"
+                  android:text="00.0"      
+                  android:textColor="#FFFFFF"
+        />     
+            
+            
+            
+      <!--  机组起停-->
+            <Button     
+                       
+             android:id="@+id/jizhustart_stop"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="55dp"
+             android:layout_y="855dp"
+             android:background="@drawable/jizustart_up"
+             android:onClick="Butjizustart_stop"   
+                                                                                     
+              />       
+                <!--值班运行  -->
+             <Button     
+                       
+             android:id="@+id/zhibanstart_stop"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="180dp"
+             android:layout_y="855dp"
+             android:background="@drawable/zhiban_up"
+             android:onClick="zhibanstart_stop"   
+                                                                                     
+              />      
+         
+             
+             <!--  负压运行-->
+             <Button     
+                       
+             android:id="@+id/fuyastart_stop"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="305dp"
+             android:layout_y="855dp"
+             android:background="@drawable/fuya_up"
+             android:onClick="fuyastart_stop"   
+                                                                                     
+              />     
+      
+             
+            <!-- 机组运行指示灯 --> 
+             
+            <Button     
+                       
+             android:id="@+id/jizuyunxing_led"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="455dp"
+             android:layout_y="625dp"
+             android:background="@drawable/init_ing"
+                                                                                       
+              />   
+            
+            
+               <!-- 值班运行指示灯 --> 
+         <Button     
+                       
+             android:id="@+id/zhibanyunxing_led"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="455dp"
+             android:layout_y="680dp"
+             android:background="@drawable/init_ing"
+         
+                                                                                     
+              />       
+                
+               <!-- 负压运行指示灯 --> 
+            
+             <Button     
+                       
+             android:id="@+id/fuyayunxing_led"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="455dp"
+             android:layout_y="736dp"
+             android:background="@drawable/init_ing"
+                                                                                 
+              />      
+              
+         <!-- 机组故障指示灯 --> 
+         
+     <Button                   
+             android:id="@+id/jizuguzhang_led"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="455dp"
+             android:layout_y="793dp"
+             android:background="@drawable/init_ing"
+               />      
+                          
+     <!-- 高效指示灯 --> 
+     
+             <Button            
+             android:id="@+id/gaoxiao_led"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="455dp"
+             android:layout_y="849dp"
+             android:background="@drawable/init_ing"
+         />        
+         
+           
+             
+             
+    <!-- 电话机模块 -->         
+           
+               <TextView 
+               android:id="@+id/tv_dianhuadisplay_id"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_x="700dp"
+               android:layout_y="630dp"
+               android:textSize="45px"         
+               android:textColor="#FFFFFF"
+               
+        />            
+             
+      <!-- 拨号1 -->       
+             
+            <Button             
+             android:id="@+id/bohao_1_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="690dp"
+             android:layout_y="705dp"
+             android:background="@drawable/up_1" 
+             android:onClick="Butbohao_1"
+                                                  
+              />  
+       <!-- 拨号2 -->              
+         <Button             
+             android:id="@+id/bohao_2_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="780dp"
+             android:layout_y="705dp"
+             android:background="@drawable/up_2"
+             android:onClick="Butbohao_2"
+                                                  
+              />  
+              
+              <!-- 拨号3 -->        
+            <Button             
+             android:id="@+id/bohao_3_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="870dp"
+             android:layout_y="705dp"
+             android:background="@drawable/up_3"
+             android:onClick="Butbohao_3"
+                                                  
+              />     
+              
+  
+            <!-- 拨号4 -->           
+             <Button             
+             android:id="@+id/bohao_4_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="690dp"
+             android:layout_y="755dp"
+             android:background="@drawable/up_4"
+             android:onClick="Butbohao_4"
+                                                  
+              /> 
+                  
+              <!-- 拨号5 -->      
+            <Button             
+             android:id="@+id/bohao_5_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="780dp"
+             android:layout_y="755dp"
+             android:background="@drawable/up_5"
+             android:onClick="Butbohao_5"
+                                                  
+              />   
+                 
+          <!-- 拨号6 -->          
+               <Button             
+             android:id="@+id/bohao_6_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="870dp"
+             android:layout_y="755dp"
+             android:background="@drawable/up_6"
+             android:onClick="Butbohao_6"
+                                                  
+              />   
+              <!-- 拨号7 -->      
+              <Button             
+             android:id="@+id/bohao_7_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="690dp"
+             android:layout_y="805dp"
+             android:background="@drawable/up_7"
+             android:onClick="Butbohao_7"
+                                                  
+              />    
+              
+             <!-- 拨号8-->       
+              <Button             
+             android:id="@+id/bohao_8_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="780dp"
+             android:layout_y="805dp"
+             android:background="@drawable/up_8"
+             android:onClick="Butbohao_8"
+                                                  
+              />    
+            
+                <!-- 拨号9 -->      
+               <Button             
+             android:id="@+id/bohao_9_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="870dp"
+             android:layout_y="805dp"
+             android:background="@drawable/up_9"
+             android:onClick="Butbohao_9"
+                                                  
+              />  
+                            
+              <!-- 拨号* -->         
+          <Button             
+             android:id="@+id/bohaoxing_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="690dp"
+             android:layout_y="855dp"
+             android:background="@drawable/xing_up"
+             android:onClick="Butbohaoxing"
+                                                  
+              />                
+               
+                <!-- 拨号0-->      
+               <Button             
+             android:id="@+id/bohao_0_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="780dp"
+             android:layout_y="855dp"
+             android:background="@drawable/up_0"
+             android:onClick="Butbohao_0"
+                                                  
+              />     
+      
+                 <!-- 拨号# -->      
+              <Button             
+               android:id="@+id/bohaojing_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="870dp"
+             android:layout_y="855dp"
+             android:background="@drawable/up_jinghao"
+             android:onClick="Butbohaojing"
+                                                  
+              />           
+      
+               
+            <!-- 免提按钮    --> 
+            <Button             
+             android:id="@+id/bohao_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="970dp"
+             android:layout_y="705dp"
+             android:background="@drawable/phone_up"
+             android:onClick="Butbohao"
+                                                  
+              />        
+              
+        
+            <!-- 对讲按键      --> 
+             <Button             
+             android:id="@+id/duijiang_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1060dp"
+             android:layout_y="705dp"
+             android:background="@drawable/duijiang_up"
+             android:onClick="Butduijiang"
+                                                  
+              />        
+        
+             <!-- 背景音乐按键  --> 
+                  <Button             
+             android:id="@+id/beijingyinyue_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1150dp"
+             android:layout_y="705dp"
+             android:background="@drawable/music_up"
+             android:onClick="Butbeijingyinyue"
+                                                  
+              />        
+     
+                  <!-- 背景音乐按键递增 -->
+                    <Button             
+             android:id="@+id/yinyuezen_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1190dp"
+             android:layout_y="825dp"
+             android:background="@drawable/musicup_up"
+             android:onClick="Butyinyuezen"
+                                                  
+              />    
+          
+                <!-- 背景音乐按键递减-->
+                   <Button             
+             android:id="@+id/yinyuejian_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1190dp"
+             android:layout_y="870dp"
+             android:background="@drawable/musicdown_up"
+             android:onClick="Butyinyuejian"
+                                                  
+              />              
+                 
+                   
+               <!-- 背景音乐动态效果图 -->    
+                   <Button             
+             android:id="@+id/yinyuedongdai_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="970dp"
+             android:layout_y="830dp"
+             android:background="@drawable/music_display1"
+              />            
+                   
+                    
+                   
+      <!-- 氧气 -->  
+               <Button             
+             android:id="@+id/yangqi_normal_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1400dp"
+             android:layout_y="625dp"
+             android:background="@drawable/qitizhengchang"
+                />    
+            
+            
+               <Button             
+             android:id="@+id/yangqi_under_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1468dp"
+             android:layout_y="625dp"
+             android:background="@drawable/qitizhengchang"
+                />   
+                           
+                
+               <Button             
+             android:id="@+id/yangqi_over_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1537dp"
+             android:layout_y="625dp"
+             android:background="@drawable/qitizhengchang"    
+                />
+               
+               
+            <!-- 笑气   -->     
+                   <Button             
+             android:id="@+id/xiaoqi_normal_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1400dp"
+             android:layout_y="692dp"
+             android:background="@drawable/qitizhengchang"
+           
+                                                  
+              /> 
+                 <Button             
+             android:id="@+id/xiaoqi_under_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1468dp"
+             android:layout_y="692dp"
+             android:background="@drawable/qitizhengchang"
+           
+                                                  
+              />    
+            
+                 <Button             
+             android:id="@+id/xiaoqi_over_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1537dp"
+             android:layout_y="692dp"
+             android:background="@drawable/qitizhengchang"                                                     
+              />          
+                        
+          <!-- 氩气      -->   
+        
+               <Button             
+             android:id="@+id/yaqi_normal_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1400dp"
+             android:layout_y="756dp"
+             android:background="@drawable/qitizhengchang"
+               />                            
+       
+             <Button             
+             android:id="@+id/yaqi_under_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1468dp"
+             android:layout_y="756dp"
+             android:background="@drawable/qitizhengchang"
+               />                        
+ 
+             <Button             
+             android:id="@+id/yaqi_over_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1537dp"
+             android:layout_y="756dp"
+             android:background="@drawable/qitizhengchang"
+               />                    
+
+             <!-- 氮气    -->    
+            <Button             
+             android:id="@+id/danqi_normal_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1400dp"
+             android:layout_y="830dp"
+             android:background="@drawable/qitizhengchang"
+             />                    
+      
+            
+          <Button             
+             android:id="@+id/danqi_under_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1468dp"
+             android:layout_y="830dp"
+             android:background="@drawable/qitizhengchang"
+             /> 
+                          
+            <Button             
+             android:id="@+id/danqi_over_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1537dp"
+             android:layout_y="830dp"
+             android:background="@drawable/qitizhengchang"
+             />            
+            
+              
+              <!-- 负压气   -->        
+                 <Button             
+             android:id="@+id/fuyaqi_normal_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1678dp"
+             android:layout_y="626dp"
+             android:background="@drawable/qitizhengchang"
+             />   
+           
+              <Button             
+             android:id="@+id/fuyaqi_under_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1747dp"
+             android:layout_y="625dp"
+             android:background="@drawable/qitizhengchang"
+             />   
+             
+                 <Button             
+             android:id="@+id/fuyaqi_over_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1816dp"
+             android:layout_y="625dp"
+             android:background="@drawable/qitizhengchang"
+             />   
+ 
+                 <!-- 压缩空气 -->   
+                 <Button             
+             android:id="@+id/yasuoqi_normal_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1678dp"
+             android:layout_y="692dp"
+             android:background="@drawable/qitizhengchang"
+             /> 
+      
+                     <Button             
+             android:id="@+id/yasuoqi_under_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1747dp"
+             android:layout_y="692dp"
+             android:background="@drawable/qitizhengchang"
+             /> 
+      
+               <Button             
+             android:id="@+id/yasuoqi_over_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1816dp"
+             android:layout_y="692dp"
+             android:background="@drawable/qitizhengchang"
+             /> 
+                
+               <!-- 二氧化碳气  -->             
+                  <Button             
+             android:id="@+id/eryanghuatanqi_normal_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1678dp"
+             android:layout_y="753dp"
+             android:background="@drawable/qitizhengchang"
+             />                    
+             
+                  <Button             
+             android:id="@+id/eryanghuatanqi_under_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1747dp"
+             android:layout_y="753dp"
+             android:background="@drawable/qitizhengchang"
+             />                    
+                             
+                        <Button             
+             android:id="@+id/eryanghuatanqi_over_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1817dp"
+             android:layout_y="753dp"
+             android:background="@drawable/qitizhengchang"
+             />    
+             
+                        
+      <!-- 照明1      -->    
+            
+        <Button             
+             android:id="@+id/zhaoming_1_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="280dp"
+             android:layout_y="961dp"
+             android:background="@drawable/led_on"
+             android:onClick="Butzhaoming_1"
+                                                  
+              />
+        
+     
+        <!-- 照明2     --> 
+          <Button         
+             android:id="@+id/zhaoming_2_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="500dp"
+             android:layout_y="961dp"
+             android:background="@drawable/led_on"
+             android:onClick="Butzhaoming_2"
+             
+           />
+       
+                  <!-- 无影灯    -->       
+            <Button    
+             android:id="@+id/wuyingdeng_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="720dp"
+             android:layout_y="961dp"
+             android:background="@drawable/led_on"
+             android:onClick="Butwuyingdeng"                                                
+              />    
+           
+            <!-- 术中灯   -->    
+          <Button    
+             android:id="@+id/shuzhongdeng_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="950dp"
+             android:layout_y="961dp"
+             android:background="@drawable/led_on"
+             android:onClick="Butshuzhongdeng"                                              
+              /> 
+     
+          
+         <!-- 观片灯   -->                  
+         <Button              
+             android:id="@+id/guanpiandeng_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1170dp"
+             android:layout_y="961dp"
+             android:background="@drawable/led_on"
+             android:onClick="Butguanpiandeng"      
+                                       
+              />   
+ 
+         
+  <!-- 备用  --> 
+  
+        <Button              
+             android:id="@+id/beiyong_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1390dp"
+             android:layout_y="961dp"
+             android:background="@drawable/led_on"
+             android:onClick="Butbeiyong"   
+                                        
+              />    
+                          
+        
+       <!-- 消音   -->            
+          <Button                      
+             android:id="@+id/xiaoyin_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="1610dp"
+             android:layout_y="967dp"
+             android:background="@drawable/jingyin"
+             android:onClick="Butxiaoyin"                                                                                      
+              />      
+           
+           <Button 
+             android:id="@+id/bt_loginInto_id"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_x="558dp"  
+             android:layout_y="562dp"
+             android:background="@drawable/login_into"
+             android:onClick="loginInto"
+    /> 
+    
+           
+</AbsoluteLayout>
+
+  
