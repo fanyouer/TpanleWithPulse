@@ -259,7 +259,11 @@ public class Modbus_Slav extends Thread {
         wenDu = (short) regHodingBuf[7];
         shiDu = (short) regHodingBuf[8];
         fengJiZhuangTai = (short) regHodingBuf[9];
-        zhiBanZhuangTai = (short) regHodingBuf[10];
+        //zhiBanZhuangTai = (short) regHodingBuf[10];
+        zhiBanZhuangTai=(short)(regHodingBuf[10]&0x01);
+        //upperComputerFuYaStartMonitoringPoint = (short) ((regHodingBuf[10] & 0x02) >> 1);                      //上位机负压启动监控点
+        fuYaZhuangtai = (short) ((regHodingBuf[10] & 0x02) >> 1);                      //上位机负压启动监控点
+
         fengJiGuZhang = (short) regHodingBuf[11];
         GaoXiao = (short) regHodingBuf[12];
         ColdWaterValveOpening = (short) regHodingBuf[13];//冷水阀开度
@@ -283,7 +287,7 @@ public class Modbus_Slav extends Thread {
         upperComputerFengJiStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x10) >> 4);                    //上位机风机已启动监控点
         upperComputerPaiFengJiStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x20) >> 5);                 //上位机排风机已启动监控点
         upperComputerZhiBanStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x40) >> 6);                    //上位机值班已启动监控点
-        upperComputerFuYaStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x80) >> 7);                      //上位机负压启动监控点
+     //   upperComputerFuYaStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x80) >> 7);                      //上位机负压启动监控点
 
         upperComputerElectricPreheatOneMonitoringPoint = (short) ((regHodingBuf[18] & 0x10) >> 4);             //上位机电预热1监控点
         upperComputerElectricPreheatTwoMonitoringPoint = (short) ((regHodingBuf[18] & 0x20) >> 5);             //上位机电预热2监控点

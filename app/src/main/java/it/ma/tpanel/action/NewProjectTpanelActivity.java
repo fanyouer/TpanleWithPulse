@@ -1213,12 +1213,21 @@ public class NewProjectTpanelActivity extends Activity {
                     Swenduset_shi="0"+setWenDu/10%10;
                     Swenduset_ge="0"+setWenDu%10;
                     */
+                    /*
                     Swenduset_bai = "0" + modbus_salve.getWenDuSet() / 100;
                     Swenduset_shi = "0" + modbus_salve.getWenDuSet() / 10 % 10;
                     Swenduset_ge = "0" + modbus_salve.getWenDuSet() % 10;
+                    */
+
+                    Swenduset_bai = "0" + wenDuSetTemp / 100;
+                    Swenduset_shi = "0" + wenDuSetTemp / 10 % 10;
+                    Swenduset_ge = "0" + wenDuSetTemp % 10;
+
                     SwenduDislay_bai = "0" + modbus_salve.getWenDu() / 100;
                     SwenduDislay_shi = "0" + modbus_salve.getWenDu() / 10 % 10;
                     SwenduDislay_ge = "0" + modbus_salve.getWenDu() % 10;
+
+
 
                     wendu_DisplaySet_Change++;
 
@@ -1244,9 +1253,14 @@ public class NewProjectTpanelActivity extends Activity {
                     Sshiduset_shi="0"+setShiDu/10%10;
                     Sshiduset_ge="0"+setShiDu%10;
                     */
+                    /*
                     Sshiduset_bai = "0" + modbus_salve.getShiDuSet() / 100;
                     Sshiduset_shi = "0" + modbus_salve.getShiDuSet() / 10 % 10;
                     Sshiduset_ge = "0" + modbus_salve.getShiDuSet() % 10;
+                    */
+                    Sshiduset_bai = "0" + shiDuSetTemp / 100;
+                    Sshiduset_shi = "0" + shiDuSetTemp / 10 % 10;
+                    Sshiduset_ge = "0" + shiDuSetTemp % 10;
 
                     SshiduDislay_bai = "0" + modbus_salve.getShiDu() / 100;
                     SshiduDislay_shi = "0" + modbus_salve.getShiDu() / 10 % 10;
@@ -1258,6 +1272,7 @@ public class NewProjectTpanelActivity extends Activity {
                         tv_ShiduDispay.setText(Sshiduset_bai.substring(Sshiduset_bai.length() - 1, Sshiduset_bai.length()) + Sshiduset_shi.substring(Sshiduset_shi.length() - 1, Sshiduset_shi.length()) + "." + Sshiduset_ge.substring(Sshiduset_ge.length() - 1, Sshiduset_ge.length()));
                     } else {
                         tv_ShiduDispay.setText(SshiduDislay_bai.substring(SshiduDislay_bai.length() - 1, SshiduDislay_bai.length()) + SshiduDislay_shi.substring(SshiduDislay_shi.length() - 1, SshiduDislay_shi.length()) + "." + SshiduDislay_ge.substring(SshiduDislay_ge.length() - 1, SshiduDislay_ge.length()));
+                        modbus_salve.setShiDuSet(shiDuSetTemp);
                         shidu_DisplaySet_Change = 30;
                         shiDuSetStatus=false;
                         modbus_salve.allowWriteShiDuSet = true;
@@ -1389,7 +1404,6 @@ public class NewProjectTpanelActivity extends Activity {
         shoushu_sec = 0;
         shoushu_minue = 0;
         shoushu_hour = 0;
-
     }
 
 
@@ -1444,7 +1458,7 @@ public class NewProjectTpanelActivity extends Activity {
             if (modbus_salve.getWenDuSet() < 500) {
                 modbus_salve.setWenDuSet((short) (modbus_salve.getWenDuSet() + 10));
             }
-            */
+           */
             if(wenDuSetTemp<500){
                 wenDuSetTemp+=10;
             }
@@ -1464,8 +1478,13 @@ public class NewProjectTpanelActivity extends Activity {
             setShiDu-=10;
             */
         if(shiDuSetStatus){
+            /*
             if (modbus_salve.getShiDuSet() > 10) {
                 modbus_salve.setShiDuSet((short) (modbus_salve.getShiDuSet() - 10));
+            }
+            */
+            if(shiDuSetTemp>10){
+                shiDuSetTemp-=10;
             }
         }
         shidu_DisplaySet_Change = 0;
@@ -1483,8 +1502,13 @@ public class NewProjectTpanelActivity extends Activity {
             setShiDu+=10;
             */
         if(shiDuSetStatus){
+            /*
             if (modbus_salve.getShiDuSet() < 990) {
                 modbus_salve.setShiDuSet((short) (modbus_salve.getShiDuSet() + 10));
+            }
+            */
+            if(shiDuSetTemp<990){
+                shiDuSetTemp+=10;
             }
         }
         shidu_DisplaySet_Change = 0;
