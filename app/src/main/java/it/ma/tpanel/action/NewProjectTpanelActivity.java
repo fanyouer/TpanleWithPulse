@@ -11,7 +11,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.graphics.Typeface;
 import android.os.Bundle;
 
 import android.view.MotionEvent;
@@ -1253,6 +1252,7 @@ public class NewProjectTpanelActivity extends Activity {
                     Sshiduset_shi="0"+setShiDu/10%10;
                     Sshiduset_ge="0"+setShiDu%10;
                     */
+
                     /*
                     Sshiduset_bai = "0" + modbus_salve.getShiDuSet() / 100;
                     Sshiduset_shi = "0" + modbus_salve.getShiDuSet() / 10 % 10;
@@ -1352,9 +1352,9 @@ public class NewProjectTpanelActivity extends Activity {
                     editor.putInt("上位机心跳监控点", modbus_salve.getUpperComputerHeartBeatMonitoringPoint());
                     editor.putInt("上位机手自动监控点", modbus_salve.getUpperComputerHandAutomaticallyMonitoringPoint());
                     editor.putInt("上位机风机状态监控点", modbus_salve.getUpperComputerFengjiZHuangTaiMonitoringPoint());
-                    editor.putInt("上位机盘管低温监控点", modbus_salve.getUpperComputerPanGuanDiWenMonitoringPoint());
+                    editor.putInt("上位机盘管低温监控点", modbus_salve.getUpperComputerZhongXiaoMonitoringPoint());
                     editor.putInt("上位机高效报警监控点", modbus_salve.getUpperComputerGaoXiaoMonitoringPoint());
-                    editor.putInt("上位机中效报警监控点", modbus_salve.getUpperComputerZhongXiaoMonitoringPoint());
+                    editor.putInt("上位机中效报警监控点", modbus_salve.getUpperComputerChuXiaoMonitoringPoint());
 
 
                     editor.putInt("上位机电加热1监控点", modbus_salve.getUpperComputerElectricWarmOneMonitoringPoint());

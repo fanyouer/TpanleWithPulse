@@ -46,9 +46,9 @@ public class Modbus_Slav extends Thread {
     private short upperComputerHeartBeatMonitoringPoint = 0;       //上位机心跳监控点
     private short upperComputerHandAutomaticallyMonitoringPoint = 0;//上位机手自动监控点
     private short upperComputerFengjiZHuangTaiMonitoringPoint;//上位机风机状态监控点
-    private short upperComputerPanGuanDiWenMonitoringPoint;//上位机盘管低温监控点
+    private short upperComputerZhongXiaoMonitoringPoint;//上位机盘管低温监控点
     private short upperComputerGaoXiaoMonitoringPoint;//上位机高效报警监控点
-    private short upperComputerZhongXiaoMonitoringPoint;//上位机中效报警监控点
+    private short upperComputerChuXiaoMonitoringPoint;//上位机中效报警监控点
     private short upperComputerElectricWarmOneMonitoringPoint;//上位机电加热1监控点
     private short upperComputerElectricWarmTwoMonitoringPoint;//上位机电加热2监控点
     private short upperComputerElectricWarmThreeMonitoringPoint;//上位机电加热3监控点
@@ -274,9 +274,9 @@ public class Modbus_Slav extends Thread {
         upperComputerHeartBeatMonitoringPoint = (short) ((regHodingBuf[17] & 0x0100) >> 8);                    //上位机心跳监控点
         upperComputerHandAutomaticallyMonitoringPoint = (short) ((regHodingBuf[17] & 0x0200) >> 9);            //上位机手自动监控点
         upperComputerFengjiZHuangTaiMonitoringPoint = (short) ((regHodingBuf[17] & 0x0400) >> 10);             //上位机风机状态监控点
-        upperComputerPanGuanDiWenMonitoringPoint = (short) ((regHodingBuf[17] & 0x0800) >> 11);                //上位机盘管低温监控点
+        upperComputerZhongXiaoMonitoringPoint = (short) ((regHodingBuf[17] & 0x0800) >> 11);                     //上位机中效报警监控点
         upperComputerGaoXiaoMonitoringPoint = (short) ((regHodingBuf[17] & 0x1000) >> 12);                     //上位机高效报警监控点
-        upperComputerZhongXiaoMonitoringPoint = (short) ((regHodingBuf[17] & 0x2000) >> 13);                   //上位机中效报警监控点
+        upperComputerChuXiaoMonitoringPoint = (short) ((regHodingBuf[17] & 0x2000) >> 13);                     //上位机初效报警监控点
         upperComputerElectricWarmOneMonitoringPoint = (short) ((regHodingBuf[17] & 0x4000) >> 14);             //上位机电加热1监控点
         upperComputerElectricWarmTwoMonitoringPoint = (short) ((regHodingBuf[17] & 0x8000) >> 15);             //上位机电加热2监控点
 
@@ -574,14 +574,14 @@ public class Modbus_Slav extends Thread {
     }
 
 
-    public short getUpperComputerPanGuanDiWenMonitoringPoint() {
-        return upperComputerPanGuanDiWenMonitoringPoint;
+    public short getUpperComputerZhongXiaoMonitoringPoint() {
+        return upperComputerZhongXiaoMonitoringPoint;
     }
 
 
-    public void setUpperComputerPanGuanDiWenMonitoringPoint(
-            short upperComputerPanGuanDiWenMonitoringPoint) {
-        this.upperComputerPanGuanDiWenMonitoringPoint = upperComputerPanGuanDiWenMonitoringPoint;
+    public void setUpperComputerZhongXiaoMonitoringPoint(
+            short upperComputerZhongXiaoMonitoringPoint) {
+        this.upperComputerZhongXiaoMonitoringPoint = upperComputerZhongXiaoMonitoringPoint;
     }
 
 
@@ -596,14 +596,14 @@ public class Modbus_Slav extends Thread {
     }
 
 
-    public short getUpperComputerZhongXiaoMonitoringPoint() {
-        return upperComputerZhongXiaoMonitoringPoint;
+    public short getUpperComputerChuXiaoMonitoringPoint() {
+        return upperComputerChuXiaoMonitoringPoint;
     }
 
 
-    public void setUpperComputerZhongXiaoMonitoringPoint(
-            short upperComputerZhongXiaoMonitoringPoint) {
-        this.upperComputerZhongXiaoMonitoringPoint = upperComputerZhongXiaoMonitoringPoint;
+    public void setUpperComputerChuXiaoMonitoringPoint(
+            short upperComputerChuXiaoMonitoringPoint) {
+        this.upperComputerChuXiaoMonitoringPoint = upperComputerChuXiaoMonitoringPoint;
     }
 
 
