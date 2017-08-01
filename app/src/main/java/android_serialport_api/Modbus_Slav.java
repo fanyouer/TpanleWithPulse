@@ -38,7 +38,6 @@ public class Modbus_Slav extends Thread {
     private short fengJiGuZhang = 0;
     private short GaoXiao;
 
-
     private short ColdWaterValveOpening = 0;//冷水阀
     private short HotWaterValveOpening = 0;//热水阀
     private short HumidifieOpening = 0;   //加湿器
@@ -72,7 +71,6 @@ public class Modbus_Slav extends Thread {
     private short upperComputerCompressorTwoBreakdownMonitoringPoint;//上位机压缩机2故障监控点
     private short upperComputerCompressorThreeBreakdownMonitoringPoint;//上位机压缩机3故障监控点
     private short upperComputerCompressorFourBreakdownMonitoringPoint;//上位机压缩机4故障监控点
-
 
     private short WinterInSummer = 0;//冬夏季
 
@@ -244,7 +242,6 @@ public class Modbus_Slav extends Thread {
 
         slav_hand_10();
         onDataSend(seBuf, 8);
-
     }
 
     /***
@@ -279,7 +276,6 @@ public class Modbus_Slav extends Thread {
         upperComputerElectricWarmOneMonitoringPoint = (short) ((regHodingBuf[17] & 0x4000) >> 14);             //上位机电加热1监控点
         upperComputerElectricWarmTwoMonitoringPoint = (short) ((regHodingBuf[17] & 0x8000) >> 15);             //上位机电加热2监控点
 
-
         upperComputerElectricWarmThreeMonitoringPoint = (short) (regHodingBuf[17] & 0x01);                     //上位机电加热3监控点
         upperComputerElectricWarmHighTemperatureMonitoringPoint = (short) ((regHodingBuf[17] & 0x02) >> 1);    //上位机电加热高温监控点
         upperComputerFengJiQueFengMonitoringPoint = (short) ((regHodingBuf[17] & 0x04) >> 2);                  //上位机风机缺风监控点
@@ -288,7 +284,6 @@ public class Modbus_Slav extends Thread {
         upperComputerPaiFengJiStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x20) >> 5);                 //上位机排风机已启动监控点
         upperComputerZhiBanStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x40) >> 6);                    //上位机值班已启动监控点
         upperComputerFuYaStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x80) >> 7);                      //上位机负压启动监控点
-
 
         upperComputerElectricPreheatOneMonitoringPoint = (short) ((regHodingBuf[18] & 0x10) >> 4);             //上位机电预热1监控点
         upperComputerElectricPreheatTwoMonitoringPoint = (short) ((regHodingBuf[18] & 0x20) >> 5);             //上位机电预热2监控点

@@ -25,6 +25,13 @@ import android_serialport_api.Modbus_Slav1;
 import android_serialport_api.Modbus_Slav2;
 
 public class NewProjectTpanelActivity extends Activity {
+
+    private boolean wenDuSetStatus=false;//温湿度设置按钮第一次按的时候不会改变值，只会显示设定值
+    private boolean shiDuSetStatus=false;//此状态为用于判断是否是第一次按
+
+    private short wenDuSetTemp=250;//温度设置缓存，在设置温度时只会改变这个值，跳回温度显示时，这个值会传给setWenDuSet
+    private short shiDuSetTemp=500;//湿度设置缓存
+
     private Button ButStart_shuoshu;
     private Button ButStop_shuoshu;
     private Button ButReset_shuoshu;
@@ -1217,12 +1224,12 @@ public class NewProjectTpanelActivity extends Activity {
 
                     if (wendu_DisplaySet_Change < 30) {
                         modbus_salve.allowWriteWenDuSet = false;
-                        // Modbus_Slav.allowWriteWenDuSet=false;
                         tv_WenduDispay.setText(Swenduset_bai.substring(Swenduset_bai.length() - 1, Swenduset_bai.length()) + Swenduset_shi.substring(Swenduset_shi.length() - 1, Swenduset_shi.length()) + "." + Swenduset_ge.substring(Swenduset_ge.length() - 1, Swenduset_ge.length()));
                     } else {
                         tv_WenduDispay.setText(SwenduDislay_bai.substring(SwenduDislay_bai.length() - 1, SwenduDislay_bai.length()) + SwenduDislay_shi.substring(SwenduDislay_shi.length() - 1, SwenduDislay_shi.length()) + "." + SwenduDislay_ge.substring(SwenduDislay_ge.length() - 1, SwenduDislay_ge.length()));
+                        modbus_salve.setWenDuSet(wenDuSetTemp);
                         wendu_DisplaySet_Change = 30;
-                        // modbus_salve.allowWriteWenDuSet=true;
+                        wenDuSetStatus=false;
                         modbus_salve.allowWriteWenDuSet = true;
                     }
 
@@ -1247,13 +1254,12 @@ public class NewProjectTpanelActivity extends Activity {
                     shidu_DisplaySet_Change++;
 
                     if (shidu_DisplaySet_Change < 30) {
-                        //modbus_salve.allowWriteShiDuSet=false;
                         modbus_salve.allowWriteShiDuSet = false;
                         tv_ShiduDispay.setText(Sshiduset_bai.substring(Sshiduset_bai.length() - 1, Sshiduset_bai.length()) + Sshiduset_shi.substring(Sshiduset_shi.length() - 1, Sshiduset_shi.length()) + "." + Sshiduset_ge.substring(Sshiduset_ge.length() - 1, Sshiduset_ge.length()));
                     } else {
                         tv_ShiduDispay.setText(SshiduDislay_bai.substring(SshiduDislay_bai.length() - 1, SshiduDislay_bai.length()) + SshiduDislay_shi.substring(SshiduDislay_shi.length() - 1, SshiduDislay_shi.length()) + "." + SshiduDislay_ge.substring(SshiduDislay_ge.length() - 1, SshiduDislay_ge.length()));
                         shidu_DisplaySet_Change = 30;
-                        // modbus_salve.allowWriteShiDuSet=true;
+                        shiDuSetStatus=false;
                         modbus_salve.allowWriteShiDuSet = true;
                     }
 
@@ -1410,15 +1416,18 @@ public class NewProjectTpanelActivity extends Activity {
      */
 
     public void Butwendu_down(View v) {
-        /*
-        if(setWenDu>10)
-            setWenDu-=10;
+        if(wenDuSetStatus){
+            /*
+            if (modbus_salve.getWenDuSet() > 10) {
+                modbus_salve.setWenDuSet((short) (modbus_salve.getWenDuSet() - 10));
+            }
             */
-        if (modbus_salve.getWenDuSet() > 10) {
-            modbus_salve.setWenDuSet((short) (modbus_salve.getWenDuSet() - 10));
+            if(wenDuSetTemp>10){
+                wenDuSetTemp-=10;
+            }
         }
         wendu_DisplaySet_Change = 0;
-        //  modbus_salve.setWenDuSet(setWenDu);
+        wenDuSetStatus=true;
     }
 
     /***
@@ -1430,11 +1439,18 @@ public class NewProjectTpanelActivity extends Activity {
         /*if(setWenDu<500)
             setWenDu+=10;
             */
-        if (modbus_salve.getWenDuSet() < 500) {
-            modbus_salve.setWenDuSet((short) (modbus_salve.getWenDuSet() + 10));
+        if(wenDuSetStatus){
+            /*
+            if (modbus_salve.getWenDuSet() < 500) {
+                modbus_salve.setWenDuSet((short) (modbus_salve.getWenDuSet() + 10));
+            }
+            */
+            if(wenDuSetTemp<500){
+                wenDuSetTemp+=10;
+            }
         }
         wendu_DisplaySet_Change = 0;
-        // modbus_salve.setWenDuSet(setWenDu);
+        wenDuSetStatus=true;
     }
 
     /***
@@ -1447,10 +1463,13 @@ public class NewProjectTpanelActivity extends Activity {
         if(	setShiDu>10)
             setShiDu-=10;
             */
-        if (modbus_salve.getShiDuSet() > 10) {
-            modbus_salve.setShiDuSet((short) (modbus_salve.getShiDuSet() - 10));
+        if(shiDuSetStatus){
+            if (modbus_salve.getShiDuSet() > 10) {
+                modbus_salve.setShiDuSet((short) (modbus_salve.getShiDuSet() - 10));
+            }
         }
         shidu_DisplaySet_Change = 0;
+        shiDuSetStatus=true;
         // modbus_salve.setShiDuSet(setShiDu);
     }
 
@@ -1463,10 +1482,13 @@ public class NewProjectTpanelActivity extends Activity {
         if(  setShiDu<990)
             setShiDu+=10;
             */
-        if (modbus_salve.getShiDuSet() < 990) {
-            modbus_salve.setShiDuSet((short) (modbus_salve.getShiDuSet() + 10));
+        if(shiDuSetStatus){
+            if (modbus_salve.getShiDuSet() < 990) {
+                modbus_salve.setShiDuSet((short) (modbus_salve.getShiDuSet() + 10));
+            }
         }
         shidu_DisplaySet_Change = 0;
+        shiDuSetStatus=true;
         // modbus_salve.setShiDuSet(setShiDu);
     }
 
