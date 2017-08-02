@@ -84,12 +84,12 @@
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\shuzhongdeng_press.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\bohaoxinghao_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\bohaoxinghao_press.png"
-    },
-    {
         "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\fengshanlu1.png",
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\fengshanlu1.png"
+    },
+    {
+        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\bohaoxinghao_press.png",
+        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\bohaoxinghao_press.png"
     },
     {
         "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\led_on.png",

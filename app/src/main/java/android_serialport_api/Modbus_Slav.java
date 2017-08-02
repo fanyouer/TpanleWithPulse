@@ -1,12 +1,16 @@
 package android_serialport_api;
 
+import android.util.Log;
+
 import it.ma.crc.CRC_16;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Array;
 import java.security.InvalidParameterException;
+import java.util.Arrays;
 
 /**
  * 串口UTRA5
@@ -103,25 +107,81 @@ public class Modbus_Slav extends Thread {
 
 
     public void run() {
+
+            byte[] txDataTemp=new byte[1024];
+            boolean txDataFlag=false;
+            super.run();
+            while (!isInterrupted()) {
+
+                int size;
+                try {
+                    byte[] reBuf = new byte[100];
+                    if (mInputStream == null) return;
+                    size = mInputStream.read(reBuf);
+                    if (size > 0) {
+                        byte[] temp = new byte[size];
+                        System.arraycopy(reBuf,0,temp,0,size);
+
+                       // Log.d("reBuf", "run: "+Arrays.toString(temp));
+                        if (size==32){
+                            System.arraycopy(temp,0,txDataTemp,0,size);
+                            txDataFlag=true;
+                        }else {
+                            if (txDataFlag){
+                                txDataFlag=false;
+                                System.arraycopy(temp,0,txDataTemp,32,size);
+                                byte[] temp2 = new byte[size+32];
+                                System.arraycopy(txDataTemp,0,temp2,0,size+32);
+                                onDataReceived(temp2, size+32);
+
+                              //  Log.d("reBuf", "run: "+Arrays.toString(temp2));
+                              //  txDataTemp=null;
+                            }
+                            else {
+                                onDataReceived(temp, size);
+                            }
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+/*
+        byte[] txDataTemp=new byte[32];
+        boolean overFlag=false;
         super.run();
         while (!isInterrupted()) {
             int size;
-
             try {
-                byte[] buffer = new byte[1024];
+                byte[] reBuf = new byte[100];
                 if (mInputStream == null) return;
-                size = mInputStream.read(buffer);
-                if (size > 3) {
-                    onDataReceived(buffer, size);
+                size = mInputStream.read(reBuf);
+
+
+                if (size==32){
+                    System.arraycopy(reBuf,0,txDataTemp,0,32);
+                   // Log.d("reBuf", "run: "+Arrays.toString(txDataTemp));
+                    overFlag=true;
+                }
+                if ((size > 0||size<32)&&overFlag){
+                    Log.d("reBuf", "run: "+Arrays.toString(reBuf));
+                    System.arraycopy(txDataTemp,0,reBuf,32,size);
+                    overFlag=false;
+                    onDataReceived(reBuf, size+32);
+                  //  Log.d("size", "run: "+size);
+                   // Log.d("reBuf", "run: "+Arrays.toString(reBuf));
+                }else {
+                    onDataReceived(reBuf, size);
+
                 }
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
-
-
+*/
     }
 
 
@@ -288,7 +348,7 @@ public class Modbus_Slav extends Thread {
         upperComputerPaiFengJiStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x20) >> 5);                 //上位机排风机已启动监控点
         upperComputerZhiBanStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x40) >> 6);                    //上位机值班已启动监控点
      //   upperComputerFuYaStartMonitoringPoint = (short) ((regHodingBuf[17] & 0x80) >> 7);                      //上位机负压启动监控点
-
+/*
         upperComputerElectricPreheatOneMonitoringPoint = (short) ((regHodingBuf[18] & 0x10) >> 4);             //上位机电预热1监控点
         upperComputerElectricPreheatTwoMonitoringPoint = (short) ((regHodingBuf[18] & 0x20) >> 5);             //上位机电预热2监控点
         upperComputerElectricPreheatThreeMonitoringPoint = (short) ((regHodingBuf[18] & 0x40) >> 6);           //上位机电预热3监控点
@@ -302,6 +362,7 @@ public class Modbus_Slav extends Thread {
         upperComputerCompressorThreeBreakdownMonitoringPoint = (short) ((regHodingBuf[18] & 0x04) >> 2);       //上位机压缩机3故障监控点
         upperComputerCompressorFourBreakdownMonitoringPoint = (short) ((regHodingBuf[18] & 0x08) >> 3);        //上位机压缩机4故障监控点
         WinterInSummer = (short) ((regHodingBuf[20] & 0x04) >> 2);                                             //冬夏季监控控制点偏移2
+    */
     }
 
 
