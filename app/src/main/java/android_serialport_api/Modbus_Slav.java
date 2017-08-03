@@ -11,6 +11,10 @@ import java.io.OutputStream;
 import java.lang.reflect.Array;
 import java.security.InvalidParameterException;
 import java.util.Arrays;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * 串口UTRA5
@@ -18,6 +22,9 @@ import java.util.Arrays;
  * @author Administrator
  */
 public class Modbus_Slav extends Thread {
+
+    public int txDataLength=0;//接收缓存数组长度
+    public byte[] txData=new byte[1024];
 
     int[] regHodingBuf = new int[1024];
 
@@ -75,8 +82,9 @@ public class Modbus_Slav extends Thread {
     private short upperComputerCompressorTwoBreakdownMonitoringPoint;//上位机压缩机2故障监控点
     private short upperComputerCompressorThreeBreakdownMonitoringPoint;//上位机压缩机3故障监控点
     private short upperComputerCompressorFourBreakdownMonitoringPoint;//上位机压缩机4故障监控点
-
     private short WinterInSummer = 0;//冬夏季
+
+    Timer timer10ms=new Timer();
 
     private SerialPort mserialPort = null;
 
@@ -108,82 +116,107 @@ public class Modbus_Slav extends Thread {
 
     public void run() {
 
-            byte[] txDataTemp=new byte[1024];
-            boolean txDataFlag=false;
-            super.run();
-            while (!isInterrupted()) {
-
-                int size;
-                try {
-                    byte[] reBuf = new byte[100];
-                    if (mInputStream == null) return;
-                    size = mInputStream.read(reBuf);
-                    if (size > 0) {
-                        byte[] temp = new byte[size];
-                        System.arraycopy(reBuf,0,temp,0,size);
-
-                       // Log.d("reBuf", "run: "+Arrays.toString(temp));
-                        if (size==32){
-                            System.arraycopy(temp,0,txDataTemp,0,size);
-                            txDataFlag=true;
-                        }else {
-                            if (txDataFlag){
-                                txDataFlag=false;
-                                System.arraycopy(temp,0,txDataTemp,32,size);
-                                byte[] temp2 = new byte[size+32];
-                                System.arraycopy(txDataTemp,0,temp2,0,size+32);
-                                onDataReceived(temp2, size+32);
-
-                              //  Log.d("reBuf", "run: "+Arrays.toString(temp2));
-                              //  txDataTemp=null;
-                            }
-                            else {
-                                onDataReceived(temp, size);
-                            }
-                        }
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-
-/*
-        byte[] txDataTemp=new byte[32];
-        boolean overFlag=false;
         super.run();
+        timer10ms.schedule(taskPoll,0,10);//10ms后开始，每10ms轮询一次
+
         while (!isInterrupted()) {
             int size;
             try {
                 byte[] reBuf = new byte[100];
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
-
-
-                if (size==32){
-                    System.arraycopy(reBuf,0,txDataTemp,0,32);
-                   // Log.d("reBuf", "run: "+Arrays.toString(txDataTemp));
-                    overFlag=true;
-                }
-                if ((size > 0||size<32)&&overFlag){
-                    Log.d("reBuf", "run: "+Arrays.toString(reBuf));
-                    System.arraycopy(txDataTemp,0,reBuf,32,size);
-                    overFlag=false;
-                    onDataReceived(reBuf, size+32);
-                  //  Log.d("size", "run: "+size);
-                   // Log.d("reBuf", "run: "+Arrays.toString(reBuf));
-                }else {
-                    onDataReceived(reBuf, size);
-
+                Log.d("rebuf", "run: "+Arrays.toString(reBuf));
+                txDataLength=txDataLength+size;
+                if (size > 0) {
+                   // onDataReceived(reBuf, size);
+                    System.arraycopy(reBuf,0,txData,txDataLength-size,size);
+                    Log.d("txData", "run: "+Arrays.toString(txData));
+                    if (txDataLength>1000){
+                        txDataLength=0;
+                    }
                 }
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+/*
+        if (txReady){
+            Log.d("chuli", "run: "+Arrays.toString(txData));
+            onDataReceived(txData, txDataLength);
+            Log.d("length", "run: "+txDataLength);
+            txReady=false;
+            txDataLength=0;
+        }
 */
-    }
 
+/*
+        byte[] txDataTemp=new byte[1024];
+        boolean txDataFlag=false;
+        super.run();
+        while (!isInterrupted()) {
+
+            int size;
+            try {
+                byte[] reBuf = new byte[100];
+                if (mInputStream == null) return;
+                size = mInputStream.read(reBuf);
+                if (size > 0) {
+                    if (size==32){
+                        System.arraycopy(reBuf,0,txDataTemp,0,size);
+                        txDataFlag=true;
+                    }else {
+                        if (txDataFlag){
+                            txDataFlag=false;
+                            System.arraycopy(reBuf,0,txDataTemp,32,size);
+                            byte[] temp2 = new byte[size+32];
+                            System.arraycopy(txDataTemp,0,temp2,0,size+32);
+                            onDataReceived(temp2, size+32);
+                        }
+                        else {
+                            onDataReceived(reBuf, size);
+                            Log.d("test", "run: "+Arrays.toString(reBuf));
+                        }
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+*/
+
+    }
+    TimerTask taskPoll=new TimerTask() {
+        int txDataLengthTemp=0;
+        int txIdleCount=0;
+       // int a=0;
+        public void run() {
+      //      Log.d("test", "run: "+a++);
+            if(txDataLength>0){
+                if(txDataLengthTemp!=txDataLength){
+                    txDataLengthTemp=txDataLength;
+                    //Log.d("txDataLength", "run: "+txDataLength);
+                    txIdleCount=0;
+                }
+                if(txIdleCount<4){
+                    txIdleCount++;
+                    if (txIdleCount>=4){
+                        txIdleCount=0;
+                        byte[] sendOutArrayTemp=new byte[txDataLength];
+                        System.arraycopy(txData,0,sendOutArrayTemp,0,txDataLength);
+                        onDataReceived(sendOutArrayTemp, txDataLength);
+                        Log.d("sendOutArrayTemp", "run: "+Arrays.toString(sendOutArrayTemp));
+                        Log.d("txDataLength", "run: "+txDataLength);
+                        txDataLength=0;
+                      //  Log.d("txReady", "run: "+txReady);
+                    }
+                }
+            }
+            else {
+                txDataLengthTemp=0;
+            }
+        }
+    };
 
     /**
      * @return mesrialPort  串口
