@@ -126,17 +126,17 @@ public class Modbus_Slav extends Thread {
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
                // Log.d("rebuf", "run: "+Arrays.toString(reBuf));
-                txDataLength=txDataLength+size;
-                if (size > 0) {
-                    if (txDataLength>500){
-                        txDataLength=0;
-                    }
-                   // onDataReceived(reBuf, size);
-                    System.arraycopy(reBuf,0,txData,txDataLength-size,size);
-                   // Log.d("txData", "run: "+Arrays.toString(txData));
-
+                if (txDataLength>500){
+                    txDataLength=0;
                 }
-
+                synchronized (this){
+                    txDataLength=txDataLength+size;
+                    if (size > 0) {
+                        // onDataReceived(reBuf, size);
+                        System.arraycopy(reBuf,0,txData,txDataLength-size,size);
+                        // Log.d("txData", "run: "+Arrays.toString(txData));
+                    }
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -246,26 +246,28 @@ public class Modbus_Slav extends Thread {
 
             return;
         }
-        byte[] txDataTemp=new byte[size];
-        System.arraycopy(reBuf,0,txDataTemp,0,size);
-        Log.d("txDataTemp", "onDataReceived: "+Arrays.toString(txDataTemp));
-        Log.d("size", "onDataReceived: "+size);
-        if (size <= 3)
-            return;
-        if (CRC_16.checkBuf(txDataTemp)) {
-            switch (txDataTemp[1]) {
-                case 0x03:
-                    mod_Fun_03_Slav(txDataTemp);
-                    break;
-                //case 0x06:	    mod_Fun_06_Slav(reBuf,size);	break;
-                case 0x10:
-                    mod_Fun_16_Slav(txDataTemp, size);
-                    break;
-                default:
-                    break;
+        synchronized (this) {
+            byte[] txDataTemp = new byte[size];
+            System.arraycopy(reBuf, 0, txDataTemp, 0, size);
+
+            Log.d("txDataTemp", "onDataReceived: " + Arrays.toString(txDataTemp));
+            Log.d("size", "onDataReceived: " + size);
+            if (size <= 3)
+                return;
+            if (CRC_16.checkBuf(txDataTemp)) {
+                switch (txDataTemp[1]) {
+                    case 0x03:
+                        mod_Fun_03_Slav(txDataTemp);
+                        break;
+                    //case 0x06:	    mod_Fun_06_Slav(reBuf,size);	break;
+                    case 0x10:
+                        mod_Fun_16_Slav(txDataTemp, size);
+                        break;
+                    default:
+                        break;
+                }
             }
         }
-
     }
 
     /***

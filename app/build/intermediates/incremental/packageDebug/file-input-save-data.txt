@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Aug 07 10:28:02 CST 2017
+#Mon Aug 07 13:52:30 CST 2017
 60.set=ANDROID_RESOURCE
 52.set=ANDROID_RESOURCE
 53.base=C\:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\resources-debug.ap_

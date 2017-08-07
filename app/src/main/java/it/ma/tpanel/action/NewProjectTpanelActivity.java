@@ -1226,8 +1226,6 @@ public class NewProjectTpanelActivity extends Activity {
                     SwenduDislay_shi = "0" + modbus_salve.getWenDu() / 10 % 10;
                     SwenduDislay_ge = "0" + modbus_salve.getWenDu() % 10;
 
-
-
                     wendu_DisplaySet_Change++;
 
                     if (wendu_DisplaySet_Change < 30) {
