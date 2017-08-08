@@ -23,6 +23,11 @@ import static android.content.ContentValues.TAG;
  */
 public class Modbus_Slav extends Thread {
 
+    Object syn1=new Object();
+    Object syn2=new Object();
+
+    //public boolean txReady=false;
+
     public int txDataLength=0;//接收缓存数组长度
     public byte[] txData=new byte[1024];
 
@@ -115,7 +120,7 @@ public class Modbus_Slav extends Thread {
 
 
     public void run() {
-
+/*
         super.run();
         timer10ms.schedule(taskPoll,0,10);//10ms后开始，每10ms轮询一次
 
@@ -125,35 +130,34 @@ public class Modbus_Slav extends Thread {
                 byte[] reBuf = new byte[100];
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
-               // Log.d("rebuf", "run: "+Arrays.toString(reBuf));
-                if (txDataLength>500){
-                    txDataLength=0;
-                }
-                synchronized (this){
-                    txDataLength=txDataLength+size;
-                    if (size > 0) {
-                        // onDataReceived(reBuf, size);
-                        System.arraycopy(reBuf,0,txData,txDataLength-size,size);
-                        // Log.d("txData", "run: "+Arrays.toString(txData));
+
+                    if (txDataLength>500){
+                        txDataLength=0;
                     }
-                }
+                    if (size > 0) {
+                        txDataLength+=size;
+                        System.arraycopy(reBuf,0,txData,Math.abs(txDataLength-size),size);
+                    }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-/*
+*/
+        /*
+        Log.d("txReady", "run: "+txReady);
         if (txReady){
-            Log.d("chuli", "run: "+Arrays.toString(txData));
+            //Log.d("chuli", "run: "+Arrays.toString(txData));
+
             onDataReceived(txData, txDataLength);
-            Log.d("length", "run: "+txDataLength);
+          //  Log.d("length", "run: "+txDataLength);
             txReady=false;
             txDataLength=0;
         }
-*/
+        */
 
-/*
-        byte[] txDataTemp=new byte[1024];
-        boolean txDataFlag=false;
+
+        byte[] txDataTemp = new byte[1024];
+        boolean txDataFlag = false;
         super.run();
         while (!isInterrupted()) {
 
@@ -163,20 +167,19 @@ public class Modbus_Slav extends Thread {
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
                 if (size > 0) {
-                    if (size==32){
-                        System.arraycopy(reBuf,0,txDataTemp,0,size);
-                        txDataFlag=true;
-                    }else {
-                        if (txDataFlag){
-                            txDataFlag=false;
-                            System.arraycopy(reBuf,0,txDataTemp,32,size);
-                            byte[] temp2 = new byte[size+32];
-                            System.arraycopy(txDataTemp,0,temp2,0,size+32);
-                            onDataReceived(temp2, size+32);
-                        }
-                        else {
+                    if (size == 32) {
+                        System.arraycopy(reBuf, 0, txDataTemp, 0, size);
+                        txDataFlag = true;
+                    } else {
+                        if (txDataFlag) {
+                            txDataFlag = false;
+                            System.arraycopy(reBuf, 0, txDataTemp, 32, size);
+                            byte[] temp2 = new byte[size + 32];
+                            System.arraycopy(txDataTemp, 0, temp2, 0, size + 32);
+                            onDataReceived(temp2, size + 32);
+                        } else {
                             onDataReceived(reBuf, size);
-                            Log.d("test", "run: "+Arrays.toString(reBuf));
+                         //   Log.d("test", "run: " + Arrays.toString(reBuf));
                         }
                     }
                 }
@@ -184,8 +187,9 @@ public class Modbus_Slav extends Thread {
                 e.printStackTrace();
             }
         }
-*/
+    }
 
+/*
     }
     TimerTask taskPoll=new TimerTask() {
         int txDataLengthTemp=0;
@@ -200,6 +204,7 @@ public class Modbus_Slav extends Thread {
                     txIdleCount++;
                     if (txIdleCount>=4){
                         txIdleCount=0;
+                      //  txReady=true;
                         onDataReceived(txData, txDataLength);
                         txDataLength=0;
                     }
@@ -210,7 +215,7 @@ public class Modbus_Slav extends Thread {
             }
         }
     };
-
+*/
     /**
      * @return mesrialPort  串口
      * @throws SecurityException
@@ -243,31 +248,31 @@ public class Modbus_Slav extends Thread {
     private void onDataReceived(byte[] reBuf, int size) {
 
         if (!(SLAV_addr == reBuf[0])) {
-
             return;
         }
-        synchronized (this) {
-            byte[] txDataTemp = new byte[size];
-            System.arraycopy(reBuf, 0, txDataTemp, 0, size);
+          //  byte[] txDataTemp = new byte[size];
+         //   System.arraycopy(reBuf, 0, txDataTemp, 0, size);
 
-            Log.d("txDataTemp", "onDataReceived: " + Arrays.toString(txDataTemp));
-            Log.d("size", "onDataReceived: " + size);
+          //  Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
+          //  Log.d("size", "onDataReceived: " + size);
+        if (size==13){
+            Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
+        }
             if (size <= 3)
                 return;
-            if (CRC_16.checkBuf(txDataTemp)) {
-                switch (txDataTemp[1]) {
+            if (CRC_16.checkBuf(reBuf)) {
+                switch (reBuf[1]) {
                     case 0x03:
-                        mod_Fun_03_Slav(txDataTemp);
+                        mod_Fun_03_Slav(reBuf);
                         break;
                     //case 0x06:	    mod_Fun_06_Slav(reBuf,size);	break;
                     case 0x10:
-                        mod_Fun_16_Slav(txDataTemp, size);
+                        mod_Fun_16_Slav(reBuf, size);
                         break;
                     default:
                         break;
                 }
             }
-        }
     }
 
     /***

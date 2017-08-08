@@ -13,6 +13,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -1227,16 +1228,38 @@ public class NewProjectTpanelActivity extends Activity {
                     SwenduDislay_ge = "0" + modbus_salve.getWenDu() % 10;
 
                     wendu_DisplaySet_Change++;
+/*
+                    if (wendu_DisplaySet_Change>33){
+                        wenDuSetTemp=modbus_salve.getWenDuSet();
+                        wendu_DisplaySet_Change=34;
+                        tv_WenduDispay.setText(SwenduDislay_bai.substring(SwenduDislay_bai.length() - 1, SwenduDislay_bai.length()) + SwenduDislay_shi.substring(SwenduDislay_shi.length() - 1, SwenduDislay_shi.length()) + "." + SwenduDislay_ge.substring(SwenduDislay_ge.length() - 1, SwenduDislay_ge.length()));
+                    }
+                    if (wendu_DisplaySet_Change<=33&&wendu_DisplaySet_Change>=30){
+                        modbus_salve.setWenDuSet(wenDuSetTemp);
+                        wenDuSetStatus=false;
+                        modbus_salve.allowWriteWenDuSet = true;
+                    }
+                    if (wendu_DisplaySet_Change<30){
+                        modbus_salve.allowWriteWenDuSet = false;
+                        tv_WenduDispay.setText(Swenduset_bai.substring(Swenduset_bai.length() - 1, Swenduset_bai.length()) + Swenduset_shi.substring(Swenduset_shi.length() - 1, Swenduset_shi.length()) + "." + Swenduset_ge.substring(Swenduset_ge.length() - 1, Swenduset_ge.length()));
+                    }
+*/
+
 
                     if (wendu_DisplaySet_Change < 30) {
                         modbus_salve.allowWriteWenDuSet = false;
                         tv_WenduDispay.setText(Swenduset_bai.substring(Swenduset_bai.length() - 1, Swenduset_bai.length()) + Swenduset_shi.substring(Swenduset_shi.length() - 1, Swenduset_shi.length()) + "." + Swenduset_ge.substring(Swenduset_ge.length() - 1, Swenduset_ge.length()));
                     } else {
                         tv_WenduDispay.setText(SwenduDislay_bai.substring(SwenduDislay_bai.length() - 1, SwenduDislay_bai.length()) + SwenduDislay_shi.substring(SwenduDislay_shi.length() - 1, SwenduDislay_shi.length()) + "." + SwenduDislay_ge.substring(SwenduDislay_ge.length() - 1, SwenduDislay_ge.length()));
-                        modbus_salve.setWenDuSet(wenDuSetTemp);
-                        wendu_DisplaySet_Change = 30;
-                        wenDuSetStatus=false;
-                        modbus_salve.allowWriteWenDuSet = true;
+
+                        if (wendu_DisplaySet_Change<33){
+                            modbus_salve.setWenDuSet(wenDuSetTemp);
+                            wenDuSetStatus=false;
+                            modbus_salve.allowWriteWenDuSet = true;
+                        }else {
+                            wenDuSetTemp=modbus_salve.getWenDuSet();
+                            wendu_DisplaySet_Change=34;
+                        }
                     }
 
                     String SshiduDislay_bai;
@@ -1270,10 +1293,14 @@ public class NewProjectTpanelActivity extends Activity {
                         tv_ShiduDispay.setText(Sshiduset_bai.substring(Sshiduset_bai.length() - 1, Sshiduset_bai.length()) + Sshiduset_shi.substring(Sshiduset_shi.length() - 1, Sshiduset_shi.length()) + "." + Sshiduset_ge.substring(Sshiduset_ge.length() - 1, Sshiduset_ge.length()));
                     } else {
                         tv_ShiduDispay.setText(SshiduDislay_bai.substring(SshiduDislay_bai.length() - 1, SshiduDislay_bai.length()) + SshiduDislay_shi.substring(SshiduDislay_shi.length() - 1, SshiduDislay_shi.length()) + "." + SshiduDislay_ge.substring(SshiduDislay_ge.length() - 1, SshiduDislay_ge.length()));
-                        modbus_salve.setShiDuSet(shiDuSetTemp);
-                        shidu_DisplaySet_Change = 30;
-                        shiDuSetStatus=false;
-                        modbus_salve.allowWriteShiDuSet = true;
+                        if (shidu_DisplaySet_Change<33){
+                            modbus_salve.setShiDuSet(shiDuSetTemp);
+                            shiDuSetStatus=false;
+                            modbus_salve.allowWriteShiDuSet = true;
+                        }else {
+                            shiDuSetTemp=modbus_salve.getShiDuSet();
+                            shidu_DisplaySet_Change = 34;
+                        }
                     }
 
                     String SyachaDislay_bai;
