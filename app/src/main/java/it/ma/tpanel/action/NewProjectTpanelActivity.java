@@ -1,7 +1,10 @@
 package it.ma.tpanel.action;
 
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -11,6 +14,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -25,6 +30,20 @@ import android_serialport_api.Modbus_Slav1;
 import android_serialport_api.Modbus_Slav2;
 
 public class NewProjectTpanelActivity extends Activity {
+//**************************音乐播放器部分*****************************//
+    private AudioManager mgr;
+
+    private Button musicStart;
+    private Button musicNext;
+    private int picSwitchCount=0;
+    private MediaPlayer mediaPlayer;
+    private File[] musics;
+    private int songIndex = 0;
+    private ArrayList<String> songArrayList; //播放声音列表
+    private String musicPath;
+    private File music;
+    private boolean firstStart=true;
+//*******************************************************************//
 
     private boolean wenDuSetStatus=false;//温湿度设置按钮第一次按的时候不会改变值，只会显示设定值
     private boolean shiDuSetStatus=false;//此状态为用于判断是否是第一次按
@@ -186,6 +205,70 @@ public class NewProjectTpanelActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        mgr = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
+        mediaPlayer=new MediaPlayer();
+        mediaPlayer.setOnCompletionListener(new CompletionListener());
+        musicPath="mnt/extsd";
+        songArrayList = new ArrayList<String>();
+        music = new File(musicPath);
+
+        Log.d("music", "onCreate: "+music.isDirectory());
+        musics = music.listFiles();
+        if (musics!=null){
+            for (File item : musics) {
+                if (item.toString().endsWith(".mp3")){
+                    songArrayList.add(item.toString());
+                    Log.d("歌曲的位置", "→" +item);
+                }
+            }
+        }
+
+        musicStart=(Button)findViewById(R.id.music_start_id);
+        musicNext=(Button)findViewById(R.id.music_next_id);
+        musicStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (musics!=null){
+                    picSwitchCount++;
+                    if (picSwitchCount%2==1){
+                        musicStart.setBackgroundResource(R.drawable.music_pause);
+                        if (firstStart){
+                            firstStart=false;
+                            songplay();
+                        }
+                        mediaPlayer.start();//播放
+
+                    }else {
+                        musicStart.setBackgroundResource(R.drawable.music_start);
+                        mediaPlayer.pause();
+                    }
+                }
+            }
+        });
+
+        musicNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (picSwitchCount%2==1){
+                    nextsong();
+                }
+            }
+        });
+
+        musicNext.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    view.setBackgroundResource(R.drawable.music_next_down);
+                }else if (motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    view.setBackgroundResource(R.drawable.music_next_up);
+                }
+                return false;
+            }
+        });
+
+
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
         modbus_salve.start();
         modbus_save_1.start();
@@ -798,12 +881,11 @@ public class NewProjectTpanelActivity extends Activity {
 
         ButMusic_dizeng.setOnTouchListener(new OnTouchListener() {
 
-
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.musicup_down);
+                    v.setBackgroundResource(R.drawable.music_vol_plus_down);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.musicup_up);
+                    v.setBackgroundResource(R.drawable.music_vol_plus_up);
 
                 }
                 return false;
@@ -815,9 +897,9 @@ public class NewProjectTpanelActivity extends Activity {
 
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.musicdown_down);
+                    v.setBackgroundResource(R.drawable.music_vol_min_down);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.musicdown_up);
+                    v.setBackgroundResource(R.drawable.music_vol_min_up);
 
                 }
                 return false;
@@ -829,6 +911,9 @@ public class NewProjectTpanelActivity extends Activity {
         timer4.schedule(task4, 300, 300);
         framesJiZu_timer.schedule(task_jiZuframes, 300, 300);
     }
+
+
+
 
     TimerTask task1 = new TimerTask() {
 
@@ -1416,6 +1501,8 @@ public class NewProjectTpanelActivity extends Activity {
         }
     };
 
+
+
     public void ButStart_shuoshu(View v) {
         shoushu_temp = 1;
     }
@@ -1783,6 +1870,7 @@ public class NewProjectTpanelActivity extends Activity {
             music_UpDown = 7;
         }
         modbus_save_1.setBackMusic_upDown(music_UpDown);
+        mgr.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_RAISE, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
     }
 
     /***
@@ -1797,6 +1885,7 @@ public class NewProjectTpanelActivity extends Activity {
         }
 
         modbus_save_1.setBackMusic_upDown(music_UpDown);
+        mgr.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_LOWER, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
     }
 
     /***
@@ -1901,7 +1990,6 @@ public class NewProjectTpanelActivity extends Activity {
             modbus_save_1.setPrepare((short) 0);
             ButPrepare_variabe = 0;
             ButPrepare.setBackgroundResource(R.drawable.led_off);
-
         } else {
             ButPrepare_variabe = 1;
             ButPrepare.setBackgroundResource(R.drawable.led_on);
@@ -1927,11 +2015,52 @@ public class NewProjectTpanelActivity extends Activity {
     }
 
     public void loginInto(View v) {
-
         intent.setClass(this, UnitMonitoringDataActivity.class);
         startActivity(intent);
-
     }
 
+    private final class CompletionListener implements MediaPlayer.OnCompletionListener {
+        public void onCompletion(MediaPlayer mp) {
+            nextsong();
+        }
+    }
+    private void nextsong() {
+
+        if (songIndex < songArrayList.size() - 1) {
+            songIndex = songIndex + 1;
+            songplay();
+        }
+        else {
+            songIndex = 0;
+            songplay();
+        }
+    }
+    private void songplay() {
+        try {
+            mediaPlayer.reset();
+            mediaPlayer.setDataSource(songArrayList.get(songIndex));
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+        } catch (IllegalArgumentException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SecurityException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalStateException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        mediaPlayer.release();
+        mediaPlayer = null;
+        super.onDestroy();
+    }
 
 }

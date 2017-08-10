@@ -258,21 +258,21 @@ public class Modbus_Slav extends Thread {
         if (size==13){
             Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
         }
-            if (size <= 3)
-                return;
-            if (CRC_16.checkBuf(reBuf)) {
-                switch (reBuf[1]) {
-                    case 0x03:
-                        mod_Fun_03_Slav(reBuf);
-                        break;
-                    //case 0x06:	    mod_Fun_06_Slav(reBuf,size);	break;
-                    case 0x10:
-                        mod_Fun_16_Slav(reBuf, size);
-                        break;
-                    default:
-                        break;
-                }
+        if (size <= 3)
+            return;
+        if (CRC_16.checkBuf(reBuf)) {
+            switch (reBuf[1]) {
+                case 0x03:
+                    mod_Fun_03_Slav(reBuf);
+                    break;
+                //case 0x06:	    mod_Fun_06_Slav(reBuf,size);	break;
+                case 0x10:
+                    mod_Fun_16_Slav(reBuf, size);
+                    break;
+                default:
+                    break;
             }
+        }
     }
 
     /***

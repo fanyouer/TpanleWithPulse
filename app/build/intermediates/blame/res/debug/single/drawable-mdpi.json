@@ -52,10 +52,6 @@
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\down_1.png"
     },
     {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\musicdown_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\musicdown_down.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\down_2.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\down_2.png"
     },
@@ -96,16 +92,16 @@
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\phone_down.png"
     },
     {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\duijiang_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\duijiang_down.png"
+        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\dijian_down.png",
+        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\dijian_down.png"
     },
     {
         "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\up_4.png",
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\up_4.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\dijian_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\dijian_down.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\duijiang_down.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\duijiang_down.png"
     },
     {
         "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\qitichaoya.png",
@@ -540,10 +536,6 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\up_6.png"
     },
     {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\musicup_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\musicup_down.png"
-    },
-    {
         "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\up_1.png",
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\up_1.png"
     },
@@ -654,10 +646,6 @@
     {
         "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\up_7.png",
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\up_7.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\musicdown_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\musicdown_up.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\baojing_lv_huang.png",
@@ -834,9 +822,5 @@
     {
         "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\qitiqianya.png",
         "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\qitiqianya.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\musicup_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\musicup_up.png"
     }
 ]
