@@ -144,241 +144,243 @@ public class UnitMonitoringDataActivity extends Activity {
                     short UpperComputerCompressorFourBreakdownMonitoringPoint = (short) sharedPreferences.getInt("上位机压缩机4故障监控点", 0);
                     short WinrerInSummer = (short) sharedPreferences.getInt("冬夏季", 0);
 
+                    if (UpperComputerFengjiZHuangTaiMonitoringPoint==1){
+                        flow_temp++;
+                        if (flow_temp > 36)
+                            flow_temp = 0;
+                        switch (flow_temp) {
+                            case 3: {
 
-                    flow_temp++;
-                    if (flow_temp > 36)
-                        flow_temp = 0;
-                    switch (flow_temp) {
-                        case 3: {
-
-                            bt_jinfengflow1.setBackgroundResource(R.drawable.flow_2);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-
-                        }
-                        break;
-                        case 6: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(R.drawable.flow_3);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-                        case 9: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(R.drawable.flow_2);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-                        case 12: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(R.drawable.flow_3);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-                        case 15: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(R.drawable.flow_3);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-                        case 18: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(R.drawable.flow_0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
+                                bt_jinfengflow1.setBackgroundResource(R.drawable.flow_2);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
 
 
-                        case 21: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(R.drawable.flow_0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-                        case 24: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(R.drawable.flow_0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-
-                        case 27: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(R.drawable.flow_0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-                        case 30: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(R.drawable.flow_1);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-
-                        case 33: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(R.drawable.flow_1);
-                            bt_jinfengflow12.setBackgroundResource(0);
-
-                        }
-                        break;
-                        case 36: {
-
-                            bt_jinfengflow1.setBackgroundResource(0);
-                            bt_jinfengflow2.setBackgroundResource(0);
-                            bt_jinfengflow3.setBackgroundResource(0);
-                            bt_jinfengflow4.setBackgroundResource(0);
-                            bt_jinfengflow5.setBackgroundResource(0);
-                            bt_jinfengflow6.setBackgroundResource(0);
-                            bt_jinfengflow7.setBackgroundResource(0);
-                            bt_jinfengflow8.setBackgroundResource(0);
-                            bt_jinfengflow9.setBackgroundResource(0);
-                            bt_jinfengflow10.setBackgroundResource(0);
-                            bt_jinfengflow11.setBackgroundResource(0);
-                            bt_jinfengflow12.setBackgroundResource(R.drawable.flow_2);
-
-                        }
-                        break;
-
-
-                        default:
+                            }
                             break;
-                    }
+                            case 6: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(R.drawable.flow_3);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+                            case 9: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(R.drawable.flow_2);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+                            case 12: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(R.drawable.flow_3);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+                            case 15: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(R.drawable.flow_3);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+                            case 18: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(R.drawable.flow_0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
 
 
-                    if (fengjilun_temp == 0) {
-                        fengjilun_temp = 1;
-                        bt_fengjilun.setBackgroundResource(R.drawable.fengshanlu2);
-                    } else {
-                        fengjilun_temp = 0;
-                        bt_fengjilun.setBackgroundResource(R.drawable.fengshanlu1);
+                            case 21: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(R.drawable.flow_0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+                            case 24: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(R.drawable.flow_0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+
+                            case 27: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(R.drawable.flow_0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+                            case 30: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(R.drawable.flow_1);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+
+                            case 33: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(R.drawable.flow_1);
+                                bt_jinfengflow12.setBackgroundResource(0);
+
+                            }
+                            break;
+                            case 36: {
+
+                                bt_jinfengflow1.setBackgroundResource(0);
+                                bt_jinfengflow2.setBackgroundResource(0);
+                                bt_jinfengflow3.setBackgroundResource(0);
+                                bt_jinfengflow4.setBackgroundResource(0);
+                                bt_jinfengflow5.setBackgroundResource(0);
+                                bt_jinfengflow6.setBackgroundResource(0);
+                                bt_jinfengflow7.setBackgroundResource(0);
+                                bt_jinfengflow8.setBackgroundResource(0);
+                                bt_jinfengflow9.setBackgroundResource(0);
+                                bt_jinfengflow10.setBackgroundResource(0);
+                                bt_jinfengflow11.setBackgroundResource(0);
+                                bt_jinfengflow12.setBackgroundResource(R.drawable.flow_2);
+
+                            }
+                            break;
+
+
+                            default:
+                                break;
+                        }
+
+
+                        if (fengjilun_temp == 0) {
+                            fengjilun_temp = 1;
+                            bt_fengjilun.setBackgroundResource(R.drawable.fengshanlu2);
+                        } else {
+                            fengjilun_temp = 0;
+                            bt_fengjilun.setBackgroundResource(R.drawable.fengshanlu1);
+                        }
                     }
+
 
 
                     if (UpperComputerChuXiaoMonitoringPoint == 1) {

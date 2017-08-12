@@ -4,32 +4,36 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\background.png"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\start_up.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\start_up.png"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_6.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_6.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_down.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_down.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojing_lv_huang.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojing_lv_huang.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\login_into.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\login_into.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_0.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_0.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhiban_up.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhiban_up.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_jinghao.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_jinghao.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao3_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao3_press.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao4_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao4_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_5.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_5.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao9_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao9_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_display1.png",
@@ -44,56 +48,52 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\dijian_down.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jizustart_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jizustart_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_7.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_7.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhishi_hong.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhishi_hong.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\guanpiandeng.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\guanpiandeng.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_1.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_1.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_7.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_7.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\wuyingdeng_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\wuyingdeng_press.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_5.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_5.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\start_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\start_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jizustart_down.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jizustart_down.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojing_huise.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojing_huise.png"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\login_into.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\login_into.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_9.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_9.png"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_4.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_4.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_0.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_0.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\waring.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\waring.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_7.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_7.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhishi_hong.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhishi_hong.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\musicup_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\musicup_down.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jizustart_up.png",
@@ -104,84 +104,88 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhishi_lv.png"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\monitor.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\monitor.png"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao6_press.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao6_press.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao5_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao5_press.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohaoxinghao_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohaoxinghao_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_display3.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_display3.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\beiyongdeng.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\beiyongdeng.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_0.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_0.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_9.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_9.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\init_ing.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\init_ing.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\musicdown_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\musicdown_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_7.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_7.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\led_off.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\led_off.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao8_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao8_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\duijiang_up.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\duijiang_up.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\shuzhongdeng.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\shuzhongdeng.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_2.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_2.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\led_on.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\led_on.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\xing_down.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\xing_down.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming1.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming1.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_2.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_2.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_jinghao.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_jinghao.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_8.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_8.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\xing_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\xing_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_5.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_5.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_3.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_3.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\dizeng_down.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\dizeng_down.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\duijiang_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\duijiang_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fuya_up.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fuya_up.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\loginback.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\loginback.png"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\yueyao_logo.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\yueyao_logo.png"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_up.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_up.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\duijiang_down.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\duijiang_down.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\qitiqianya.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\qitiqianya.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\reset_up.png",
@@ -196,16 +200,16 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\wuyingdeng.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_1.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_1.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fengshanlu2.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fengshanlu2.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fuya_down.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fuya_down.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_jinghao.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_jinghao.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojing_huang_hong.png",
@@ -220,388 +224,8 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_3.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\wuyingdeng_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\wuyingdeng_press.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\beiyongdeng.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\beiyongdeng.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_0.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_0.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\qitizhengchang.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\qitizhengchang.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\wuyingdeng.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\wuyingdeng.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhiban_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhiban_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_4.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_4.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_1.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_1.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\phone_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\phone_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao3_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao3_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao7_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao7_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stop_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\stop_up.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stop_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\stop_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\phone_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\phone_up.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fuya_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fuya_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\dijian_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\dijian_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\duijiang_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\duijiang_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\musicdown_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\musicdown_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojingdise.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojingdise.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\dizeng_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\dizeng_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_6.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_6.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\shuzhongdeng.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\shuzhongdeng.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_9.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_9.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\guanpiandeng_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\guanpiandeng_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_3.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_3.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_1.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_1.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao5_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao5_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming2_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming2_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\led_off.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\led_off.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_dijian.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_dijian.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_2.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_2.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_8.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_8.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\waring.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\waring.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\beiyongdeng_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\beiyongdeng_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fengshanlu1.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fengshanlu1.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming2_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming2_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_dijian.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_dijian.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohaojinghao_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohaojinghao_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\shuzhongdeng_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\shuzhongdeng_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stop_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\stop_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_display2.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_display2.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jingyin_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jingyin_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\start_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\start_up.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fuya_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fuya_up.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_0.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_0.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_6.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_6.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao9_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao9_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao3_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao3_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhiban_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhiban_up.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\loginback.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\loginback.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhishi_lv.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhishi_lv.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\guanpiandeng.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\guanpiandeng.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\yueyao_logo.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\yueyao_logo.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_4.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_4.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\background.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\background.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_8.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_8.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\wuyingdeng_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\wuyingdeng_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jizustart_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jizustart_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\login_into.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\login_into.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_9.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_9.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\waring.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\waring.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_7.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_7.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\monitor.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\monitor.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\monitor.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\monitor.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohaoxinghao_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohaoxinghao_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\running.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\running.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_0.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_0.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\init_ing.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\init_ing.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojingdise.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojingdise.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_4.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_4.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao8_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao8_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_7.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_7.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohaojinghao_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohaojinghao_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao8_press.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao8_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_display3.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_display3.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao_1_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao_1_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming1.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming1.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao7_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao7_press.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_5.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_5.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\xing_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\xing_down.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\dizeng_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\dizeng_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_6.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_6.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao6_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao6_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jizustart_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jizustart_up.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fuya_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fuya_up.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\yueyao_logo.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\yueyao_logo.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_0.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_0.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\qitichaoya.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\qitichaoya.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\qitiqianya.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\qitiqianya.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\duijiang_down.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\duijiang_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\guanpiandeng.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\guanpiandeng.png"
-    },
-    {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_jinghao.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_jinghao.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao9_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao9_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_0.png",
@@ -616,8 +240,16 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\start_down.png"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhiban_down.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhiban_down.png"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\led_on.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\led_on.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_4.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_4.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stop_up.png",
@@ -628,32 +260,20 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming1_press.png"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao7_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao7_press.png"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\qitizhengchang.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\qitizhengchang.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\start_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\start_down.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jingyin.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jingyin.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojing_lv_huang.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojing_lv_huang.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\beiyongdeng_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\beiyongdeng_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\reset_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\reset_down.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\shuzhongdeng_press.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\shuzhongdeng_press.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\phone_up.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\phone_up.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_3.png",
@@ -664,108 +284,76 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_1.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jingyin_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jingyin_press.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\running.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\running.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming1.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming1.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_3.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_3.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojingdise.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojingdise.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\guanpiandeng_press.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\guanpiandeng_press.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\musicup_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\musicup_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_6.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_6.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao2_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao2_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_2.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_2.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_display2.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_display2.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\phone_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\phone_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\shuzhongdeng.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\shuzhongdeng.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_2.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_2.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming2.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming2.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fengshanlu2.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fengshanlu2.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhiban_down.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhiban_down.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_9.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_9.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_jinghao.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_jinghao.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_display1.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_display1.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_3.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_3.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\reset_down.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\reset_down.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_3.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_3.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_8.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_8.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming1_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming1_press.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao5_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao5_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming2.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming2.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_dizeng.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_dizeng.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\flow_1.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\flow_1.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\zhaoming2_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\zhaoming2_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jingyin.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jingyin.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojing_huang_hong.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojing_huang_hong.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\led_off.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\led_off.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fengshanlu1.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fengshanlu1.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\beiyongdeng_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\beiyongdeng_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_dizeng.png",
@@ -776,36 +364,28 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao4_press.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\reset_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\reset_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\fengshanlu1.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\fengshanlu1.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao0_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohao0_press.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\up_dijian.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_dijian.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\qitiqianya.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\qitiqianya.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohaojinghao_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohaojinghao_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\qitichaoya.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\qitichaoya.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_up.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_up.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stop_down.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\stop_down.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\init_ing.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\init_ing.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohaoxinghao_press.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\bohaoxinghao_press.png"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\down_9.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\down_9.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_display2.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\music_display2.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\xing_up.png",
@@ -816,8 +396,8 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\up_2.png"
     },
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\baojing_huise.png",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\baojing_huise.png"
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jingyin_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-hdpi\\jingyin_press.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bohao2_press.png",

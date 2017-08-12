@@ -44,9 +44,7 @@
              android:layout_y="300dp"
              android:background="@drawable/fengshanlu1"
     />
-    
-    
-    
+
     
        <Button 
              android:id="@+id/bt_zhongxiaowaring_id"

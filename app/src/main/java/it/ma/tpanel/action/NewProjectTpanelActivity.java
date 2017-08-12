@@ -10,6 +10,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,11 +20,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import android_serialport_api.Modbus_Slav;
 import android_serialport_api.Modbus_Slav1;
@@ -33,13 +39,18 @@ public class NewProjectTpanelActivity extends Activity {
 //**************************音乐播放器部分*****************************//
     private AudioManager mgr;
 
+    private AlertDialog.Builder builder;
+    private AlertDialog alertDialog;
+
     private Button musicStart;
     private Button musicNext;
-    private int picSwitchCount=0;
+    private Button musicList;
+
     private MediaPlayer mediaPlayer;
     private File[] musics;
     private int songIndex = 0;
     private ArrayList<String> songArrayList; //播放声音列表
+    private ArrayList<String> songNameArrayList;
     private String musicPath;
     private File music;
     private boolean firstStart=true;
@@ -211,14 +222,16 @@ public class NewProjectTpanelActivity extends Activity {
         mediaPlayer.setOnCompletionListener(new CompletionListener());
         musicPath="mnt/extsd";
         songArrayList = new ArrayList<String>();
-        music = new File(musicPath);
+        songNameArrayList=new ArrayList<String>();
 
-        Log.d("music", "onCreate: "+music.isDirectory());
+        music = new File(musicPath);
         musics = music.listFiles();
+
         if (musics!=null){
             for (File item : musics) {
                 if (item.toString().endsWith(".mp3")){
                     songArrayList.add(item.toString());
+                    songNameArrayList.add(item.toString().substring(10));
                     Log.d("歌曲的位置", "→" +item);
                 }
             }
@@ -226,31 +239,32 @@ public class NewProjectTpanelActivity extends Activity {
 
         musicStart=(Button)findViewById(R.id.music_start_id);
         musicNext=(Button)findViewById(R.id.music_next_id);
+        musicList=(Button)findViewById(R.id.music_list_button_id);
+
         musicStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (musics!=null){
-                    picSwitchCount++;
-                    if (picSwitchCount%2==1){
+                    if (mediaPlayer.isPlaying()){
+                        musicStart.setBackgroundResource(R.drawable.music_start_up);
+                        mediaPlayer.pause();
+                    }
+                    else {
                         musicStart.setBackgroundResource(R.drawable.music_pause);
                         if (firstStart){
                             firstStart=false;
                             songplay();
                         }
                         mediaPlayer.start();//播放
-
-                    }else {
-                        musicStart.setBackgroundResource(R.drawable.music_start);
-                        mediaPlayer.pause();
                     }
-                }
+                }else Toast.makeText(NewProjectTpanelActivity.this,"没发现歌曲",Toast.LENGTH_SHORT).show();
             }
         });
 
         musicNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (picSwitchCount%2==1){
+                if (mediaPlayer.isPlaying()) {
                     nextsong();
                 }
             }
@@ -267,6 +281,41 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
+
+        musicStart.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    view.setBackgroundResource(R.drawable.music_start_down);
+                }else if (motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    view.setBackgroundResource(R.drawable.music_start_up);
+                }
+                return false;
+            }
+        });
+
+        musicList.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    view.setBackgroundResource(R.drawable.music_list_button_down);
+                }else if (motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    view.setBackgroundResource(R.drawable.music_list_button_up);
+                }
+                return false;
+            }
+        });
+
+        musicList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (musics!=null){
+                    ShowDialog();
+                }else Toast.makeText(NewProjectTpanelActivity.this,"没找到歌曲",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
 
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
@@ -912,9 +961,6 @@ public class NewProjectTpanelActivity extends Activity {
         framesJiZu_timer.schedule(task_jiZuframes, 300, 300);
     }
 
-
-
-
     TimerTask task1 = new TimerTask() {
 
         public void run() {
@@ -1180,21 +1226,18 @@ public class NewProjectTpanelActivity extends Activity {
                             ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
                             ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
                             ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
                         }
                         break;
                         case 1: {
                             ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
                             ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitiqianya);
                             ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
                         }
                         break;
                         case 2: {
                             ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
                             ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitichaoya);
                             ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
                         }
                         break;
 
@@ -1270,8 +1313,6 @@ public class NewProjectTpanelActivity extends Activity {
                         default:
                             break;
                     }
-
-
                 }
 
             });
@@ -1410,9 +1451,6 @@ public class NewProjectTpanelActivity extends Activity {
                         yacha_DisplaySet_Change = 30;
 
                     }
-
-
-
 		      /*  modbus_salve.setWenDuSet(modbus_save_2.getWenDuSet());
 		        modbus_salve.setShiDuSet(modbus_save_2.getShiDuSet());
 	     	    modbus_save_2.setWenDu(modbus_salve.getWenDu());
@@ -2063,4 +2101,33 @@ public class NewProjectTpanelActivity extends Activity {
         super.onDestroy();
     }
 
+    private void ShowDialog() {
+        Context context=NewProjectTpanelActivity.this;
+        LayoutInflater inflater=(LayoutInflater)context.getSystemService(LAYOUT_INFLATER_SERVICE);
+        View layout=inflater.inflate(R.layout.music_list,null);
+        ListView listview=(ListView)layout.findViewById(R.id.music_list_id);
+        ArrayAdapter adapter=new ArrayAdapter(context,android.R.layout.simple_list_item_1,songNameArrayList);
+        listview.setAdapter(adapter);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int positon, long id) {
+                songIndex=positon;
+                songplay();
+
+                if (mediaPlayer.isPlaying()){
+                    musicStart.setBackgroundResource(R.drawable.music_pause);
+                }
+                else musicStart.setBackgroundResource(R.drawable.music_start_up);
+                if (alertDialog != null) {
+                    alertDialog.dismiss();
+                }
+            }
+        });
+
+        builder = new AlertDialog.Builder(context);
+        builder.setView(layout);
+        alertDialog = builder.create();
+        alertDialog.show();
+    }
 }

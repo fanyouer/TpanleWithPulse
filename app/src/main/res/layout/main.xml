@@ -2,10 +2,7 @@
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="@drawable/background"
-
-    >
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/tv_shoushu_id"
@@ -497,10 +494,10 @@
     <!-- 免提按钮    -->
     <Button
         android:id="@+id/bohao_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_x="970dp"
-        android:layout_y="705dp"
+        android:layout_y="715dp"
         android:background="@drawable/phone_up"
         android:onClick="Butbohao"
 
@@ -510,10 +507,10 @@
     <!-- 对讲按键      -->
     <Button
         android:id="@+id/duijiang_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="1060dp"
-        android:layout_y="705dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="1037dp"
+        android:layout_y="715dp"
         android:background="@drawable/duijiang_up"
         android:onClick="Butduijiang"
 
@@ -522,10 +519,10 @@
     <!-- 背景音乐按键  -->
     <Button
         android:id="@+id/beijingyinyue_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="1150dp"
-        android:layout_y="705dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="1104dp"
+        android:layout_y="715dp"
         android:background="@drawable/music_up"
         android:onClick="Butbeijingyinyue"
 
@@ -561,7 +558,7 @@
         android:layout_height="wrap_content"
         android:layout_x="970dp"
         android:layout_y="815dp"
-        android:background="@drawable/music_start"
+        android:background="@drawable/music_start_up"
         />
 
     <!--音乐播放下一首按键-->
@@ -572,6 +569,57 @@
         android:layout_x="1037dp"
         android:layout_y="815dp"
         android:background="@drawable/music_next_up"/>
+
+    <!--音乐列表按键-->
+    <Button
+        android:id="@+id/music_list_button_id"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="1170dp"
+        android:layout_y="715dp"
+        android:background="@drawable/music_list_button_up"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="965dp"
+        android:layout_y="765dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:text="免提电话"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1033dp"
+        android:layout_y="765dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:text="免提对讲"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1100dp"
+        android:layout_y="765dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:text="背景音乐"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1165dp"
+        android:layout_y="765dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:text="音乐列表"
+        />
+
+
     <!-- 背景音乐动态效果图 -->
     <Button
         android:id="@+id/yinyuedongdai_id"
@@ -629,8 +677,6 @@
         android:layout_x="1468dp"
         android:layout_y="692dp"
         android:background="@drawable/qitizhengchang"
-
-
         />
 
     <Button
@@ -863,7 +909,4 @@
         android:background="@drawable/login_into"
         android:onClick="loginInto" />
 
-
 </AbsoluteLayout>
-
-  
