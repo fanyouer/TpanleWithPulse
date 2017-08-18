@@ -529,11 +529,9 @@ public class NewProjectTpanelActivity extends Activity {
                     v.setBackgroundResource(R.drawable.stop_up);
                 }
 
-
                 return false;
             }
         });
-
 
         ButReset_mazui.setOnTouchListener(new OnTouchListener() {
 
@@ -550,7 +548,6 @@ public class NewProjectTpanelActivity extends Activity {
 
         ButDown_wendu.setOnTouchListener(new OnTouchListener() {
 
-
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.dijian_down);
@@ -558,11 +555,9 @@ public class NewProjectTpanelActivity extends Activity {
                     v.setBackgroundResource(R.drawable.up_dijian);
                 }
 
-
                 return false;
             }
         });
-
 
         ButUp_wendu.setOnTouchListener(new OnTouchListener() {
 
@@ -574,11 +569,9 @@ public class NewProjectTpanelActivity extends Activity {
                     v.setBackgroundResource(R.drawable.up_dizeng);
                 }
 
-
                 return false;
             }
         });
-
 
         ButDown_shidu.setOnTouchListener(new OnTouchListener() {
 
@@ -1907,8 +1900,12 @@ public class NewProjectTpanelActivity extends Activity {
         if (music_UpDown > 7) {
             music_UpDown = 7;
         }
-        modbus_save_1.setBackMusic_upDown(music_UpDown);
-        mgr.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_RAISE, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
+        if (modbus_save_1.getBackMusic()==1){
+            modbus_save_1.setBackMusic_upDown(music_UpDown);
+        }
+        if (mediaPlayer.isPlaying()){
+            mgr.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_RAISE, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
+        }
     }
 
     /***
@@ -1921,9 +1918,12 @@ public class NewProjectTpanelActivity extends Activity {
         if (music_UpDown < 0) {
             music_UpDown = 0;
         }
-
-        modbus_save_1.setBackMusic_upDown(music_UpDown);
-        mgr.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_LOWER, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
+        if (modbus_save_1.getBackMusic()==1){
+            modbus_save_1.setBackMusic_upDown(music_UpDown);
+        }
+        if (mediaPlayer.isPlaying()){
+            mgr.adjustStreamVolume(AudioManager.STREAM_MUSIC,AudioManager.ADJUST_LOWER, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
+        }
     }
 
     /***

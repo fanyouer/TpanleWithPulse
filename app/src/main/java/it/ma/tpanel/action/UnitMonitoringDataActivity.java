@@ -379,7 +379,8 @@ public class UnitMonitoringDataActivity extends Activity {
                             fengjilun_temp = 0;
                             bt_fengjilun.setBackgroundResource(R.drawable.fengshanlu1);
                         }
-                    }
+                        bt_fengji.setBackgroundResource(R.drawable.running);
+                    }else bt_fengji.setBackgroundResource(R.drawable.init_ing);
 
 
 
