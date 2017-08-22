@@ -23,14 +23,6 @@ import static android.content.ContentValues.TAG;
  */
 public class Modbus_Slav extends Thread {
 
-    Object syn1=new Object();
-    Object syn2=new Object();
-
-    //public boolean txReady=false;
-
-    public int txDataLength=0;//接收缓存数组长度
-    public byte[] txData=new byte[1024];
-
     int[] regHodingBuf = new int[1024];
 
     public boolean allowWriteShiDuSet = true;
@@ -89,7 +81,7 @@ public class Modbus_Slav extends Thread {
     private short upperComputerCompressorFourBreakdownMonitoringPoint;//上位机压缩机4故障监控点
     private short WinterInSummer = 0;//冬夏季
 
-    Timer timer10ms=new Timer();
+   // Timer timer10ms=new Timer();
 
     private SerialPort mserialPort = null;
 
@@ -109,8 +101,6 @@ public class Modbus_Slav extends Thread {
         }
         mInputStream = mserialPort.getInputStream();
         mOutputStream = mserialPort.getOutputStream();
-
-
     }
 
 
@@ -120,41 +110,6 @@ public class Modbus_Slav extends Thread {
 
 
     public void run() {
-/*
-        super.run();
-        timer10ms.schedule(taskPoll,0,10);//10ms后开始，每10ms轮询一次
-
-        while (!isInterrupted()) {
-            int size;
-            try {
-                byte[] reBuf = new byte[100];
-                if (mInputStream == null) return;
-                size = mInputStream.read(reBuf);
-
-                    if (txDataLength>500){
-                        txDataLength=0;
-                    }
-                    if (size > 0) {
-                        txDataLength+=size;
-                        System.arraycopy(reBuf,0,txData,Math.abs(txDataLength-size),size);
-                    }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-*/
-        /*
-        Log.d("txReady", "run: "+txReady);
-        if (txReady){
-            //Log.d("chuli", "run: "+Arrays.toString(txData));
-
-            onDataReceived(txData, txDataLength);
-          //  Log.d("length", "run: "+txDataLength);
-            txReady=false;
-            txDataLength=0;
-        }
-        */
-
 
         byte[] txDataTemp = new byte[1024];
         boolean txDataFlag = false;
@@ -166,6 +121,7 @@ public class Modbus_Slav extends Thread {
                 byte[] reBuf = new byte[100];
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
+                Log.d("rebuf", "run: "+Arrays.toString(reBuf));
                 if (size > 0) {
                     if (size == 32) {
                         System.arraycopy(reBuf, 0, txDataTemp, 0, size);
@@ -189,33 +145,6 @@ public class Modbus_Slav extends Thread {
         }
     }
 
-/*
-    }
-    TimerTask taskPoll=new TimerTask() {
-        int txDataLengthTemp=0;
-        int txIdleCount=0;
-        public void run() {
-            if(txDataLength>0){
-                if(txDataLengthTemp!=txDataLength){
-                    txDataLengthTemp=txDataLength;
-                    txIdleCount=0;
-                }
-                if(txIdleCount<4){
-                    txIdleCount++;
-                    if (txIdleCount>=4){
-                        txIdleCount=0;
-                      //  txReady=true;
-                        onDataReceived(txData, txDataLength);
-                        txDataLength=0;
-                    }
-                }
-            }
-            else {
-                txDataLengthTemp=0;
-            }
-        }
-    };
-*/
     /**
      * @return mesrialPort  串口
      * @throws SecurityException

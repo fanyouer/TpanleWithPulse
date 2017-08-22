@@ -1,18 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\layout\\main.xml"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\layout\\main.xml"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\unit_monitoringdata.xml",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\layout\\unit_monitoringdata.xml"
-    },
-    {
-        "merged": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\unit_monitoringdata.xml",
-        "source": "C:\\Users\\G\\StudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\layout\\unit_monitoringdata.xml"
     }
 ]
