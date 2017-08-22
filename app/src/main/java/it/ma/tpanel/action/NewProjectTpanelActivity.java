@@ -1524,7 +1524,6 @@ public class NewProjectTpanelActivity extends Activity {
 
                     editor.commit();//提交修改
 
-
                 }
 
             });

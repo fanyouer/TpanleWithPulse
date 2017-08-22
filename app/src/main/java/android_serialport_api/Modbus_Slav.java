@@ -28,7 +28,7 @@ public class Modbus_Slav extends Thread {
 
     //public boolean txReady=false;
 
-    public int txDataLength=0;//接收缓存数组长度
+    //public int txDataLength=0;//接收缓存数组长度
     public byte[] txData=new byte[1024];
 
     int[] regHodingBuf = new int[1024];

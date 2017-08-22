@@ -197,8 +197,6 @@ public class Modbus_Slav2 extends Thread {
         }
 
         onDataSend(seBuf, 4 + 2 * len + 1);
-
-
     }
 
 
