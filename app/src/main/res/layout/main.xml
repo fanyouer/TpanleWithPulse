@@ -560,11 +560,11 @@
 
     <TextView
         android:id="@+id/tv_dianhuadisplay_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="302dp"
+        android:layout_height="50dp"
         android:textSize="45px"
         android:textColor="#FFFFFF"
-
+        android:gravity="right"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -573,8 +573,8 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.629"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintHorizontal_bias="0.560"
+        app:layout_constraintVertical_bias="0.61" />
 
     <!-- 拨号1 -->
 
@@ -630,9 +630,12 @@
         android:background="@drawable/up_4"
         android:onClick="Butbohao_4"
 
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_1_id"
-        app:layout_constraintLeft_toLeftOf="@+id/bohao_1_id" />
+        app:layout_constraintLeft_toLeftOf="@+id/bohao_1_id"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.740" />
 
     <!-- 拨号5 -->
     <Button
@@ -644,8 +647,11 @@
 
         app:layout_constraintLeft_toRightOf="@+id/bohao_4_id"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_2_id" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.740" />
 
     <!-- 拨号6 -->
     <Button
@@ -657,8 +663,11 @@
 
         app:layout_constraintLeft_toRightOf="@+id/bohao_5_id"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_3_id" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.740" />
     <!-- 拨号7 -->
     <Button
         android:id="@+id/bohao_7_id"
@@ -667,9 +676,12 @@
         android:background="@drawable/up_7"
         android:onClick="Butbohao_7"
 
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_4_id"
-        app:layout_constraintLeft_toLeftOf="@+id/bohao_4_id" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bohao_4_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.785" />
 
     <!-- 拨号8-->
     <Button
@@ -679,10 +691,13 @@
         android:background="@drawable/up_8"
         android:onClick="Butbohao_8"
 
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_5_id"
+        android:layout_marginTop="8dp"
         app:layout_constraintLeft_toRightOf="@+id/bohao_7_id"
-        android:layout_marginLeft="5dp" />
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.785" />
 
     <!-- 拨号9 -->
     <Button
@@ -694,8 +709,11 @@
 
         app:layout_constraintLeft_toRightOf="@+id/bohao_8_id"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_6_id" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.785" />
 
     <!-- 拨号* -->
     <Button
@@ -705,9 +723,13 @@
         android:background="@drawable/xing_up"
         android:onClick="Butbohaoxing"
 
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_7_id"
-        app:layout_constraintLeft_toLeftOf="@+id/bohao_7_id" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bohao_7_id"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.828" />
 
     <!-- 拨号0-->
     <Button
@@ -717,10 +739,13 @@
         android:background="@drawable/up_0"
         android:onClick="Butbohao_0"
 
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_8_id"
+        android:layout_marginTop="8dp"
         app:layout_constraintLeft_toRightOf="@+id/bohaoxing_id"
-        android:layout_marginLeft="5dp" />
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.828" />
 
     <!-- 拨号# -->
     <Button
@@ -730,10 +755,13 @@
         android:background="@drawable/up_jinghao"
         android:onClick="Butbohaojing"
 
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_9_id"
+        android:layout_marginTop="8dp"
         app:layout_constraintLeft_toRightOf="@+id/bohao_0_id"
-        android:layout_marginLeft="5dp" />
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.828" />
 
 
     <!-- 免提按钮    -->
