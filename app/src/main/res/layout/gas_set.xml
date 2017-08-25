@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gas_set"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/gas_set_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出"
+            android:textSize="20dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.965"
+            android:onClick="gasSetExit"/>
+
+        <EditText
+            android:id="@+id/et_yangqi_up"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:text="0.450"
+            android:textColor="#ff0000"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <EditText
+            android:id="@+id/et_yasuokongqi_up"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#ff0000"
+            android:text="0.900"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_yangqi_up"
+            app:layout_constraintLeft_toLeftOf="@+id/et_yangqi_up" />
+
+        <EditText
+            android:id="@+id/et_xiaoqi_up"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#ff0000"
+            android:text="0.450"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_yasuokongqi_up"
+            app:layout_constraintLeft_toLeftOf="@+id/et_yasuokongqi_up" />
+
+        <EditText
+            android:id="@+id/et_eryanghuatan_up"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#ff0000"
+            android:text="0.400"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            app:layout_constraintLeft_toLeftOf="@+id/et_xiaoqi_up"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_xiaoqi_up" />
+
+        <EditText
+            android:id="@+id/et_fuyaxiyin_up"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#ff0000"
+            android:text="0.030"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            app:layout_constraintLeft_toLeftOf="@+id/et_eryanghuatan_up"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_eryanghuatan_up" />
+
+        <EditText
+            android:id="@+id/et_yangqi_down"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:maxLength="5"
+            android:text="0.400"
+            android:textColor="#000ff0"
+            android:inputType="numberDecimal"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.870"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <EditText
+            android:id="@+id/et_yasuokongqi_down"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#000ff0"
+            android:text="0.450"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_yangqi_down"
+            app:layout_constraintLeft_toLeftOf="@+id/et_yangqi_down" />
+
+        <EditText
+            android:id="@+id/et_xiaoqi_down"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#000ff0"
+            android:text="0.100"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_yasuokongqi_down"
+            app:layout_constraintLeft_toLeftOf="@+id/et_yasuokongqi_down" />
+
+        <EditText
+            android:id="@+id/et_eryanghuatan_down"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#000ff0"
+            android:text="0.350"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_xiaoqi_down"
+            app:layout_constraintLeft_toLeftOf="@+id/et_xiaoqi_down" />
+
+        <EditText
+            android:id="@+id/et_fuyaxiyin_down"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:textColor="#000ff0"
+            android:text="0.070"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_eryanghuatan_down"
+            app:layout_constraintLeft_toLeftOf="@+id/et_eryanghuatan_down" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

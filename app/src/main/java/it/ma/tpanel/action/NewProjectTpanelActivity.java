@@ -77,54 +77,15 @@ public class NewProjectTpanelActivity extends Activity {
     private Button ButMusic_dijian;
     private Button ButMusic_dongTai;
     public short FengJiZhuangTai;
-    /***
-     * 氧气
-     */
-    private Button ButOxygen_Display_normal;
-    private Button ButOxygen_Display_under;
-    private Button ButOxygen_Display_over;
 
-
-    /***
-     * 笑气
-     */
-    private Button ButLaughingGas_Display_normal;
-    private Button ButLaughingGas_Display_under;
-    private Button ButLaughingGas_Display_over;
-    /***
-     * 氩气
-     */
-    private Button ButArgonGas_Display_normal;
-    private Button ButArgonGas_Display_under;
-    private Button ButArgonGas_Display_over;
-
-    /***
-     * 氮气
-     */
-    private Button ButNitrogenGas_Display_normal;
-    private Button ButNitrogenGas_Display_under;
-    private Button ButNitrogenGas_Display_over;
-    /***
-     * 负压
-     */
-    private Button ButNegativePressure_Display_normal;
-    private Button ButNegativePressure_Display_under;
-    private Button ButNegativePressure_Display_over;
-    /***
-     * 压缩空气
-     */
-    private Button ButPressAirGas_Display_normal;
-    private Button ButPressAirGas_Display_under;
-    private Button ButPressAirGas_Display_over;
-    /***
-     * 二氧化碳
-     */
-    private Button ButCarbon_Display_normal;
-    private Button ButCarbon_Display_under;
-    private Button ButCarbon_Display_over;
 
     private Button ButLightling_1;
     private Button ButLightling_2;
+    private Button ButZhaoMing1Up;
+    private Button ButZhaoMing1Down;
+    private Button ButZhaoMing2Up;
+    private Button ButZhaoMing2Down;
+
     private Button ButShadowless_Lamp;//无影灯
     private Button ButIntraoperative_Lamp;//术中灯
     private Button But_OfLightThe_Lamp;//光片灯
@@ -181,6 +142,7 @@ public class NewProjectTpanelActivity extends Activity {
 
     SharedPreferences sharedPreferences;
     String data;
+
 
     public void onCreate(Bundle savedInstanceState) {
 
@@ -242,63 +204,16 @@ public class NewProjectTpanelActivity extends Activity {
 
 
         /***
-         * 氧气
-         */
-
-        ButOxygen_Display_normal = (Button) findViewById(R.id.yangqi_normal_id);
-        ButOxygen_Display_under = (Button) findViewById(R.id.yangqi_under_id);
-        ButOxygen_Display_over = (Button) findViewById(R.id.yangqi_over_id);
-
-        /***
-         * 笑气
-         */
-
-        ButLaughingGas_Display_normal = (Button) findViewById(R.id.xiaoqi_normal_id);
-        ButLaughingGas_Display_under = (Button) findViewById(R.id.xiaoqi_under_id);
-        ButLaughingGas_Display_over = (Button) findViewById(R.id.xiaoqi_over_id);
-        /***
-         * 氩气
-         */
-        ButArgonGas_Display_normal = (Button) findViewById(R.id.yaqi_normal_id);
-        ButArgonGas_Display_under = (Button) findViewById(R.id.yaqi_under_id);
-        ButArgonGas_Display_over = (Button) findViewById(R.id.yaqi_over_id);
-
-        /***
-         * 氮气
-         */
-        ButNitrogenGas_Display_normal = (Button) findViewById(R.id.danqi_normal_id);
-        ButNitrogenGas_Display_under = (Button) findViewById(R.id.danqi_under_id);
-        ButNitrogenGas_Display_over = (Button) findViewById(R.id.danqi_over_id);
-
-
-        /***
-         * 负压气体
-         */
-        ButNegativePressure_Display_normal = (Button) findViewById(R.id.fuyaqi_normal_id);
-        ButNegativePressure_Display_under = (Button) findViewById(R.id.fuyaqi_under_id);
-        ButNegativePressure_Display_over = (Button) findViewById(R.id.fuyaqi_over_id);
-
-
-        /***
-         * 压缩空气
-         */
-        ButPressAirGas_Display_normal = (Button) findViewById(R.id.yasuoqi_normal_id);
-        ButPressAirGas_Display_under = (Button) findViewById(R.id.yasuoqi_under_id);
-        ButPressAirGas_Display_over = (Button) findViewById(R.id.yasuoqi_over_id);
-
-
-        /***
-         * 二氧化碳气体
-         */
-        ButCarbon_Display_normal = (Button) findViewById(R.id.eryanghuatanqi_normal_id);
-        ButCarbon_Display_under = (Button) findViewById(R.id.eryanghuatanqi_under_id);
-        ButCarbon_Display_over = (Button) findViewById(R.id.eryanghuatanqi_over_id);
-
-        /***
          * 照明1,2
          */
         ButLightling_1 = (Button) findViewById(R.id.zhaoming_1_id);
         ButLightling_2 = (Button) findViewById(R.id.zhaoming_2_id);
+        
+        ButZhaoMing1Up=findViewById(R.id.bt_zhaoming1_up);
+        ButZhaoMing1Down=findViewById(R.id.bt_zhaoming1_down);
+        ButZhaoMing2Up=findViewById(R.id.bt_zhaoming2_up);
+        ButZhaoMing2Down=findViewById(R.id.bt_zhaoming2_down);
+
         /***
          * 无影灯
          */
@@ -324,6 +239,8 @@ public class NewProjectTpanelActivity extends Activity {
         //        tv_ShouShu.setTypeface(tf);
         //        tv_BeiJing.setTypeface(tf);
         //       tv_MaZui.setTypeface(tf);
+
+
 
         ButStart_shuoshu.setOnTouchListener(new OnTouchListener() {
 
@@ -957,234 +874,7 @@ public class NewProjectTpanelActivity extends Activity {
 
     	       */
 
-
-                    /**
-                     * 氧气
-                     */
-
-                    //     modbus_save_2.setOxygen_IS_Normal(modbus_save_1.getOxygen_IS_Normal());
-                    switch (modbus_save_1.getOxygen_IS_Normal()) {
-                        case 0: {
-                            // modbus_save_2.setOxygen_IS_Normal(modbus_save_1.getOxygen_IS_Normal());
-                            ButOxygen_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButOxygen_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButOxygen_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
-                        }
-                        break;
-                        case 1: {
-                            //  modbus_save_2.setOxygen_IS_Normal(modbus_save_1.getOxygen_IS_Normal());
-                            ButOxygen_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
-                            ButOxygen_Display_under.setBackgroundResource(R.drawable.qitiqianya);
-                            ButOxygen_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
-                        }
-                        break;
-                        case 2: {
-                            ButOxygen_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
-                            ButOxygen_Display_under.setBackgroundResource(R.drawable.qitichaoya);
-                            ButOxygen_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
-                        }
-                        break;
-                        default:
-                            break;
-
-                    }
-
-
-                    /***
-                     * 笑气
-                     */
-                    //       modbus_save_2.setLaughingGas_IS_Normal(modbus_save_1.getLaughingGas_IS_Normal());
-                    switch (modbus_save_1.getLaughingGas_IS_Normal()) {
-                        case 0: {
-                            ButLaughingGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButLaughingGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButLaughingGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
-                        }
-                        break;
-                        case 1: {
-                            ButLaughingGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
-                            ButLaughingGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
-                            ButLaughingGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
-                        }
-                        break;
-                        case 2: {
-                            ButLaughingGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
-                            ButLaughingGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
-                            ButLaughingGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
-                        }
-                        break;
-                        default:
-                            break;
-
-                    }
-
-                    /***
-                     *  氩气
-                     */
-                    //        modbus_save_2.setArgonGas_IS_Normal(modbus_save_1.getArgonGas_IS_Normal());
-                    switch (modbus_save_1.getArgonGas_IS_Normal()) {
-                        case 0: {
-                            ButArgonGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButArgonGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButArgonGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
-                        }
-                        break;
-                        case 1: {
-                            ButArgonGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
-                            ButArgonGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
-                            ButArgonGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
-                        }
-                        break;
-                        case 2: {
-                            ButArgonGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
-                            ButArgonGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
-                            ButArgonGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
-                        }
-                        break;
-                        default:
-                            break;
-
-                    }
-
-                    /***
-                     * 氮气
-                     */
-                    //     modbus_save_2.setNitrogenGas_IS_Normal(modbus_save_1.getNitrogenGas_IS_Normal());
-                    switch (modbus_save_1.getNitrogenGas_IS_Normal()) {
-                        case 0: {
-                            ButNitrogenGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButNitrogenGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButNitrogenGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
-                        }
-                        break;
-                        case 1: {
-                            ButNitrogenGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
-                            ButNitrogenGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
-                            ButNitrogenGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
-                        }
-                        break;
-                        case 2: {
-                            ButNitrogenGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
-                            ButNitrogenGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
-                            ButNitrogenGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
-                        }
-                        break;
-
-                        default:
-                            break;
-                    }
-
-                    /***
-                     * 负压
-                     */
-                    //    modbus_save_2.setNegativePressure_IS_Normal(modbus_save_1.getNegativePressure_IS_Normal());
-                    switch (modbus_save_1.getNegativePressure_IS_Normal()) {
-                        case 0: {
-                            ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
-                        }
-                        break;
-                        case 1: {
-                            ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
-                            ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitiqianya);
-                            ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
-                        }
-                        break;
-                        case 2: {
-                            ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
-                            ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitichaoya);
-                            ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
-                        }
-                        break;
-
-                        default:
-                            break;
-                    }
-
-                    /***
-                     * 压缩空气
-                     */
-
-
-                    //     modbus_save_2.setPressAirGas_IS_Normal(modbus_save_1.getPressAirGas_IS_Normal());
-
-                    switch (modbus_save_1.getPressAirGas_IS_Normal()) {
-                        case 0: {
-                            ButPressAirGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButPressAirGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButPressAirGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
-                        }
-                        break;
-                        case 1: {
-                            ButPressAirGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
-                            ButPressAirGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
-                            ButPressAirGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
-                        }
-                        break;
-                        case 2: {
-                            ButPressAirGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
-                            ButPressAirGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
-                            ButPressAirGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
-                        }
-                        break;
-
-                        default:
-                            break;
-                    }
-
-
-                    /***
-                     * 二氧化碳
-                     */
-
-
-                    //    modbus_save_2.setCarbon_IS_Normal(modbus_save_1.getCarbon_IS_Normal());
-
-                    switch (modbus_save_1.getCarbon_IS_Normal()) {
-                        case 0: {
-                            ButCarbon_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButCarbon_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
-                            ButCarbon_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
-
-                        }
-                        break;
-                        case 1: {
-                            ButCarbon_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
-                            ButCarbon_Display_under.setBackgroundResource(R.drawable.qitiqianya);
-                            ButCarbon_Display_over.setBackgroundResource(R.drawable.qitiqianya);
-
-                        }
-                        break;
-                        case 2: {
-                            ButCarbon_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
-                            ButCarbon_Display_under.setBackgroundResource(R.drawable.qitichaoya);
-                            ButCarbon_Display_over.setBackgroundResource(R.drawable.qitichaoya);
-
-                        }
-                        break;
-
-                        default:
-                            break;
-                    }
+                    //此处处理气体报警
 
 
                 }
@@ -1737,7 +1427,7 @@ public class NewProjectTpanelActivity extends Activity {
      */
 
     public void Butbohaojing(View v) {
-        if (Telephone_display.length() < 15)
+       if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "#");
     }
 
@@ -1931,6 +1621,11 @@ public class NewProjectTpanelActivity extends Activity {
         intent.setClass(this, UnitMonitoringDataActivity.class);
         startActivity(intent);
 
+    }
+
+    public void loginIntoGasSet(View v){
+        intent.setClass(this, GasSet.class);
+        startActivity(intent);
     }
 
 

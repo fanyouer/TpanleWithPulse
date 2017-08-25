@@ -24,6 +24,11 @@ android:theme="@android:style/Theme.NoTitleBar"
     </intent-filter>
 </activity>
 
+<activity android:name=".GasSet"
+    android:theme="@style/dialogstyle"
+    >
+
+</activity>
 
 <activity
 

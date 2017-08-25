@@ -29,6 +29,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="it.ma.tpanel.action.GasSet"
+            android:theme="@style/dialogstyle" >
+        </activity>
+        <activity
             android:name="it.ma.tpanel.action.UnitMonitoringDataActivity"
             android:label="UnitMonitoringData"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >

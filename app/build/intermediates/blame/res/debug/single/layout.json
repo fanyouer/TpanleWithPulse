@@ -88,6 +88,10 @@
         "source": "C:\\Users\\K\\.android\\build-cache\\b3725d0b6f382ff4ef0814c197fcda907e4b674f\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\gas_set.xml",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\layout\\gas_set.xml"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
         "source": "C:\\Users\\K\\.android\\build-cache\\b3725d0b6f382ff4ef0814c197fcda907e4b674f\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
