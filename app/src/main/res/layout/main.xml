@@ -1006,10 +1006,11 @@
 
     <TextView
         android:id="@+id/tv_yangqidisplay"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="0.000Mpa"
         android:textSize="25dp"
+        android:gravity="center_horizontal"
         android:textColor="#ffffff"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -1024,10 +1025,11 @@
 
     <TextView
         android:id="@+id/tv_yasuokongqi"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="0.000Mpa"
         android:textSize="25dp"
+        android:gravity="center_horizontal"
         android:textColor="#FFFFFF"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -1037,15 +1039,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintVertical_bias="0.635" />
 
     <TextView
         android:id="@+id/tv_xiaoqi"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="0.000Mpa"
         android:textSize="25dp"
+        android:gravity="center_horizontal"
         android:textColor="#FFFFFF"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -1055,15 +1058,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintVertical_bias="0.635" />
 
     <TextView
         android:id="@+id/tv_eryanghuatan"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="0.000Mpa"
         android:textSize="25dp"
+        android:gravity="center_horizontal"
         android:textColor="#FFFFFF"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -1073,15 +1077,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintVertical_bias="0.710" />
 
     <TextView
         android:id="@+id/tv_fuyaxiyin"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="0.000Mpa"
         android:textSize="25dp"
+        android:gravity="center_horizontal"
         android:textColor="#FFFFFF"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -1091,10 +1096,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintVertical_bias="0.710" />
 
     <Button
+        android:onClick="light1up"
         android:id="@+id/bt_zhaoming1_up"
         android:layout_width="75dp"
         android:layout_height="35dp"
@@ -1111,9 +1117,10 @@
         android:layout_marginTop="8dp"
         app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintVertical_bias="0.932"
-        android:textColor="@drawable/button_font_style"/>
+        android:textColor="@drawable/button_font_style" />
 
     <Button
+        android:onClick="light1down"
         android:id="@+id/bt_zhaoming1_down"
         android:layout_width="75dp"
         android:layout_height="35dp"
@@ -1133,6 +1140,7 @@
         app:layout_constraintVertical_bias="0.966" />
 
     <Button
+        android:onClick="light2up"
         android:id="@+id/bt_zhaoming2_up"
         android:layout_width="75dp"
         android:layout_height="35dp"
@@ -1152,6 +1160,7 @@
         app:layout_constraintVertical_bias="0.932" />
 
     <Button
+        android:onClick="light2down"
         android:id="@+id/bt_zhaoming2_down"
         android:layout_width="75dp"
         android:layout_height="35dp"

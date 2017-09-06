@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -24,6 +25,8 @@ import android_serialport_api.Modbus_Slav;
 import android_serialport_api.Modbus_Slav1;
 import android_serialport_api.Modbus_Slav2;
 
+import static android.content.ContentValues.TAG;
+
 public class NewProjectTpanelActivity extends Activity {
 
     private boolean wenDuSetStatus=false;//温湿度设置按钮第一次按的时候不会改变值，只会显示设定值
@@ -31,6 +34,30 @@ public class NewProjectTpanelActivity extends Activity {
 
     private short wenDuSetTemp=250;//温度设置缓存，在设置温度时只会改变这个值，跳回温度显示时，这个值会传给setWenDuSet
     private short shiDuSetTemp=500;//湿度设置缓存
+
+    private TextView yangQiValue;
+    private TextView yaSuoKongQiValue;
+    private TextView xiaoQiValue;
+    private TextView erYangHuaTanValue;
+    private TextView fuYaXiYinValue;
+    private boolean blinkTemp[];
+
+    private int yangQiUpTemp;
+    private int yangQiDownTemp;
+    private int yaSuoUpTemp;
+    private int yaSuoDownTemp;
+    private int xiaoQiUpTemp;
+    private int xiaoQiDownTemp;
+    private int erYangUpTemp;
+    private int erYangDownTemp;
+    private int fuYaUpTemp;
+    private int fuYaDownTemp;
+
+    private Button light1up;
+    private Button light1down;
+    private Button light2up;
+    private Button light2down;
+
 
     private Button ButStart_shuoshu;
     private Button ButStop_shuoshu;
@@ -81,10 +108,6 @@ public class NewProjectTpanelActivity extends Activity {
 
     private Button ButLightling_1;
     private Button ButLightling_2;
-    private Button ButZhaoMing1Up;
-    private Button ButZhaoMing1Down;
-    private Button ButZhaoMing2Up;
-    private Button ButZhaoMing2Down;
 
     private Button ButShadowless_Lamp;//无影灯
     private Button ButIntraoperative_Lamp;//术中灯
@@ -141,17 +164,43 @@ public class NewProjectTpanelActivity extends Activity {
     Modbus_Slav2 modbus_save_2 = new Modbus_Slav2();
 
     SharedPreferences sharedPreferences;
+    SharedPreferences sharedGasLimit;
+    Editor gasLimitEditor;
     String data;
 
+    private void beepOn(){
+        if (ButErasure_variabe==1){
+            modbus_save_1.setErasure((short) 1);
+        }
+    }
+    private void beepOff(){
+            modbus_save_1.setErasure((short) 0);
+    }
 
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
+        sharedGasLimit=this.getSharedPreferences("gaslimit",this.MODE_WORLD_READABLE);
+
+        gasLimitEditor = sharedGasLimit.edit();
+        blinkTemp=new boolean[7];
         modbus_salve.start();
         modbus_save_1.start();
         modbus_save_2.start();
+
+        yangQiValue =findViewById(R.id.tv_yangqidisplay);
+        yaSuoKongQiValue=findViewById(R.id.tv_yasuokongqi);
+        xiaoQiValue=findViewById(R.id.tv_xiaoqi);
+        erYangHuaTanValue=findViewById(R.id.tv_eryanghuatan);
+        fuYaXiYinValue=findViewById(R.id.tv_fuyaxiyin);
+
+        light1up=findViewById(R.id.bt_zhaoming1_up);
+        light1down=findViewById(R.id.bt_zhaoming1_down);
+        light2up=findViewById(R.id.bt_zhaoming2_up);
+        light2down=findViewById(R.id.bt_zhaoming2_down);
+
         ButStart_shuoshu = (Button) findViewById(R.id.shuoshu_start_id);
         ButStop_shuoshu = (Button) findViewById(R.id.shuoshu_stop_id);
         ButReset_shuoshu = (Button) findViewById(R.id.shuoshu_reset_id);
@@ -202,48 +251,16 @@ public class NewProjectTpanelActivity extends Activity {
         tv_ShiduDispay = (TextView) findViewById(R.id.tv_shidudisplay_id);
         tv_YaChaDispay = (TextView) findViewById(R.id.tv_yachadisplay_id);
 
-
-        /***
-         * 照明1,2
-         */
-        ButLightling_1 = (Button) findViewById(R.id.zhaoming_1_id);
+        ButLightling_1 = (Button) findViewById(R.id.zhaoming_1_id);//照明1,2
         ButLightling_2 = (Button) findViewById(R.id.zhaoming_2_id);
-        
-        ButZhaoMing1Up=findViewById(R.id.bt_zhaoming1_up);
-        ButZhaoMing1Down=findViewById(R.id.bt_zhaoming1_down);
-        ButZhaoMing2Up=findViewById(R.id.bt_zhaoming2_up);
-        ButZhaoMing2Down=findViewById(R.id.bt_zhaoming2_down);
-
-        /***
-         * 无影灯
-         */
-        ButShadowless_Lamp = (Button) findViewById(R.id.wuyingdeng_id);
-        /***
-         * 术中灯
-         */
-        ButIntraoperative_Lamp = (Button) findViewById(R.id.shuzhongdeng_id);
-        /***
-         * 观片灯
-         */
-        But_OfLightThe_Lamp = (Button) findViewById(R.id.guanpiandeng_id);
-        /***
-         * 备用
-         */
-        ButPrepare = (Button) findViewById(R.id.beiyong_id);
-        /***
-         * 消音
-         */
-        ButErasure = (Button) findViewById(R.id.xiaoyin_id);
-
-        //   Typeface   tf=Typeface.createFromAsset(getAssets(), "fonts/DS-DIGIB.TTF");
-        //        tv_ShouShu.setTypeface(tf);
-        //        tv_BeiJing.setTypeface(tf);
-        //       tv_MaZui.setTypeface(tf);
-
+        ButShadowless_Lamp = (Button) findViewById(R.id.wuyingdeng_id);//无影灯
+        ButIntraoperative_Lamp = (Button) findViewById(R.id.shuzhongdeng_id);//术中灯
+        But_OfLightThe_Lamp = (Button) findViewById(R.id.guanpiandeng_id);//观片灯
+        ButPrepare = (Button) findViewById(R.id.beiyong_id);//备用
+        ButErasure = (Button) findViewById(R.id.xiaoyin_id);//消音
 
 
         ButStart_shuoshu.setOnTouchListener(new OnTouchListener() {
-
 
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -255,8 +272,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButStop_shuoshu.setOnTouchListener(new OnTouchListener() {
 
 
@@ -270,8 +285,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButReset_shuoshu.setOnTouchListener(new OnTouchListener() {
 
 
@@ -286,8 +299,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButStart_mazui.setOnTouchListener(new OnTouchListener() {
 
 
@@ -302,8 +313,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButStop_mazui.setOnTouchListener(new OnTouchListener() {
 
 
@@ -318,8 +327,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButReset_mazui.setOnTouchListener(new OnTouchListener() {
 
             public boolean onTouch(View v, MotionEvent event) {
@@ -332,9 +339,7 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
         ButDown_wendu.setOnTouchListener(new OnTouchListener() {
-
 
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -347,8 +352,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButUp_wendu.setOnTouchListener(new OnTouchListener() {
 
 
@@ -363,8 +366,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButDown_shidu.setOnTouchListener(new OnTouchListener() {
 
 
@@ -375,12 +376,9 @@ public class NewProjectTpanelActivity extends Activity {
                     v.setBackgroundResource(R.drawable.up_dijian);
                 }
 
-
                 return false;
             }
         });
-
-
         ButUp_shidu.setOnTouchListener(new OnTouchListener() {
 
 
@@ -395,8 +393,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButDown_Yacha.setOnTouchListener(new OnTouchListener() {
 
 
@@ -411,8 +407,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButUp_yacha.setOnTouchListener(new OnTouchListener() {
 
 
@@ -427,7 +421,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
         ButJizu_start_stop.setOnTouchListener(new OnTouchListener() {
 
 
@@ -442,7 +435,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
         ButZhiban_start_stop.setOnTouchListener(new OnTouchListener() {
 
 
@@ -456,8 +448,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButFuya_start_stop.setOnTouchListener(new OnTouchListener() {
 
 
@@ -471,8 +461,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_1.setOnTouchListener(new OnTouchListener() {
 
 
@@ -487,8 +475,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_2.setOnTouchListener(new OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -501,8 +487,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_3.setOnTouchListener(new OnTouchListener() {
 
 
@@ -517,8 +501,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_4.setOnTouchListener(new OnTouchListener() {
 
 
@@ -533,8 +515,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_5.setOnTouchListener(new OnTouchListener() {
 
 
@@ -549,8 +529,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_6.setOnTouchListener(new OnTouchListener() {
 
             public boolean onTouch(View v, MotionEvent event) {
@@ -564,8 +542,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_7.setOnTouchListener(new OnTouchListener() {
 
 
@@ -580,8 +556,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_8.setOnTouchListener(new OnTouchListener() {
 
 
@@ -596,8 +570,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_9.setOnTouchListener(new OnTouchListener() {
 
 
@@ -612,8 +584,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_xinghao.setOnTouchListener(new OnTouchListener() {
 
 
@@ -628,8 +598,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_jinghao.setOnTouchListener(new OnTouchListener() {
 
 
@@ -644,8 +612,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButBoHao_0.setOnTouchListener(new OnTouchListener() {
 
             public boolean onTouch(View v, MotionEvent event) {
@@ -659,8 +625,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButMianTi.setOnTouchListener(new OnTouchListener() {
 
 
@@ -675,8 +639,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButDuiJiang.setOnTouchListener(new OnTouchListener() {
 
 
@@ -694,8 +656,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButMusic_start_stop.setOnTouchListener(new OnTouchListener() {
 
 
@@ -711,8 +671,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
-
         ButMusic_dizeng.setOnTouchListener(new OnTouchListener() {
 
 
@@ -726,7 +684,6 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
         ButMusic_dijian.setOnTouchListener(new OnTouchListener() {
 
 
@@ -740,6 +697,7 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
+
         df = new SimpleDateFormat("HH:mm:ss");
         df_data = new SimpleDateFormat("yyyy年MM月dd日     EE");
         timer1.schedule(task1, 1000, 1000);
@@ -759,6 +717,7 @@ public class NewProjectTpanelActivity extends Activity {
 
                     //机组起停，值班起停，负压起停的脉冲模式
                     //按下相应按键，跳变到高电平，持续7s，跳变回低电平
+                    /*
                     if (modbus_salve.getJiZuStartStop() == 1) {
                         jiZuQiTingCount++;
                     }
@@ -782,6 +741,7 @@ public class NewProjectTpanelActivity extends Activity {
                         fuYaQiTingCount = 0;
                         modbus_salve.setFuYaStartStop((short) 0);
                     }
+                    */
 
 
                     beijing = df.format(new Date());
@@ -834,8 +794,7 @@ public class NewProjectTpanelActivity extends Activity {
             });
 
         }
-    };
-
+    };//北京时间计时器,机组启停按键所在任务
 
     TimerTask task4 = new TimerTask() {
 
@@ -862,27 +821,197 @@ public class NewProjectTpanelActivity extends Activity {
                             break;
                     }
 
+             //此处处理气体报警
 
-             /*  modbus_save_1.setLightling_1(modbus_save_2.getLightling_1());
-               modbus_save_1.setLightling_2(modbus_save_2.getLightling_2());
-    	       modbus_save_1.setShadowless_Lamp(modbus_save_2.getShadowless_Lamp());
-    	       modbus_save_1.setIntraoperative_Lamp(modbus_save_2.getIntraoperative_Lamp());
-    	       modbus_save_1.setOfLightThe_Lamp(modbus_save_2.getOfLightThe_Lamp());
-    	       modbus_save_1.setPrepare(modbus_save_2.getPrepare());
-    	       modbus_save_1.setErasure(modbus_save_2.getErasure());
-    	       modbus_save_1.setBackMusic(modbus_save_2.getBackMusic());
+                    yangQiUpTemp = (int)(Float.parseFloat(sharedGasLimit.getString("氧气上限","0"))*1000);
+                    yangQiDownTemp = (int)(Float.parseFloat(sharedGasLimit.getString("氧气下限","0"))*1000);
+                    yaSuoUpTemp = (int)(Float.parseFloat(sharedGasLimit.getString("压缩空气上限","0"))*1000);
+                    yaSuoDownTemp = (int)(Float.parseFloat(sharedGasLimit.getString("压缩空气下限","0"))*1000);
+                    xiaoQiUpTemp = (int)(Float.parseFloat(sharedGasLimit.getString("笑气上限","0"))*1000);
+                    xiaoQiDownTemp = (int)(Float.parseFloat(sharedGasLimit.getString("笑气下限","0"))*1000);
+                    erYangUpTemp = (int)(Float.parseFloat(sharedGasLimit.getString("二氧化碳上限","0"))*1000);
+                    erYangDownTemp = (int)(Float.parseFloat(sharedGasLimit.getString("二氧化碳下限","0"))*1000);
+                    fuYaUpTemp = (int)(Float.parseFloat(sharedGasLimit.getString("负压吸引上限","0"))*1000);
+                    fuYaDownTemp = (int)(Float.parseFloat(sharedGasLimit.getString("负压吸引下限","0"))*1000);
 
-    	       */
+                    if (modbus_save_1.getOxygen_IS_Normal()==0){
+                        yangQiValue.setText("无数据");
+                        yangQiValue.setTextColor(Color.RED);
+                    }else{
+                        if (modbus_save_1.getOxygen_IS_Normal()>yangQiUpTemp){
+                            if (blinkTemp[0]){
+                                blinkTemp[0]=false;
+                                yangQiValue.setText("0."+modbus_save_1.getOxygen_IS_Normal()+"Mpa");
+                                yangQiValue.setTextColor(Color.RED);
+                            }
+                            else{
+                                blinkTemp[0]=true;
+                                yangQiValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getOxygen_IS_Normal()<yangQiDownTemp){
+                            if (blinkTemp[0]){
+                                blinkTemp[0]=false;
+                                yangQiValue.setText("0."+modbus_save_1.getOxygen_IS_Normal()+"Mpa");
+                                yangQiValue.setTextColor(0x76960000);
+                            }
+                            else{
+                                blinkTemp[0]=true;
+                                yangQiValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getOxygen_IS_Normal()>yangQiDownTemp&&modbus_save_1.getOxygen_IS_Normal()<yangQiUpTemp){
+                            yangQiValue.setText("0."+modbus_save_1.getOxygen_IS_Normal()+"Mpa");
+                            yangQiValue.setTextColor(Color.GREEN);
+                            beepOff();
+                        }
+                    }
 
-                    //此处处理气体报警
+                    if (modbus_save_1.getPressAirGas_IS_Normal()==0){
+                        yaSuoKongQiValue.setText("无数据");
+                        yaSuoKongQiValue.setTextColor(Color.RED);
+                    }else{
+                        if (modbus_save_1.getPressAirGas_IS_Normal()>yaSuoUpTemp){
+                            if (blinkTemp[1]){
+                                blinkTemp[1]=false;
+                                yaSuoKongQiValue.setText("0."+modbus_save_1.getPressAirGas_IS_Normal()+"Mpa");
+                                yaSuoKongQiValue.setTextColor(Color.RED);
+                            }
+                            else{
+                                blinkTemp[1]=true;
+                                yaSuoKongQiValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getPressAirGas_IS_Normal()<yaSuoDownTemp){
+                            if (blinkTemp[1]){
+                                blinkTemp[1]=false;
+                                yaSuoKongQiValue.setText("0."+modbus_save_1.getPressAirGas_IS_Normal()+"Mpa");
+                                yaSuoKongQiValue.setTextColor(0x76960000);
+                            }
+                            else{
+                                blinkTemp[1]=true;
+                                yaSuoKongQiValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getPressAirGas_IS_Normal()>yaSuoDownTemp&&modbus_save_1.getPressAirGas_IS_Normal()<yaSuoUpTemp){
+                            yaSuoKongQiValue.setText("0."+modbus_save_1.getPressAirGas_IS_Normal()+"Mpa");
+                            yaSuoKongQiValue.setTextColor(Color.GREEN);
+                            beepOff();
+                        }
+                    }
 
+                    if (modbus_save_1.getLaughingGas_IS_Normal()==0){
+                        xiaoQiValue.setText("无数据");
+                        xiaoQiValue.setTextColor(Color.RED);
+                    }else {
+                        if (modbus_save_1.getLaughingGas_IS_Normal()>xiaoQiUpTemp){
+                            if (blinkTemp[2]){
+                                blinkTemp[2]=false;
+                                xiaoQiValue.setText("0."+modbus_save_1.getLaughingGas_IS_Normal()+"Mpa");
+                                xiaoQiValue.setTextColor(Color.RED);
+                            }
+                            else{
+                                blinkTemp[2]=true;
+                                xiaoQiValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getLaughingGas_IS_Normal()<xiaoQiDownTemp){
+                            if (blinkTemp[2]){
+                                blinkTemp[2]=false;
+                                xiaoQiValue.setText("0."+modbus_save_1.getLaughingGas_IS_Normal()+"Mpa");
+                                xiaoQiValue.setTextColor(0x76960000);
+                            }
+                            else{
+                                blinkTemp[2]=true;
+                                xiaoQiValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getLaughingGas_IS_Normal()>xiaoQiDownTemp&&modbus_save_1.getLaughingGas_IS_Normal()<xiaoQiUpTemp){
+                            xiaoQiValue.setText("0."+modbus_save_1.getLaughingGas_IS_Normal()+"Mpa");
+                            xiaoQiValue.setTextColor(Color.GREEN);
+                            beepOff();
+                        }
+                    }
 
+                    if (modbus_save_1.getCarbon_IS_Normal()==0){
+                        erYangHuaTanValue.setText("无数据");
+                        erYangHuaTanValue.setTextColor(Color.RED);
+                    }else {
+                        if (modbus_save_1.getCarbon_IS_Normal()>erYangUpTemp){
+                            if (blinkTemp[3]){
+                                blinkTemp[3]=false;
+                                erYangHuaTanValue.setText("0."+modbus_save_1.getCarbon_IS_Normal()+"Mpa");
+                                erYangHuaTanValue.setTextColor(Color.RED);
+                            }
+                            else{
+                                blinkTemp[3]=true;
+                                erYangHuaTanValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getCarbon_IS_Normal()<erYangDownTemp){
+                            if (blinkTemp[3]){
+                                blinkTemp[3]=false;
+                                erYangHuaTanValue.setText("0."+modbus_save_1.getCarbon_IS_Normal()+"Mpa");
+                                erYangHuaTanValue.setTextColor(0x76960000);
+                            }
+                            else{
+                                blinkTemp[3]=true;
+                                erYangHuaTanValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getCarbon_IS_Normal()>erYangDownTemp&&modbus_save_1.getCarbon_IS_Normal()<erYangUpTemp){
+                            erYangHuaTanValue.setText("0."+modbus_save_1.getCarbon_IS_Normal()+"Mpa");
+                            erYangHuaTanValue.setTextColor(Color.GREEN);
+                            beepOff();
+                        }
+                    }
+
+                    if (modbus_save_1.getNegativePressure_IS_Normal()==0){
+                        fuYaXiYinValue.setText("无数据");
+                        fuYaXiYinValue.setTextColor(Color.RED);
+                    }else{
+                        if (modbus_save_1.getNegativePressure_IS_Normal()<fuYaUpTemp){
+                            if (blinkTemp[4]){
+                                blinkTemp[4]=false;
+                                fuYaXiYinValue.setText("-0."+modbus_save_1.getNegativePressure_IS_Normal()+"Mpa");
+                                fuYaXiYinValue.setTextColor(Color.RED);
+                            }
+                            else{
+                                blinkTemp[4]=true;
+                                fuYaXiYinValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getNegativePressure_IS_Normal()>fuYaDownTemp){
+                            if (blinkTemp[4]){
+                                blinkTemp[4]=false;
+                                fuYaXiYinValue.setText("-0.0"+modbus_save_1.getNegativePressure_IS_Normal()+"Mpa");
+                                fuYaXiYinValue.setTextColor(0x76960000);
+                            }
+                            else{
+                                blinkTemp[4]=true;
+                                fuYaXiYinValue.setText("");
+                                beepOn();
+                            }
+                        }
+                        if (modbus_save_1.getNegativePressure_IS_Normal()<fuYaDownTemp&&modbus_save_1.getNegativePressure_IS_Normal()>fuYaUpTemp){
+                            fuYaXiYinValue.setText("-0.0"+modbus_save_1.getNegativePressure_IS_Normal()+"Mpa");
+                            fuYaXiYinValue.setTextColor(Color.GREEN);
+                            beepOff();
+                        }
+                    }
                 }
-
             });
-
         }
-    };
+    };//气体报警处理
 
 
     TimerTask task_jiZuframes = new TimerTask() {
@@ -1104,46 +1233,32 @@ public class NewProjectTpanelActivity extends Activity {
             });
 
         }
-    };
+    };//温湿度设置显示,机组状态获取
 
     public void ButStart_shuoshu(View v) {
         shoushu_temp = 1;
-    }
-
+    }//手术开始
     public void ButStop_shuoshu(View v) {
         shoushu_temp = 0;
-    }
-
+    }//手术停止
     public void ButReset_shuoshu(View v) {
         shoushu_temp = 0;
         shoushu_sec = 0;
         shoushu_minue = 0;
         shoushu_hour = 0;
-    }
-
-
+    }//手术复位
     public void ButStart_mazui(View v) {
         mazui_temp = 1;
-    }
-
+    }//麻醉开始
     public void ButStop_mazui(View v) {
         mazui_temp = 0;
-    }
-
-
+    }//麻醉停止
     public void ButReset_mazui(View v) {
         mazui_temp = 0;
         mazui_sec = 0;
         mazui_minue = 0;
         mazui_hour = 0;
-    }
-
-
-    /***
-     * 温度递减调节
-     * @param v
-     */
-
+    }//麻醉复位
     public void Butwendu_down(View v) {
         if(wenDuSetStatus){
             /*
@@ -1157,12 +1272,7 @@ public class NewProjectTpanelActivity extends Activity {
         }
         wendu_DisplaySet_Change = 0;
         wenDuSetStatus=true;
-    }
-
-    /***
-     * 温度递增调节
-     * @param v
-     */
+    }//温度递减调节
     public void Butwendu_up(View v) {
 
         /*if(setWenDu<500)
@@ -1180,13 +1290,7 @@ public class NewProjectTpanelActivity extends Activity {
         }
         wendu_DisplaySet_Change = 0;
         wenDuSetStatus=true;
-    }
-
-    /***
-     * 湿度递减调节
-     * @param v
-     */
-
+    }//温度递增调节
     public void Butshidu_down(View v) {
         /*
         if(	setShiDu>10)
@@ -1205,12 +1309,7 @@ public class NewProjectTpanelActivity extends Activity {
         shidu_DisplaySet_Change = 0;
         shiDuSetStatus=true;
         // modbus_salve.setShiDuSet(setShiDu);
-    }
-
-    /***
-     * 湿度递增调节
-     * @param v
-     */
+    }//湿度递减调节
     public void Butshidu_up(View v) {
         /*
         if(  setShiDu<990)
@@ -1229,23 +1328,13 @@ public class NewProjectTpanelActivity extends Activity {
         shidu_DisplaySet_Change = 0;
         shiDuSetStatus=true;
         // modbus_salve.setShiDuSet(setShiDu);
-    }
-
-    /***
-     * 压差递减调节
-     * @param v
-     */
+    }//湿度递增调节
     public void Butyacha_down(View v) {
         if (setYaCha > 10)
             setYaCha -= 10;
         yacha_DisplaySet_Change = 0;
         modbus_salve.setYaChaSet(setYaCha);
-    }
-
-    /***
-     * 压差递减调节
-     * @param v
-     */
+    }//压差递减调节
     public void Butyacha_up(View v) {
         if (setYaCha < 990)
             setYaCha += 10;
@@ -1253,14 +1342,9 @@ public class NewProjectTpanelActivity extends Activity {
 
         modbus_salve.setYaChaSet(setYaCha);
 
-    }
-
-    /***
-     * 机组起停
-     * @param v
-     */
+    }//压差递减调节
     public void Butjizustart_stop(View v) {
-        /*  常规按键翻转
+        // 常规按键翻转
         if(modbus_salve.getJiZuStartStop()==1)
         {
             modbus_salve.setJiZuStartStop((short)0);
@@ -1270,19 +1354,14 @@ public class NewProjectTpanelActivity extends Activity {
         {
             modbus_salve.setJiZuStartStop((short)1);
         }
-        */
+
 
         //脉冲模式
-        modbus_salve.setJiZuStartStop((short) 1);
+      //  modbus_salve.setJiZuStartStop((short) 1);
 
-    }
-
-    /***
-     * 值班起停
-     * @param v
-     */
+    }//机组启停
     public void zhibanstart_stop(View v) {
-        /*
+
         if(modbus_salve.getZhiBanStartStop()==1)
         {
             modbus_salve.setZhiBanStartStop((short)0);
@@ -1291,17 +1370,11 @@ public class NewProjectTpanelActivity extends Activity {
         {
             modbus_salve.setZhiBanStartStop((short)1);
         }
-        */
-        modbus_salve.setZhiBanStartStop((short) 1);
-    }
 
-    /***
-     * 负压起停
-     * @param v
-     */
-
+        //modbus_salve.setZhiBanStartStop((short) 1);
+    }//值班起停
     public void fuyastart_stop(View v) {
-        /*
+
         if( modbus_salve.getFuYaStartStop()==1)
         {
             modbus_salve.setFuYaStartStop((short)0);
@@ -1310,176 +1383,85 @@ public class NewProjectTpanelActivity extends Activity {
         {
             modbus_salve.setFuYaStartStop((short)1);
         }
-        */
-        modbus_salve.setFuYaStartStop((short) 1);
-    }
 
-    /***
-     * 拨号1
-     * @param v
-     */
+        //modbus_salve.setFuYaStartStop((short) 1);
+    }//负压起停
     public void Butbohao_1(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "1");
-    }
-
-    /***
-     * 拨号2
-     * @param v
-     */
+    }//拨号1
     public void Butbohao_2(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "2");
-    }
-
-    /***
-     * 拨号3
-     * @param v
-     */
+    }//拨号2
     public void Butbohao_3(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "3");
-    }
-
-    /***
-     * 拨号4
-     * @param v
-     */
+    }//拨号3
     public void Butbohao_4(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "4");
-    }
-
-    /***
-     * 拨号5
-     * @param v
-     */
+    }//拨号4
     public void Butbohao_5(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "5");
-    }
-
-
-    /***
-     * 拨号6
-     * @param v
-     */
+    }//拨号5
     public void Butbohao_6(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "6");
-    }
-
-    /***
-     * 拨号7
-     * @param v
-     */
-
+    }//拨号6
     public void Butbohao_7(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "7");
-    }
-
-
-    /***
-     * 拨号8
-     * @param v
-     */
-
+    }//拨号7
     public void Butbohao_8(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "8");
-    }
-
-
-    /***
-     * 拨号9
-     * @param v
-     */
+    }//拨号8
     public void Butbohao_9(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "9");
-    }
-
-
-    /***
-     * 拨号*
-     * @param v
-     */
-
+    }//拨号9
     public void Butbohaoxing(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "*");
-    }
-
-    /***
-     * 拨号0
-     * @param v
-     */
-
+    }//拨号*
     public void Butbohao_0(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "0");
-    }
-
-    /***
-     * 拨号#
-     * @param v
-     */
-
+    }//拨号0
     public void Butbohaojing(View v) {
        if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "#");
-    }
-
-    /***
-     * 拨号免提
-     * @param v
-     */
-
+    }//拨号#
     public void Butbohao(View v) {
         Telephone_display.setText("");
-    }
-
-    /***
-     * 拨号对讲
-     * @param v
-     */
-
+    }//拨号免提
     public void Butduijiang(View v) {
 
-    }
-
-    /***
-     * 对讲音乐
-     * @param v
-     */
-
+    }//拨号对讲
     public void Butbeijingyinyue(View v) {
+        /*
         if (modbus_save_1.getBackMusic() == 0) {
             modbus_save_1.setBackMusic((short) 1);
         } else {
             modbus_save_1.setBackMusic((short) 0);
         }
-    }
+        */
+        if (modbus_save_1.getBackMusic_upDown()!=0){
+            modbus_save_1.setBackMusic_upDown((short) 0);
+        }else {
+            modbus_save_1.setBackMusic_upDown((short) 8);
+        }
 
-    /***
-     * 音乐+
-     * @param v
-     */
-
+    }//背景音乐
     public void Butyinyuezen(View v) {
         music_UpDown++;
-        if (music_UpDown > 7) {
-            music_UpDown = 7;
+        if (music_UpDown > 8) {
+            music_UpDown = 8;
         }
         modbus_save_1.setBackMusic_upDown(music_UpDown);
-    }
-
-    /***
-     * 音乐
-     * @param v
-     */
-
+    }//音量+
     public void Butyinyuejian(View v) {
         music_UpDown--;
         if (music_UpDown < 0) {
@@ -1487,34 +1469,25 @@ public class NewProjectTpanelActivity extends Activity {
         }
 
         modbus_save_1.setBackMusic_upDown(music_UpDown);
-    }
-
-    /***
-     * 照明1
-     * @param v
-     */
-
+    }//音量-
     public void Butzhaoming_1(View v) {
         if (ButLightling_1_variabe == 1) {
             modbus_save_1.setLightling_1((short) 0);
+            modbus_save_1.setDimmer1((short) 0);
             ButLightling_1_variabe = 0;
             ButLightling_1.setBackgroundResource(R.drawable.led_off);
         } else {
             ButLightling_1_variabe = 1;
             ButLightling_1.setBackgroundResource(R.drawable.led_on);
             modbus_save_1.setLightling_1((short) 1);
+            modbus_save_1.setDimmer1((short) 10);
         }
-    }
-
-    /***
-     * 照明2
-     * @param v
-     */
-
+    }//照明1
     public void Butzhaoming_2(View v) {
 
         if (ButLightling_2_variabe == 1) {
             modbus_save_1.setLightling_2((short) 0);
+            modbus_save_1.setDimmer2((short) 0);
             ButLightling_2_variabe = 0;
             ButLightling_2.setBackgroundResource(R.drawable.led_off);
 
@@ -1522,15 +1495,10 @@ public class NewProjectTpanelActivity extends Activity {
             ButLightling_2_variabe = 1;
             ButLightling_2.setBackgroundResource(R.drawable.led_on);
             modbus_save_1.setLightling_2((short) 1);
+            modbus_save_1.setDimmer2((short) 10);
         }
 
-    }
-
-    /***
-     * 无影灯
-     * @param v
-     */
-
+    }//照明2
     public void Butwuyingdeng(View v) {
         if (ButShadowless_Lamp_variabe == 1)//无影灯
         {
@@ -1543,13 +1511,7 @@ public class NewProjectTpanelActivity extends Activity {
             modbus_save_1.setShadowless_Lamp((short) 1);
         }
 
-    }
-
-    /***
-     * 术中灯
-     * @param v
-     */
-
+    }//无影灯
     public void Butshuzhongdeng(View v) {
         if (ButIntraoperative_Lamp_variabe == 1)//术中灯
         {
@@ -1561,13 +1523,7 @@ public class NewProjectTpanelActivity extends Activity {
             ButIntraoperative_Lamp.setBackgroundResource(R.drawable.led_on);
             modbus_save_1.setIntraoperative_Lamp((short) 1);
         }
-    }
-
-    /***
-     * 观片灯
-     * @param v
-     */
-
+    }//术中灯
     public void Butguanpiandeng(View v) {
         if (But_OfLightThe_Lamp_variabe == 1) {
             modbus_save_1.setOfLightThe_Lamp((short) 0);
@@ -1578,14 +1534,7 @@ public class NewProjectTpanelActivity extends Activity {
             But_OfLightThe_Lamp.setBackgroundResource(R.drawable.led_on);
             modbus_save_1.setOfLightThe_Lamp((short) 1);
         }
-    }
-
-
-    /***
-     * 备用
-     * @param v
-     */
-
+    }//观片灯
     public void Butbeiyong(View v) {
         if (ButPrepare_variabe == 1) {
             modbus_save_1.setPrepare((short) 0);
@@ -1597,13 +1546,7 @@ public class NewProjectTpanelActivity extends Activity {
             ButPrepare.setBackgroundResource(R.drawable.led_on);
             modbus_save_1.setPrepare((short) 1);
         }
-    }
-
-    /***
-     * 消音
-     * @param v
-     */
-
+    }//备用
     public void Butxiaoyin(View v) {
         if (ButErasure_variabe == 1) {
             modbus_save_1.setErasure((short) 0);
@@ -1612,21 +1555,53 @@ public class NewProjectTpanelActivity extends Activity {
         } else {
             ButErasure_variabe = 1;
             ButErasure.setBackgroundResource(R.drawable.jingyin);
-            modbus_save_1.setErasure((short) 1);
+           // modbus_save_1.setErasure((short) 1);
         }
-    }
-
+    }//消音
     public void loginInto(View v) {
 
         intent.setClass(this, UnitMonitoringDataActivity.class);
         startActivity(intent);
 
-    }
-
+    }//进入监控界面
     public void loginIntoGasSet(View v){
         intent.setClass(this, GasSet.class);
         startActivity(intent);
-    }
+    }//进入气体上下限设置界面
+    public void light1up(View v){
+        if (modbus_save_1.getDimmer1()<10){
+            modbus_save_1.setDimmer1((short) (modbus_save_1.getDimmer1()+1));
+        }
 
+    }//照明1亮度+
+    public void light1down(View v){
+        if (modbus_save_1.getDimmer1()>0){
+            modbus_save_1.setDimmer1((short) (modbus_save_1.getDimmer1()-1));
+        }
 
+        /*
+        if (modbus_save_1.getDimmer1()==0){
+            light1down.setTextColor(Color.GRAY);
+        }else {
+            light1down.setTextColor(Color.WHITE);
+        }
+
+        if (modbus_save_1.getDimmer1()==10){
+            light1up.setTextColor(Color.GRAY);
+        }else{
+            light1up.setTextColor(Color.WHITE);
+        }
+        */
+    }//照明1亮度-
+    public void light2up(View v){
+        if (modbus_save_1.getDimmer2()<10){
+            modbus_save_1.setDimmer2((short) (modbus_save_1.getDimmer2()+1));
+        }
+
+    }//照明2亮度+
+    public void light2down(View v){
+        if (modbus_save_1.getDimmer2()>0){
+            modbus_save_1.setDimmer2((short) (modbus_save_1.getDimmer2()-1));
+        }
+    }//照明1亮度-
 }

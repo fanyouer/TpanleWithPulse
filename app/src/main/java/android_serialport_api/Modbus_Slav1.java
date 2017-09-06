@@ -1,5 +1,7 @@
 package android_serialport_api;
 
+import android.util.Log;
+
 import it.ma.crc.CRC_16;
 
 import java.io.File;
@@ -7,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.InvalidParameterException;
+import java.util.Arrays;
 
 public class Modbus_Slav1 extends Thread {
 
@@ -74,9 +77,16 @@ public class Modbus_Slav1 extends Thread {
      */
     private short Prepare = 1;
     /***
-     * 消音
+     * 蜂鸣器
      */
-    private short Erasure = 1;
+    private short Beep = 0;
+
+    /*
+    * 调光挡位
+    * */
+    private short dimmer1=10;
+    private short dimmer2=10;
+
 
     int[] regHodingBuf = new int[1024];
 
@@ -154,7 +164,7 @@ public class Modbus_Slav1 extends Thread {
         if (mserialPort == null) {
 
             String path = "/dev/ttyS3";
-            int baudrate = 9600;
+            int baudrate = 19200;
             if ((path.length() == 0) || (baudrate == -1)) {
                 throw new InvalidParameterException();
             }
@@ -234,40 +244,40 @@ public class Modbus_Slav1 extends Thread {
          */
         Oxygen_IS_Normal = (short) (regHodingBuf[6]);
 
+
+        /***
+         * 压缩空气
+         */
+        PressAirGas_IS_Normal = (short) (regHodingBuf[7]);
+
+
         /***
          * 笑气
          */
-        LaughingGas_IS_Normal = (short) (regHodingBuf[7]);
+        LaughingGas_IS_Normal = (short) (regHodingBuf[8]);
 
 
         /***
-         * 氩气
+         * 二氧化碳
          */
-        ArgonGas_IS_Normal = (short) (regHodingBuf[8]);
-
-
-        /***
-         * 氮气
-         */
-        NitrogenGas_IS_Normal = (short) (regHodingBuf[9]);
+        Carbon_IS_Normal = (short) (regHodingBuf[9]);
 
 
         /***
          * 负压
          */
 
-        NegativePressure_IS_Normal = (short) (regHodingBuf[10]);
+        NegativePressure_IS_Normal = (short) (regHodingBuf[10]/10);
+        /***
+         * 氩气
+         */
+        ArgonGas_IS_Normal = (short) (regHodingBuf[11]);
+
 
         /***
-         * 压缩空气
+         * 氮气
          */
-        PressAirGas_IS_Normal = (short) (regHodingBuf[11]);
-
-
-        /***
-         * 二氧化碳
-         */
-        Carbon_IS_Normal = (short) (regHodingBuf[12]);
+        NitrogenGas_IS_Normal = (short) (regHodingBuf[12]);
 
 
     }
@@ -300,18 +310,35 @@ public class Modbus_Slav1 extends Thread {
         }
 
         onDataSend(seBuf, 4 + 2 * len + 1);
+      //  Log.d("rebuf", "run: "+Arrays.toString(reBuf));
+      //  Log.d("onDataSend", "mod_Fun_03_Slav: "+ Arrays.toString(seBuf));
     }
 
 
     private void slav_int_03() {
 
-        regHodingBuf[0] = backMusic;
+        //regHodingBuf[0] = backMusic;
         regHodingBuf[1] = BackMusic_upDown;
-        regHodingBuf[2] = (Prepare << 0) | (Intraoperative_Lamp << 1) | (Lightling_2 << 2) | (OfLightThe_Lamp << 3) | (Shadowless_Lamp << 4) | (Lightling_1 << 5) | (Erasure << 6);
-
-
+        regHodingBuf[2] = (Prepare << 0) | (Intraoperative_Lamp << 1) | (Lightling_2 << 2) | (OfLightThe_Lamp << 3) | (Shadowless_Lamp << 4) | (Lightling_1 << 5) | (Beep << 6);
+        regHodingBuf[3] = dimmer1;
+        regHodingBuf[4] = dimmer2;
     }
 
+    public short getDimmer1(){
+        return dimmer1;
+    }
+
+    public void setDimmer1(short dimmer){
+        this.dimmer1=dimmer;
+    }
+
+    public short getDimmer2(){
+        return dimmer2;
+    }
+
+    public void setDimmer2(short dimmer){
+        this.dimmer2=dimmer;
+    }
 
     public short getBackMusic() {
         return backMusic;
@@ -464,12 +491,12 @@ public class Modbus_Slav1 extends Thread {
 
 
     public short getErasure() {
-        return Erasure;
+        return Beep;
     }
 
 
     public void setErasure(short erasure) {
-        Erasure = erasure;
+        Beep = erasure;
     }
 
 
