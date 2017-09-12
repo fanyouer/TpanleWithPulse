@@ -854,7 +854,7 @@ public class NewProjectTpanelActivity extends Activity {
                             if (blinkTemp[0]){
                                 blinkTemp[0]=false;
                                 yangQiValue.setText("0."+modbus_save_1.getOxygen_IS_Normal()+"Mpa");
-                                yangQiValue.setTextColor(0x76960000);
+                                yangQiValue.setTextColor(0x76960000);//紫色
                             }
                             else{
                                 blinkTemp[0]=true;
@@ -1198,8 +1198,8 @@ public class NewProjectTpanelActivity extends Activity {
                     editor.putInt("上位机风机状态监控点", modbus_salve.getUpperComputerFengjiZHuangTaiMonitoringPoint());
                     editor.putInt("上位机盘管低温监控点", modbus_salve.getUpperComputerZhongXiaoMonitoringPoint());
                     editor.putInt("上位机高效报警监控点", modbus_salve.getUpperComputerGaoXiaoMonitoringPoint());
-                    editor.putInt("上位机中效报警监控点", modbus_salve.getUpperComputerChuXiaoMonitoringPoint());
-
+                    editor.putInt("上位机中效报警监控点", modbus_salve.getUpperComputerZhongXiaoMonitoringPoint());
+                    editor.putInt("上位机初效报警监控点", modbus_salve.getUpperComputerChuXiaoMonitoringPoint());
 
                     editor.putInt("上位机电加热1监控点", modbus_salve.getUpperComputerElectricWarmOneMonitoringPoint());
                     editor.putInt("上位机电加热2监控点", modbus_salve.getUpperComputerElectricWarmTwoMonitoringPoint());
@@ -1453,6 +1453,7 @@ public class NewProjectTpanelActivity extends Activity {
         }else {
             modbus_save_1.setBackMusic_upDown((short) 8);
         }
+
 
     }//背景音乐
     public void Butyinyuezen(View v) {

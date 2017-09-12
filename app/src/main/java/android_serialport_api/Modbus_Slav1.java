@@ -11,6 +11,8 @@ import java.io.OutputStream;
 import java.security.InvalidParameterException;
 import java.util.Arrays;
 
+import static android.content.ContentValues.TAG;
+
 public class Modbus_Slav1 extends Thread {
 
     private short backMusic;
@@ -322,6 +324,8 @@ public class Modbus_Slav1 extends Thread {
         regHodingBuf[2] = (Prepare << 0) | (Intraoperative_Lamp << 1) | (Lightling_2 << 2) | (OfLightThe_Lamp << 3) | (Shadowless_Lamp << 4) | (Lightling_1 << 5) | (Beep << 6);
         regHodingBuf[3] = dimmer1;
         regHodingBuf[4] = dimmer2;
+        Log.d("regHodingBuf[1]", "slav_int_03: "+regHodingBuf[1]);
+        Log.d("regHodingBuf[2]", "slav_int_03: "+regHodingBuf[2]);
     }
 
     public short getDimmer1(){

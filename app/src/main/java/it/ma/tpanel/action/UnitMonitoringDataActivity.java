@@ -117,9 +117,9 @@ public class UnitMonitoringDataActivity extends Activity {
                     short UpperComputerHeartBeatMonitoringPoint = (short) sharedPreferences.getInt("上位机心跳监控点", 0);
                     short UpperComputerHandAutomaticallyMonitoringPoint = (short) sharedPreferences.getInt("上位机手自动监控点", 0);
                     short UpperComputerFengjiZHuangTaiMonitoringPoint = (short) sharedPreferences.getInt("上位机风机状态监控点", 0);
-                    short upperComputerZhongXiaoMonitoringPoint = (short) sharedPreferences.getInt("上位机盘管低温监控点", 0);
+                    short upperComputerZhongXiaoMonitoringPoint = (short) sharedPreferences.getInt("上位机中效报警监控点", 0);
                     short UpperComputerGaoXiaoMonitoringPoint = (short) sharedPreferences.getInt("上位机高效报警监控点", 0);
-                    short UpperComputerChuXiaoMonitoringPoint = (short) sharedPreferences.getInt("上位机中效报警监控点", 0);
+                    short UpperComputerChuXiaoMonitoringPoint = (short) sharedPreferences.getInt("上位机初效报警监控点", 0);
                     short UpperComputerElectricWarmOneMonitoringPoint = (short) sharedPreferences.getInt("上位机电加热1监控点", 0);
                     short UpperComputerElectricWarmTwoMonitoringPoint = (short) sharedPreferences.getInt("上位机电加热2监控点", 0);
                     short UpperComputerElectricWarmThreeMonitoringPoint = (short) sharedPreferences.getInt("上位机电加热3监控点", 0);

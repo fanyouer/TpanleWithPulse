@@ -325,8 +325,9 @@ public class Modbus_Slav extends Thread {
         upperComputerCompressorTwoBreakdownMonitoringPoint = (short) ((regHodingBuf[18] & 0x02) >> 1);         //上位机压缩机2故障监控点
         upperComputerCompressorThreeBreakdownMonitoringPoint = (short) ((regHodingBuf[18] & 0x04) >> 2);       //上位机压缩机3故障监控点
         upperComputerCompressorFourBreakdownMonitoringPoint = (short) ((regHodingBuf[18] & 0x08) >> 3);        //上位机压缩机4故障监控点
+        */
         WinterInSummer = (short) ((regHodingBuf[20] & 0x04) >> 2);                                             //冬夏季监控控制点偏移2
-    */
+
     }
 
 
