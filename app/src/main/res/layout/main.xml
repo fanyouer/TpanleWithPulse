@@ -132,7 +132,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_x="75dp"
-             android:layout_y="655dp"
+             android:layout_y="671dp"
              android:background="@drawable/up_dijian"
              android:onClick="Butwendu_down" 
                    
@@ -148,7 +148,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_x="360dp"
-             android:layout_y="655dp"
+             android:layout_y="671dp"
              android:background="@drawable/up_dizeng"
              android:onClick="Butwendu_up"                                    
               />
@@ -159,7 +159,7 @@
                   android:layout_height="wrap_content"
                   android:typeface="monospace"
                   android:layout_x="164dp"
-                  android:layout_y="632dp"
+                  android:layout_y="656dp"
                   android:textSize="45px"
                   android:textStyle="bold"
                   android:text="00.0"      
@@ -178,7 +178,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_x="75dp"
-             android:layout_y="732dp"
+             android:layout_y="762dp"
              android:background="@drawable/up_dijian"
              android:onClick="Butshidu_down"     
                
@@ -194,7 +194,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_x="360dp"
-             android:layout_y="732dp"
+             android:layout_y="762dp"
              android:background="@drawable/up_dizeng"
              android:onClick="Butshidu_up"    
                                             
@@ -206,7 +206,7 @@
                   android:layout_height="wrap_content"
                   android:typeface="monospace"
                   android:layout_x="164dp"
-                  android:layout_y="712dp"
+                  android:layout_y="749dp"
                   android:textSize="45px"
                   android:textStyle="bold"
                   android:text="00.0"      
@@ -214,44 +214,44 @@
         />     
             
             
-            
+
                 <!-- 压差调节按键 -->
-         
-               <Button  
-                   
-             android:id="@+id/yacha_down_id"
+    <!--
+          <Button
+
+        android:id="@+id/yacha_down_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="75dp"
+        android:layout_y="810dp"
+        android:background="@drawable/up_dijian"
+        android:onClick="Butyacha_down"
+
+         />
+
+       <Button
+        android:id="@+id/yacha_up_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="360dp"
+        android:layout_y="810dp"
+        android:background="@drawable/up_dizeng"
+        android:onClick="Butyacha_up"
+
+         />
+          <TextView
+             android:id="@+id/tv_yachadisplay_id"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_x="75dp"
-             android:layout_y="810dp"
-             android:background="@drawable/up_dijian"
-             android:onClick="Butyacha_down"     
-               
-              />
-             
-            <Button               
-             android:id="@+id/yacha_up_id"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_x="360dp"
-             android:layout_y="810dp"
-             android:background="@drawable/up_dizeng"
-             android:onClick="Butyacha_up"  
-                                    
-              />
-               <TextView 
-                  android:id="@+id/tv_yachadisplay_id"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:typeface="monospace"
-                  android:layout_x="164dp"
-                  android:layout_y="790dp"
-                  android:textSize="45px"
-                  android:textStyle="bold"
-                  android:text="00.0"      
-                  android:textColor="#FFFFFF"
-        />     
-            
+             android:typeface="monospace"
+             android:layout_x="164dp"
+             android:layout_y="790dp"
+             android:textSize="45px"
+             android:textStyle="bold"
+             android:text="00.0"
+             android:textColor="#FFFFFF"
+   />
+       -->
             
             
       <!--  机组起停-->

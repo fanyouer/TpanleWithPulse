@@ -206,8 +206,8 @@ public class NewProjectTpanelActivity extends Activity {
         ButDown_shidu = (Button) findViewById(R.id.shidu_down_id);
         ButUp_shidu = (Button) findViewById(R.id.shidu_up_id);
 
-        ButDown_Yacha = (Button) findViewById(R.id.yacha_down_id);
-        ButUp_yacha = (Button) findViewById(R.id.yacha_up_id);
+        //ButDown_Yacha = (Button) findViewById(R.id.yacha_down_id);
+       // ButUp_yacha = (Button) findViewById(R.id.yacha_up_id);
         ButJizu_start_stop = (Button) findViewById(R.id.jizhustart_stop);
         ButZhiban_start_stop = (Button) findViewById(R.id.zhibanstart_stop);
         ButFuya_start_stop = (Button) findViewById(R.id.fuyastart_stop);
@@ -238,8 +238,7 @@ public class NewProjectTpanelActivity extends Activity {
         ButMusic_dongTai = (Button) findViewById(R.id.yinyuedongdai_id);
         tv_WenduDispay = (TextView) findViewById(R.id.tv_wendudisplay_id);
         tv_ShiduDispay = (TextView) findViewById(R.id.tv_shidudisplay_id);
-        tv_YaChaDispay = (TextView) findViewById(R.id.tv_yachadisplay_id);
-
+       // tv_YaChaDispay = (TextView) findViewById(R.id.tv_yachadisplay_id);
 
         /***
          * 氧气
@@ -479,7 +478,7 @@ public class NewProjectTpanelActivity extends Activity {
             }
         });
 
-
+/*
         ButDown_Yacha.setOnTouchListener(new OnTouchListener() {
 
 
@@ -510,7 +509,7 @@ public class NewProjectTpanelActivity extends Activity {
                 return false;
             }
         });
-
+*/
         ButJizu_start_stop.setOnTouchListener(new OnTouchListener() {
 
 
@@ -767,12 +766,13 @@ public class NewProjectTpanelActivity extends Activity {
 
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.duijiang_down);
-                    modbus_save_2.setDuiJiangJian((short) 1);
+                   // modbus_save_2.setDuiJiangJian((short) 1);
+                    modbus_save_1.setPrepare((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.duijiang_up);
-                    modbus_save_2.setDuiJiangJian((short) 0);
+                  //  modbus_save_2.setDuiJiangJian((short) 0);
+                    modbus_save_1.setPrepare((short) 0);
                 }
-
 
                 return false;
             }
@@ -1302,7 +1302,7 @@ public class NewProjectTpanelActivity extends Activity {
                             shidu_DisplaySet_Change = 34;
                         }
                     }
-
+/*
                     String SyachaDislay_bai;
                     String SyachaDislay_shi;
                     String SyachaDislay_ge;
@@ -1326,7 +1326,7 @@ public class NewProjectTpanelActivity extends Activity {
 
                     }
 
-
+*/
 
 		      /*  modbus_salve.setWenDuSet(modbus_save_2.getWenDuSet());
 		        modbus_salve.setShiDuSet(modbus_save_2.getShiDuSet());
@@ -1756,7 +1756,6 @@ public class NewProjectTpanelActivity extends Activity {
      */
 
     public void Butduijiang(View v) {
-
     }
 
     /***
@@ -1897,6 +1896,7 @@ public class NewProjectTpanelActivity extends Activity {
      */
 
     public void Butbeiyong(View v) {
+        /*
         if (ButPrepare_variabe == 1) {
             modbus_save_1.setPrepare((short) 0);
             ButPrepare_variabe = 0;
@@ -1907,6 +1907,7 @@ public class NewProjectTpanelActivity extends Activity {
             ButPrepare.setBackgroundResource(R.drawable.led_on);
             modbus_save_1.setPrepare((short) 1);
         }
+        */
     }
 
     /***
