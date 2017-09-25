@@ -76,6 +76,7 @@ public class Modbus_Slav1 extends Thread {
 
     int[] regHodingBuf = new int[1024];
 
+    private int gasStatus;
 
     public int SLAV_addr = 1;
     OutputStream mOutputStream = null;
@@ -241,11 +242,13 @@ public class Modbus_Slav1 extends Thread {
         fuYaXiYinChaoYa = (byte) ((regHodingBuf[3]>>8)&1);
         fuYaXiYinQianYa = (byte) ((regHodingBuf[3]>>9)&1);
 
-        yaQiChaoYa = (byte) ((regHodingBuf[3]>>10)&1);
-        yaQiQianYa = (byte) ((regHodingBuf[3]>>11)&1);
+        yaQiChaoYa = (byte) ((regHodingBuf[3]>>12)&1);
+        yaQiQianYa = (byte) ((regHodingBuf[3]>>13)&1);
 
-        danQiChaoYa = (byte) ((regHodingBuf[3]>>12)&1);
-        danQiQianYa = (byte) ((regHodingBuf[3]>>13)&1);
+        danQiChaoYa = (byte) ((regHodingBuf[3]>>10)&1);
+        danQiQianYa = (byte) ((regHodingBuf[3]>>11)&1);
+
+        gasStatus=regHodingBuf[3];
     }
 
     private void mod_Fun_03_Slav(byte[] reBuf) {
@@ -570,13 +573,8 @@ public class Modbus_Slav1 extends Thread {
         Erasure = erasure;
     }
 
-
-    public int[] getRegHodingBuf() {
-        return regHodingBuf;
-    }
-
-    public void setRegHodingBuf_1(int[] regHodingBuf) {
-        this.regHodingBuf = regHodingBuf;
+    public int getGasStatus(){
+        return gasStatus;
     }
 
 }
