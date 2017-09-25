@@ -13,45 +13,41 @@ public class Modbus_Slav1 extends Thread {
     private short backMusic;
     private short BackMusic_upDown;
 
-    /***
-     * 氧气
-     */
-    private short Oxygen_IS_Normal;
+    private byte yangQiChaoYa;
+    private byte yangQIQianYa;
 
-    /***
-     * 笑气
-     */
-    private short LaughingGas_IS_Normal;
+    private byte yaSuoKongQiChaoYa;
+    private byte yaSuoKongQiQianYa;
 
+    private byte xiaoQiChaoYa;
+    private byte xiaoQiQianYa;
 
-    /***
-     * 氩气
-     */
-    private short ArgonGas_IS_Normal;
+    private byte erYangHuaTanChaoYa;
+    private byte erYangHuaTanQianYa;
 
+    private byte fuYaXiYinChaoYa;
+    private byte fuYaXiYinQianYa;
 
-    /***
-     * 氮气
-     */
-    private short NitrogenGas_IS_Normal;
+    private byte yaQiChaoYa;
+    private byte yaQiQianYa;
 
-    /***
-     * 负压
-     */
-    private short NegativePressure_IS_Normal;
+    private byte danQiChaoYa;
+    private byte danQiQianYa;
 
-
-    /***
-     * 压缩空气
-     */
-    private short PressAirGas_IS_Normal;
-
-
-    /***
-     * 二氧化碳
-     */
-    private short Carbon_IS_Normal;
-
+    private short phone_dial_0;
+    private short phone_dial_1;
+    private short phone_dial_2;
+    private short phone_dial_3;
+    private short phone_dial_4;
+    private short phone_dial_5;
+    private short phone_dial_6;
+    private short phone_dial_7;
+    private short phone_dial_8;
+    private short phone_dial_9;
+    private short phone_dial_miHao;
+    private short phone_dial_jingHao;
+    private short phone_dial_miantiJian;
+    private short duiJiangJian;
 
     private short Lightling_1 = 1;
 
@@ -154,7 +150,7 @@ public class Modbus_Slav1 extends Thread {
         if (mserialPort == null) {
 
             String path = "/dev/ttyS3";
-            int baudrate = 9600;
+            int baudrate = 19200;
             if ((path.length() == 0) || (baudrate == -1)) {
                 throw new InvalidParameterException();
             }
@@ -229,47 +225,27 @@ public class Modbus_Slav1 extends Thread {
     }
 
     private void slav_hand_10() {
-        /***
-         * 氧气
-         */
-        Oxygen_IS_Normal = (short) (regHodingBuf[6]);
 
-        /***
-         * 笑气
-         */
-        LaughingGas_IS_Normal = (short) (regHodingBuf[7]);
+        yangQiChaoYa = (byte) ((regHodingBuf[3]>>0)&1);
+        yangQIQianYa = (byte) ((regHodingBuf[3]>>1)&1);
 
+        yaSuoKongQiChaoYa = (byte) ((regHodingBuf[3]>>2)&1);
+        yaSuoKongQiQianYa = (byte) ((regHodingBuf[3]>>3)&1);
 
-        /***
-         * 氩气
-         */
-        ArgonGas_IS_Normal = (short) (regHodingBuf[8]);
+        xiaoQiChaoYa = (byte) ((regHodingBuf[3]>>4)&1);
+        xiaoQiQianYa = (byte) ((regHodingBuf[3]>>5)&1);
 
+        erYangHuaTanChaoYa = (byte) ((regHodingBuf[3]>>6)&1);
+        erYangHuaTanQianYa = (byte) ((regHodingBuf[3]>>7)&1);
 
-        /***
-         * 氮气
-         */
-        NitrogenGas_IS_Normal = (short) (regHodingBuf[9]);
+        fuYaXiYinChaoYa = (byte) ((regHodingBuf[3]>>8)&1);
+        fuYaXiYinQianYa = (byte) ((regHodingBuf[3]>>9)&1);
 
+        yaQiChaoYa = (byte) ((regHodingBuf[3]>>10)&1);
+        yaQiQianYa = (byte) ((regHodingBuf[3]>>11)&1);
 
-        /***
-         * 负压
-         */
-
-        NegativePressure_IS_Normal = (short) (regHodingBuf[10]);
-
-        /***
-         * 压缩空气
-         */
-        PressAirGas_IS_Normal = (short) (regHodingBuf[11]);
-
-
-        /***
-         * 二氧化碳
-         */
-        Carbon_IS_Normal = (short) (regHodingBuf[12]);
-
-
+        danQiChaoYa = (byte) ((regHodingBuf[3]>>12)&1);
+        danQiQianYa = (byte) ((regHodingBuf[3]>>13)&1);
     }
 
     private void mod_Fun_03_Slav(byte[] reBuf) {
@@ -291,7 +267,6 @@ public class Modbus_Slav1 extends Thread {
             for (int i = 0; i < len; i++) {
                 seBuf[3 + 2 * i] = (byte) (crc.getUnsignedIntt(regHodingBuf[i + addr]) >> 8);
                 seBuf[4 + 2 * i] = (byte) (crc.getUnsignedIntt(regHodingBuf[i + addr]));
-
             }
             crc.update(seBuf, 2 * len + 3);
             int value = crc.getValue();
@@ -305,11 +280,10 @@ public class Modbus_Slav1 extends Thread {
 
     private void slav_int_03() {
 
-        regHodingBuf[0] = backMusic;
-        regHodingBuf[1] = BackMusic_upDown;
-        regHodingBuf[2] = (Prepare << 0) | (Intraoperative_Lamp << 1) | (Lightling_2 << 2) | (OfLightThe_Lamp << 3) | (Shadowless_Lamp << 4) | (Lightling_1 << 5) | (Erasure << 6);
-
-
+        regHodingBuf[0] = BackMusic_upDown;
+        regHodingBuf[1] = (Prepare << 0) | (Intraoperative_Lamp << 1) | (Lightling_2 << 2) | (OfLightThe_Lamp << 3) | (Shadowless_Lamp << 4) | (Lightling_1 << 5) | (Erasure << 6);
+        regHodingBuf[2] = (phone_dial_0<<0)|(phone_dial_1<<1)|(phone_dial_2<<2)|(phone_dial_3<<3)|(phone_dial_4<<4)|(phone_dial_5<<5)|(phone_dial_6<<6)|
+                (phone_dial_7<<7)|(phone_dial_8<<8)|(phone_dial_9<<9)|(phone_dial_miHao<<10)|(phone_dial_jingHao<<11)|(phone_dial_miantiJian<<12)|(duiJiangJian<<13);
     }
 
 
@@ -332,76 +306,200 @@ public class Modbus_Slav1 extends Thread {
         BackMusic_upDown = backMusic_upDown;
     }
 
+    public byte getYangQiChaoYaValue(){
+        return yangQiChaoYa;
+    }
 
-    public short getOxygen_IS_Normal() {
-        return Oxygen_IS_Normal;
+    public byte getyangQiQianYa(){
+        return yangQIQianYa;
+    }
+
+    public byte getYaSuoKongQiChaoYa(){
+        return yaSuoKongQiChaoYa;
+    }
+
+    public byte getYaSUoKongQiQianYa(){
+        return yaSuoKongQiQianYa;
+    }
+
+    public byte getXiaoQiChaoYa(){
+        return xiaoQiChaoYa;
+    }
+
+    public byte getXiaoQiQianYa(){
+        return xiaoQiQianYa;
+    }
+
+    public byte getErYangHuaYanChaoYa(){
+        return erYangHuaTanChaoYa;
+    }
+
+    public byte getErYangHuaTanQianYa(){
+        return erYangHuaTanQianYa;
+    }
+
+    public byte getFuYaXiYinChaoYa(){
+        return fuYaXiYinChaoYa;
+    }
+
+    public byte getFuYaXiYinQianYa(){
+        return fuYaXiYinQianYa;
+    }
+
+    public byte getYaQiChaoYa(){
+        return yaQiChaoYa;
+    }
+
+    public byte getYaQiQianYa(){
+        return yaQiQianYa;
+    }
+
+    public byte getDanQiChaoYa(){
+        return danQiChaoYa;
+    }
+
+    public byte getDanQiQianYa(){
+        return danQiQianYa;
+    }
+
+    public short getPhone_dial_1() {
+        return phone_dial_1;
     }
 
 
-    public void setOxygen_IS_Normal(short oxygen_IS_Normal) {
-        Oxygen_IS_Normal = oxygen_IS_Normal;
+    public void setPhone_dial_1(short phone_dial_1) {
+        this.phone_dial_1 = phone_dial_1;
     }
 
 
-    public short getLaughingGas_IS_Normal() {
-        return LaughingGas_IS_Normal;
+    public short getPhone_dial_2() {
+        return phone_dial_2;
     }
 
 
-    public void setLaughingGas_IS_Normal(short laughingGas_IS_Normal) {
-        LaughingGas_IS_Normal = laughingGas_IS_Normal;
+    public void setPhone_dial_2(short phone_dial_2) {
+        this.phone_dial_2 = phone_dial_2;
     }
 
 
-    public short getArgonGas_IS_Normal() {
-        return ArgonGas_IS_Normal;
+    public short getPhone_dial_3() {
+        return phone_dial_3;
     }
 
 
-    public void setArgonGas_IS_Normal(short argonGas_IS_Normal) {
-        ArgonGas_IS_Normal = argonGas_IS_Normal;
+    public void setPhone_dial_3(short phone_dial_3) {
+        this.phone_dial_3 = phone_dial_3;
     }
 
 
-    public short getNitrogenGas_IS_Normal() {
-        return NitrogenGas_IS_Normal;
+    public short getPhone_dial_4() {
+        return phone_dial_4;
     }
 
 
-    public void setNitrogenGas_IS_Normal(short nitrogenGas_IS_Normal) {
-        NitrogenGas_IS_Normal = nitrogenGas_IS_Normal;
+    public void setPhone_dial_4(short phone_dial_4) {
+        this.phone_dial_4 = phone_dial_4;
     }
 
 
-    public short getNegativePressure_IS_Normal() {
-        return NegativePressure_IS_Normal;
+    public short getPhone_dial_5() {
+        return phone_dial_5;
     }
 
 
-    public void setNegativePressure_IS_Normal(short negativePressure_IS_Normal) {
-        NegativePressure_IS_Normal = negativePressure_IS_Normal;
+    public void setPhone_dial_5(short phone_dial_5) {
+        this.phone_dial_5 = phone_dial_5;
     }
 
 
-    public short getPressAirGas_IS_Normal() {
-        return PressAirGas_IS_Normal;
+    public short getPhone_dial_6() {
+        return phone_dial_6;
     }
 
 
-    public void setPressAirGas_IS_Normal(short pressAirGas_IS_Normal) {
-        PressAirGas_IS_Normal = pressAirGas_IS_Normal;
+    public void setPhone_dial_6(short phone_dial_6) {
+        this.phone_dial_6 = phone_dial_6;
     }
 
 
-    public short getCarbon_IS_Normal() {
-        return Carbon_IS_Normal;
+    public short getPhone_dial_7() {
+        return phone_dial_7;
     }
 
 
-    public void setCarbon_IS_Normal(short carbon_IS_Normal) {
-        Carbon_IS_Normal = carbon_IS_Normal;
+    public void setPhone_dial_7(short phone_dial_7) {
+        this.phone_dial_7 = phone_dial_7;
     }
 
+
+    public short getPhone_dial_8() {
+        return phone_dial_8;
+    }
+
+
+    public void setPhone_dial_8(short phone_dial_8) {
+        this.phone_dial_8 = phone_dial_8;
+    }
+
+
+    public short getPhone_dial_9() {
+        return phone_dial_9;
+    }
+
+
+    public void setPhone_dial_9(short phone_dial_9) {
+        this.phone_dial_9 = phone_dial_9;
+    }
+
+
+    public short getPhone_dial_0() {
+        return phone_dial_0;
+    }
+
+
+    public void setPhone_dial_0(short phone_dial_0) {
+        this.phone_dial_0 = phone_dial_0;
+    }
+
+
+    public short getPhone_dial_miHao() {
+        return phone_dial_miHao;
+    }
+
+
+    public void setPhone_dial_miHao(short phone_dial_miHao) {
+        this.phone_dial_miHao = phone_dial_miHao;
+    }
+
+
+    public short getPhone_dial_jingHao() {
+        return phone_dial_jingHao;
+    }
+
+
+    public void setPhone_dial_jingHao(short phone_dial_jingHao) {
+        this.phone_dial_jingHao = phone_dial_jingHao;
+    }
+
+
+    public short getPhone_dial_miantiJian() {
+        return phone_dial_miantiJian;
+    }
+
+
+    public void setPhone_dial_miantiJian(short phone_dial_miantiJian) {
+        this.phone_dial_miantiJian = phone_dial_miantiJian;
+    }
+
+
+    public short getDuiJiangJian() {
+        return duiJiangJian;
+    }
+
+
+    public void setDuiJiangJian(short duiJiangJian) {
+        this.duiJiangJian = duiJiangJian;
+    }
 
     public short getLightling_1() {
         return Lightling_1;

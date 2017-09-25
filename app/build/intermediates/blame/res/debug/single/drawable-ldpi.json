@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\stop_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\stop_up.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\musicup_down.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\musicup_down.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\stop_up.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\stop_up.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\bohao4_press.png",

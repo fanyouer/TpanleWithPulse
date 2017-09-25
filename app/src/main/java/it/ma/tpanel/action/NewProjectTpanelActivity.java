@@ -13,7 +13,6 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -22,7 +21,6 @@ import android.widget.TextView;
 
 import android_serialport_api.Modbus_Slav;
 import android_serialport_api.Modbus_Slav1;
-import android_serialport_api.Modbus_Slav2;
 
 public class NewProjectTpanelActivity extends Activity {
 
@@ -176,9 +174,6 @@ public class NewProjectTpanelActivity extends Activity {
     Modbus_Slav modbus_salve = new Modbus_Slav();
     Modbus_Slav1 modbus_save_1 = new Modbus_Slav1();
 
-
-    Modbus_Slav2 modbus_save_2 = new Modbus_Slav2();
-
     SharedPreferences sharedPreferences;
     String data;
 
@@ -189,7 +184,6 @@ public class NewProjectTpanelActivity extends Activity {
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
         modbus_salve.start();
         modbus_save_1.start();
-        modbus_save_2.start();
         ButStart_shuoshu = (Button) findViewById(R.id.shuoshu_start_id);
         ButStop_shuoshu = (Button) findViewById(R.id.shuoshu_stop_id);
         ButReset_shuoshu = (Button) findViewById(R.id.shuoshu_reset_id);
@@ -562,10 +556,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao_1_press);
-                    modbus_save_2.setPhone_dial_1((short) 1);
+                    modbus_save_1.setPhone_dial_1((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_1);
-                    modbus_save_2.setPhone_dial_1((short) 0);
+                    modbus_save_1.setPhone_dial_1((short) 0);
                 }
                 return false;
             }
@@ -576,10 +570,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao2_press);
-                    modbus_save_2.setPhone_dial_2((short) 1);
+                    modbus_save_1.setPhone_dial_2((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_2);
-                    modbus_save_2.setPhone_dial_2((short) 0);
+                    modbus_save_1.setPhone_dial_2((short) 0);
                 }
                 return false;
             }
@@ -592,10 +586,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao3_press);
-                    modbus_save_2.setPhone_dial_3((short) 1);
+                    modbus_save_1.setPhone_dial_3((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_3);
-                    modbus_save_2.setPhone_dial_3((short) 0);
+                    modbus_save_1.setPhone_dial_3((short) 0);
                 }
                 return false;
             }
@@ -608,10 +602,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao4_press);
-                    modbus_save_2.setPhone_dial_4((short) 1);
+                    modbus_save_1.setPhone_dial_4((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_4);
-                    modbus_save_2.setPhone_dial_4((short) 0);
+                    modbus_save_1.setPhone_dial_4((short) 0);
                 }
                 return false;
             }
@@ -624,10 +618,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao5_press);
-                    modbus_save_2.setPhone_dial_5((short) 1);
+                    modbus_save_1.setPhone_dial_5((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_5);
-                    modbus_save_2.setPhone_dial_5((short) 0);
+                    modbus_save_1.setPhone_dial_5((short) 0);
                 }
                 return false;
             }
@@ -639,10 +633,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao6_press);
-                    modbus_save_2.setPhone_dial_6((short) 1);
+                    modbus_save_1.setPhone_dial_6((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_6);
-                    modbus_save_2.setPhone_dial_6((short) 0);
+                    modbus_save_1.setPhone_dial_6((short) 0);
                 }
                 return false;
             }
@@ -655,10 +649,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao7_press);
-                    modbus_save_2.setPhone_dial_7((short) 1);
+                    modbus_save_1.setPhone_dial_7((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_7);
-                    modbus_save_2.setPhone_dial_7((short) 0);
+                    modbus_save_1.setPhone_dial_7((short) 0);
                 }
                 return false;
             }
@@ -671,10 +665,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao8_press);
-                    modbus_save_2.setPhone_dial_8((short) 1);
+                    modbus_save_1.setPhone_dial_8((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_8);
-                    modbus_save_2.setPhone_dial_8((short) 0);
+                    modbus_save_1.setPhone_dial_8((short) 0);
                 }
                 return false;
             }
@@ -687,10 +681,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao9_press);
-                    modbus_save_2.setPhone_dial_9((short) 1);
+                    modbus_save_1.setPhone_dial_9((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_9);
-                    modbus_save_2.setPhone_dial_9((short) 0);
+                    modbus_save_1.setPhone_dial_9((short) 0);
                 }
                 return false;
             }
@@ -703,10 +697,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohaoxinghao_press);
-                    modbus_save_2.setPhone_dial_miHao((short) 1);
+                    modbus_save_1.setPhone_dial_miHao((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.xing_up);
-                    modbus_save_2.setPhone_dial_miHao((short) 0);
+                    modbus_save_1.setPhone_dial_miHao((short) 0);
                 }
                 return false;
             }
@@ -719,10 +713,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohaojinghao_press);
-                    modbus_save_2.setPhone_dial_jingHao((short) 1);
+                    modbus_save_1.setPhone_dial_jingHao((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_jinghao);
-                    modbus_save_2.setPhone_dial_jingHao((short) 0);
+                    modbus_save_1.setPhone_dial_jingHao((short) 0);
                 }
                 return false;
             }
@@ -734,10 +728,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao0_press);
-                    modbus_save_2.setPhone_dial_0((short) 1);
+                    modbus_save_1.setPhone_dial_0((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_0);
-                    modbus_save_2.setPhone_dial_0((short) 0);
+                    modbus_save_1.setPhone_dial_0((short) 0);
                 }
                 return false;
             }
@@ -750,10 +744,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.phone_down);
-                    modbus_save_2.setPhone_dial_miantiJian((short) 1);
+                    modbus_save_1.setPhone_dial_miantiJian((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.phone_up);
-                    modbus_save_2.setPhone_dial_miantiJian((short) 0);
+                    modbus_save_1.setPhone_dial_miantiJian((short) 0);
                 }
                 return false;
             }
@@ -767,10 +761,10 @@ public class NewProjectTpanelActivity extends Activity {
 
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.duijiang_down);
-                    modbus_save_2.setDuiJiangJian((short) 1);
+                    modbus_save_1.setDuiJiangJian((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.duijiang_up);
-                    modbus_save_2.setDuiJiangJian((short) 0);
+                    modbus_save_1.setDuiJiangJian((short) 0);
                 }
 
 
@@ -958,10 +952,109 @@ public class NewProjectTpanelActivity extends Activity {
     	       */
 
 
+             if (modbus_save_1.getYangQiChaoYaValue()==1){
+                 ButOxygen_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
+                 ButOxygen_Display_under.setBackgroundResource(R.drawable.qitichaoya);
+                 ButOxygen_Display_over.setBackgroundResource(R.drawable.qitichaoya);
+             }else if(modbus_save_1.getyangQiQianYa()==1){
+                 ButOxygen_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
+                 ButOxygen_Display_under.setBackgroundResource(R.drawable.qitiqianya);
+                 ButOxygen_Display_over.setBackgroundResource(R.drawable.qitiqianya);
+             }else {
+                 ButOxygen_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButOxygen_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButOxygen_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
+             }
+
+             if (modbus_save_1.getYaSuoKongQiChaoYa()==1){
+                 ButPressAirGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
+                 ButPressAirGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
+                 ButPressAirGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
+             }else if(modbus_save_1.getYaSUoKongQiQianYa()==1){
+                 ButPressAirGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
+                 ButPressAirGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
+                 ButPressAirGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
+             }else{
+                 ButPressAirGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButPressAirGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButPressAirGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
+             }
+
+             if(modbus_save_1.getXiaoQiChaoYa()==1){
+                 ButLaughingGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
+                 ButLaughingGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
+                 ButLaughingGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
+             }else if(modbus_save_1.getXiaoQiQianYa()==1){
+                 ButLaughingGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
+                 ButLaughingGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
+                 ButLaughingGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
+             }else {
+                 ButLaughingGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButLaughingGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButLaughingGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
+             }
+
+             if (modbus_save_1.getErYangHuaYanChaoYa()==1){
+                 ButCarbon_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
+                 ButCarbon_Display_under.setBackgroundResource(R.drawable.qitichaoya);
+                 ButCarbon_Display_over.setBackgroundResource(R.drawable.qitichaoya);
+             }else if (modbus_save_1.getErYangHuaTanQianYa()==1){
+                 ButCarbon_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
+                 ButCarbon_Display_under.setBackgroundResource(R.drawable.qitiqianya);
+                 ButCarbon_Display_over.setBackgroundResource(R.drawable.qitiqianya);
+             }else {
+                 ButCarbon_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButCarbon_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButCarbon_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
+             }
+
+             if (modbus_save_1.getFuYaXiYinChaoYa()==1){
+                 ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
+                 ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitichaoya);
+                 ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitichaoya);
+             }else if (modbus_save_1.getFuYaXiYinQianYa()==1){
+                 ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
+                 ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitiqianya);
+                 ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitiqianya);
+             }else {
+                 ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButNegativePressure_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButNegativePressure_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
+             }
+
+             if (modbus_save_1.getYaQiChaoYa()==1){
+                 ButArgonGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
+                 ButArgonGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
+                 ButArgonGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
+             }else if (modbus_save_1.getYaQiQianYa()==1){
+                 ButArgonGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
+                 ButArgonGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
+                 ButArgonGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
+             }else {
+                 ButArgonGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButArgonGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButArgonGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
+             }
+
+             if (modbus_save_1.getDanQiChaoYa()==1){
+                 ButNitrogenGas_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
+                 ButNitrogenGas_Display_under.setBackgroundResource(R.drawable.qitichaoya);
+                 ButNitrogenGas_Display_over.setBackgroundResource(R.drawable.qitichaoya);
+             }else if(modbus_save_1.getDanQiQianYa()==1){
+                 ButNitrogenGas_Display_normal.setBackgroundResource(R.drawable.qitiqianya);
+                 ButNitrogenGas_Display_under.setBackgroundResource(R.drawable.qitiqianya);
+                 ButNitrogenGas_Display_over.setBackgroundResource(R.drawable.qitiqianya);
+             }else {
+                 ButNitrogenGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButNitrogenGas_Display_under.setBackgroundResource(R.drawable.qitizhengchang);
+                 ButNitrogenGas_Display_over.setBackgroundResource(R.drawable.qitizhengchang);
+             }
+
+
                     /**
                      * 氧气
                      */
-
+/*
                     //     modbus_save_2.setOxygen_IS_Normal(modbus_save_1.getOxygen_IS_Normal());
                     switch (modbus_save_1.getOxygen_IS_Normal()) {
                         case 0: {
@@ -997,6 +1090,7 @@ public class NewProjectTpanelActivity extends Activity {
                      * 笑气
                      */
                     //       modbus_save_2.setLaughingGas_IS_Normal(modbus_save_1.getLaughingGas_IS_Normal());
+                    /*
                     switch (modbus_save_1.getLaughingGas_IS_Normal()) {
                         case 0: {
                             ButLaughingGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
@@ -1028,6 +1122,7 @@ public class NewProjectTpanelActivity extends Activity {
                      *  氩气
                      */
                     //        modbus_save_2.setArgonGas_IS_Normal(modbus_save_1.getArgonGas_IS_Normal());
+                    /*
                     switch (modbus_save_1.getArgonGas_IS_Normal()) {
                         case 0: {
                             ButArgonGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
@@ -1059,6 +1154,7 @@ public class NewProjectTpanelActivity extends Activity {
                      * 氮气
                      */
                     //     modbus_save_2.setNitrogenGas_IS_Normal(modbus_save_1.getNitrogenGas_IS_Normal());
+                    /*
                     switch (modbus_save_1.getNitrogenGas_IS_Normal()) {
                         case 0: {
                             ButNitrogenGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
@@ -1090,6 +1186,7 @@ public class NewProjectTpanelActivity extends Activity {
                      * 负压
                      */
                     //    modbus_save_2.setNegativePressure_IS_Normal(modbus_save_1.getNegativePressure_IS_Normal());
+                    /*
                     switch (modbus_save_1.getNegativePressure_IS_Normal()) {
                         case 0: {
                             ButNegativePressure_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
@@ -1123,7 +1220,7 @@ public class NewProjectTpanelActivity extends Activity {
 
 
                     //     modbus_save_2.setPressAirGas_IS_Normal(modbus_save_1.getPressAirGas_IS_Normal());
-
+/*
                     switch (modbus_save_1.getPressAirGas_IS_Normal()) {
                         case 0: {
                             ButPressAirGas_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
@@ -1158,7 +1255,7 @@ public class NewProjectTpanelActivity extends Activity {
 
 
                     //    modbus_save_2.setCarbon_IS_Normal(modbus_save_1.getCarbon_IS_Normal());
-
+/*
                     switch (modbus_save_1.getCarbon_IS_Normal()) {
                         case 0: {
                             ButCarbon_Display_normal.setBackgroundResource(R.drawable.qitizhengchang);
@@ -1185,7 +1282,7 @@ public class NewProjectTpanelActivity extends Activity {
                         default:
                             break;
                     }
-
+*/
 
                 }
 

@@ -292,12 +292,12 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\zhaoming2.png"
     },
     {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\down_9.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\down_9.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\baojing_huang_hong.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\baojing_huang_hong.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\down_9.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-mdpi\\down_9.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\music_display1.png",
