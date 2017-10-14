@@ -770,10 +770,10 @@ public class NewProjectTpanelActivity extends Activity {
 
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.duijiang_down);
-                    modbus_save_1.setDuiJiangJian((short) 1);
+                   // modbus_save_1.setDuiJiangJian((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.duijiang_up);
-                    modbus_save_1.setDuiJiangJian((short) 0);
+                   // modbus_save_1.setDuiJiangJian((short) 0);
                 }
 
 
@@ -1685,7 +1685,11 @@ public class NewProjectTpanelActivity extends Activity {
      */
 
     public void Butduijiang(View v) {
-
+        if (modbus_save_1.getDuiJiangJian()==1){
+            modbus_save_1.setDuiJiangJian((short) 0);
+        }else{
+            modbus_save_1.setDuiJiangJian((short) 1);
+        }
     }
 
     /***
