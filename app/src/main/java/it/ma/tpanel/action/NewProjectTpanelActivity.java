@@ -565,10 +565,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao_1_press);
-                    modbus_save_1.setPhone_dial_1((short) 1);
+                   // modbus_save_1.setPhone_dial_1((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_1);
-                    modbus_save_1.setPhone_dial_1((short) 0);
+                   // modbus_save_1.setPhone_dial_1((short) 0);
                 }
                 return false;
             }
@@ -579,10 +579,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao2_press);
-                    modbus_save_1.setPhone_dial_2((short) 1);
+                   // modbus_save_1.setPhone_dial_2((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_2);
-                    modbus_save_1.setPhone_dial_2((short) 0);
+                   // modbus_save_1.setPhone_dial_2((short) 0);
                 }
                 return false;
             }
@@ -595,10 +595,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao3_press);
-                    modbus_save_1.setPhone_dial_3((short) 1);
+                  //  modbus_save_1.setPhone_dial_3((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_3);
-                    modbus_save_1.setPhone_dial_3((short) 0);
+                  //  modbus_save_1.setPhone_dial_3((short) 0);
                 }
                 return false;
             }
@@ -611,10 +611,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao4_press);
-                    modbus_save_1.setPhone_dial_4((short) 1);
+                   // modbus_save_1.setPhone_dial_4((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_4);
-                    modbus_save_1.setPhone_dial_4((short) 0);
+                  //  modbus_save_1.setPhone_dial_4((short) 0);
                 }
                 return false;
             }
@@ -627,10 +627,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao5_press);
-                    modbus_save_1.setPhone_dial_5((short) 1);
+                   // modbus_save_1.setPhone_dial_5((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_5);
-                    modbus_save_1.setPhone_dial_5((short) 0);
+                   // modbus_save_1.setPhone_dial_5((short) 0);
                 }
                 return false;
             }
@@ -642,10 +642,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao6_press);
-                    modbus_save_1.setPhone_dial_6((short) 1);
+                 //   modbus_save_1.setPhone_dial_6((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_6);
-                    modbus_save_1.setPhone_dial_6((short) 0);
+                 //   modbus_save_1.setPhone_dial_6((short) 0);
                 }
                 return false;
             }
@@ -658,10 +658,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao7_press);
-                    modbus_save_1.setPhone_dial_7((short) 1);
+                //    modbus_save_1.setPhone_dial_7((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_7);
-                    modbus_save_1.setPhone_dial_7((short) 0);
+                 //   modbus_save_1.setPhone_dial_7((short) 0);
                 }
                 return false;
             }
@@ -674,10 +674,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao8_press);
-                    modbus_save_1.setPhone_dial_8((short) 1);
+                 //   modbus_save_1.setPhone_dial_8((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_8);
-                    modbus_save_1.setPhone_dial_8((short) 0);
+                 //   modbus_save_1.setPhone_dial_8((short) 0);
                 }
                 return false;
             }
@@ -690,10 +690,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao9_press);
-                    modbus_save_1.setPhone_dial_9((short) 1);
+                 //   modbus_save_1.setPhone_dial_9((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_9);
-                    modbus_save_1.setPhone_dial_9((short) 0);
+                 //   modbus_save_1.setPhone_dial_9((short) 0);
                 }
                 return false;
             }
@@ -706,10 +706,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohaoxinghao_press);
-                    modbus_save_1.setPhone_dial_miHao((short) 1);
+                //    modbus_save_1.setPhone_dial_miHao((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.xing_up);
-                    modbus_save_1.setPhone_dial_miHao((short) 0);
+                 //   modbus_save_1.setPhone_dial_miHao((short) 0);
                 }
                 return false;
             }
@@ -722,10 +722,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohaojinghao_press);
-                    modbus_save_1.setPhone_dial_jingHao((short) 1);
+                 //   modbus_save_1.setPhone_dial_jingHao((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_jinghao);
-                    modbus_save_1.setPhone_dial_jingHao((short) 0);
+                 //   modbus_save_1.setPhone_dial_jingHao((short) 0);
                 }
                 return false;
             }
@@ -737,10 +737,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.bohao0_press);
-                    modbus_save_1.setPhone_dial_0((short) 1);
+                 //   modbus_save_1.setPhone_dial_0((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.up_0);
-                    modbus_save_1.setPhone_dial_0((short) 0);
+                 //   modbus_save_1.setPhone_dial_0((short) 0);
                 }
                 return false;
             }
@@ -753,10 +753,10 @@ public class NewProjectTpanelActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     v.setBackgroundResource(R.drawable.phone_down);
-                    modbus_save_1.setPhone_dial_miantiJian((short) 1);
+              //      modbus_save_1.setPhone_dial_miantiJian((short) 1);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.phone_up);
-                    modbus_save_1.setPhone_dial_miantiJian((short) 0);
+              //      modbus_save_1.setPhone_dial_miantiJian((short) 0);
                 }
                 return false;
             }
@@ -1495,6 +1495,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_1(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "1");
+        if(modbus_save_1.getPhone_dial_1()==1){
+            modbus_save_1.setPhone_dial_1((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_1((short) 1);
+        }
     }
 
     /***
@@ -1504,6 +1509,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_2(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "2");
+        if(modbus_save_1.getPhone_dial_2()==1){
+            modbus_save_1.setPhone_dial_2((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_2((short) 1);
+        }
     }
 
     /***
@@ -1513,6 +1523,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_3(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "3");
+        if(modbus_save_1.getPhone_dial_3()==1){
+            modbus_save_1.setPhone_dial_3((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_3((short) 1);
+        }
     }
 
     /***
@@ -1522,6 +1537,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_4(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "4");
+        if(modbus_save_1.getPhone_dial_4()==1){
+            modbus_save_1.setPhone_dial_4((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_4((short) 1);
+        }
     }
 
     /***
@@ -1531,6 +1551,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_5(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "5");
+        if(modbus_save_1.getPhone_dial_5()==1){
+            modbus_save_1.setPhone_dial_5((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_5((short) 1);
+        }
     }
 
 
@@ -1541,6 +1566,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_6(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "6");
+        if(modbus_save_1.getPhone_dial_6()==1){
+            modbus_save_1.setPhone_dial_6((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_6((short) 1);
+        }
     }
 
     /***
@@ -1551,6 +1581,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_7(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "7");
+        if(modbus_save_1.getPhone_dial_7()==1){
+            modbus_save_1.setPhone_dial_7((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_7((short) 1);
+        }
     }
 
 
@@ -1562,6 +1597,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_8(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "8");
+        if(modbus_save_1.getPhone_dial_8()==1){
+            modbus_save_1.setPhone_dial_8((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_8((short) 1);
+        }
     }
 
 
@@ -1572,6 +1612,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_9(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "9");
+        if(modbus_save_1.getPhone_dial_9()==1){
+            modbus_save_1.setPhone_dial_9((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_9((short) 1);
+        }
     }
 
 
@@ -1583,6 +1628,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohaoxing(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "*");
+        if(modbus_save_1.getPhone_dial_miHao()==1){
+            modbus_save_1.setPhone_dial_miHao((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_miHao((short) 1);
+        }
     }
 
     /***
@@ -1593,6 +1643,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohao_0(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "0");
+        if(modbus_save_1.getPhone_dial_0()==1){
+            modbus_save_1.setPhone_dial_0((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_0((short) 1);
+        }
     }
 
     /***
@@ -1603,6 +1658,11 @@ public class NewProjectTpanelActivity extends Activity {
     public void Butbohaojing(View v) {
         if (Telephone_display.length() < 15)
             Telephone_display.setText(Telephone_display.getText() + "#");
+        if(modbus_save_1.getPhone_dial_jingHao()==1){
+            modbus_save_1.setPhone_dial_jingHao((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_jingHao((short) 1);
+        }
     }
 
     /***
@@ -1612,6 +1672,11 @@ public class NewProjectTpanelActivity extends Activity {
 
     public void Butbohao(View v) {
         Telephone_display.setText("");
+        if(modbus_save_1.getPhone_dial_miantiJian()==1){
+            modbus_save_1.setPhone_dial_miantiJian((short) 0);
+        }else {
+            modbus_save_1.setPhone_dial_miantiJian((short) 1);
+        }
     }
 
     /***
