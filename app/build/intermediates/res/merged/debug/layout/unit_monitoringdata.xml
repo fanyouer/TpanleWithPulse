@@ -437,6 +437,21 @@
              android:layout_y="320dp"
               
     /> 
-           
-      
+<!--
+    <EditText
+        android:id="@+id/et_slave_add"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="1"
+        android:layout_x="1660dp"
+        android:layout_y="700dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1633dp"
+        android:layout_y="700dp"
+        android:text="从机地址"
+        android:textSize="25px"
+        android:textColor="#ffffff"/>
+      -->
 </AbsoluteLayout>
