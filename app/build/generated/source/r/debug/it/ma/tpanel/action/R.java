@@ -2501,6 +2501,7 @@ containing a value of this type.
         public static final int eryanghuatanqi_normal_id=0x7f0c009e;
         public static final int eryanghuatanqi_over_id=0x7f0c00a0;
         public static final int eryanghuatanqi_under_id=0x7f0c009f;
+        public static final int et_slave_add=0x7f0c00e0;
         public static final int expand_activities_button=0x7f0c0030;
         public static final int expanded_menu=0x7f0c0045;
         public static final int fuyaqi_normal_id=0x7f0c0099;

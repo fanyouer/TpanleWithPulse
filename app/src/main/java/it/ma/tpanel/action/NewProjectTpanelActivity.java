@@ -175,6 +175,8 @@ public class NewProjectTpanelActivity extends Activity {
     Modbus_Slav1 modbus_save_1 = new Modbus_Slav1();
 
     SharedPreferences sharedPreferences;
+    SharedPreferences sharedSlaveAdd;
+
     String data;
 
     private void beepOn(){
@@ -191,6 +193,7 @@ public class NewProjectTpanelActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
+        sharedSlaveAdd=this.getSharedPreferences("slaveAdd", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
         modbus_salve.start();
         modbus_save_1.start();
         ButStart_shuoshu = (Button) findViewById(R.id.shuoshu_start_id);
@@ -1272,6 +1275,7 @@ public class NewProjectTpanelActivity extends Activity {
 
                     editor.commit();//提交修改
 
+                    modbus_salve.SLAV_addr= (short) Integer.parseInt(sharedSlaveAdd.getString("从机地址","1"));
 
                 }
 
