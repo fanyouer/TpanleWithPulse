@@ -783,6 +783,17 @@
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintVertical_bias="0.690" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="免提电话"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/bohao_id"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bohao_id"
+        android:id="@+id/textView" />
 
     <!-- 对讲按键      -->
     <Button
@@ -795,6 +806,16 @@
         app:layout_constraintLeft_toRightOf="@+id/bohao_id"
         android:layout_marginLeft="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/bohao_id" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="免提对讲"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/duijiang_id"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/duijiang_id" />
 
     <!-- 背景音乐按键  -->
     <Button
@@ -807,6 +828,16 @@
         app:layout_constraintLeft_toRightOf="@+id/duijiang_id"
         android:layout_marginLeft="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/duijiang_id" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="背景音乐"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/beijingyinyue_id"
+        android:layout_marginLeft="-13dp"
+        app:layout_constraintLeft_toLeftOf="@+id/beijingyinyue_id" />
 
     <!-- 背景音乐按键递增 -->
     <Button
