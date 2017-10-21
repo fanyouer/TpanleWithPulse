@@ -17,7 +17,10 @@
     <application
         android:icon="@drawable/yueyao_logo"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.NoTitleBar" >
+        android:theme="@style/AppTheme" >
+
+        <!-- android:theme="@android:style/Theme.NoTitleBar" -->
+
         <activity
             android:name="it.ma.tpanel.action.NewProjectTpanelActivity"
             android:label="@string/app_name"
@@ -32,16 +35,11 @@
             android:name="it.ma.tpanel.action.UnitMonitoringDataActivity"
             android:label="UnitMonitoringData"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-
-            <!--
-     <intent-filter >
-
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-
-    </intent-filter>
-            -->
+        </activity>
+        <activity
+            android:name="it.ma.tpanel.action.Contacts"
+            android:label="联系人"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
         <receiver

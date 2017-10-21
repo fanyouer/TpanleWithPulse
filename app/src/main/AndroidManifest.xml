@@ -9,8 +9,9 @@
 <application
 android:icon="@drawable/yueyao_logo"
 android:label="@string/app_name"
-android:theme="@android:style/Theme.NoTitleBar"
-    >
+    android:theme="@style/AppTheme">
+<!--android:theme="@android:style/Theme.NoTitleBar"-->
+
 <activity
     android:label="@string/app_name"
     android:name=".NewProjectTpanelActivity"
@@ -31,17 +32,15 @@ android:theme="@android:style/Theme.NoTitleBar"
     android:name=".UnitMonitoringDataActivity"
     android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
     >
-    <!--
-     <intent-filter >
-
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-
-    </intent-filter>
-    -->
 </activity>
 
+<activity
+    android:name=".Contacts"
+    android:label="联系人"
+    android:theme="@style/AppTheme.NoActionBar"
+    >
+
+</activity>
 
 
 

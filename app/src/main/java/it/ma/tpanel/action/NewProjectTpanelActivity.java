@@ -73,8 +73,7 @@ public class NewProjectTpanelActivity extends Activity {
     private Button ButMusic_start_stop;
     private Button ButMusic_dizeng;
     private Button ButMusic_dijian;
-    private Button ButMusic_dongTai;
-    public short FengJiZhuangTai;
+    private Button ButContacts;
     /***
      * 氧气
      */
@@ -241,7 +240,8 @@ public class NewProjectTpanelActivity extends Activity {
         ButMusic_start_stop = (Button) findViewById(R.id.beijingyinyue_id);
         ButMusic_dizeng = (Button) findViewById(R.id.yinyuezen_id);
         ButMusic_dijian = (Button) findViewById(R.id.yinyuejian_id);
-        ButMusic_dongTai = (Button) findViewById(R.id.yinyuedongdai_id);
+        ButContacts=findViewById(R.id.bt_contacts);
+      //  ButMusic_dongTai = (Button) findViewById(R.id.yinyuedongdai_id);
         tv_WenduDispay = (TextView) findViewById(R.id.tv_wendudisplay_id);
         tv_ShiduDispay = (TextView) findViewById(R.id.tv_shidudisplay_id);
         tv_YaChaDispay = (TextView) findViewById(R.id.tv_yachadisplay_id);
@@ -824,11 +824,23 @@ public class NewProjectTpanelActivity extends Activity {
                     v.setBackgroundResource(R.drawable.musicdown_down);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     v.setBackgroundResource(R.drawable.musicdown_up);
-
                 }
                 return false;
             }
         });
+
+        ButContacts.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    view.setBackgroundResource(R.drawable.contacts_down);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    view.setBackgroundResource(R.drawable.contacts_up);
+                }
+                return false;
+            }
+        });
+
         df = new SimpleDateFormat("HH:mm:ss");
         df_data = new SimpleDateFormat("yyyy年MM月dd日     EE");
         timer1.schedule(task1, 1000, 1000);
@@ -933,6 +945,7 @@ public class NewProjectTpanelActivity extends Activity {
 
                 public void run() {
 
+                    /*
                     music_dongtai_temp++;
                     if (music_dongtai_temp > 3) {
                         music_dongtai_temp = 1;
@@ -950,7 +963,7 @@ public class NewProjectTpanelActivity extends Activity {
                         default:
                             break;
                     }
-
+*/
                      if (modbus_save_1.getYangQiChaoYaValue()==1){
                          ButOxygen_Display_normal.setBackgroundResource(R.drawable.qitichaoya);
                          ButOxygen_Display_under.setBackgroundResource(R.drawable.qitichaoya);
@@ -1734,6 +1747,11 @@ public class NewProjectTpanelActivity extends Activity {
         }
 
         modbus_save_1.setBackMusic_upDown(music_UpDown);
+    }
+
+    public void ButContacts(View v){
+        intent.setClass(this, Contacts.class);
+        startActivity(intent);
     }
 
     /***
