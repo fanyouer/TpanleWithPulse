@@ -9,9 +9,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,19 +35,31 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-public class Contacts extends AppCompatActivity {
+public class Contacts extends Activity {
     private MySQLiteOpenHelper dbHelper = null;
     private TextView emptyText;
     private ListView lv_main;
     private SimpleAdapter adapter = null;
     private List<Map<String, Object>> totalList = new ArrayList<Map<String, Object>>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacts);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        /*
+        WindowManager m=getWindowManager();
+        Display d=m.getDefaultDisplay();
+        WindowManager.LayoutParams p=getWindow().getAttributes();
+        p.height=(int)(d.getHeight()*0.8);
+        p.width=(int)(d.getWidth()*0.3);
+        p.alpha=1.0f;
+        p.dimAmount=0.5f;
+        getWindow().setAttributes(p);
+*/
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // setSupportActionBar(toolbar);
         dbHelper = new MySQLiteOpenHelper(this);
         lv_main = (ListView) findViewById(R.id.listView_main);
         emptyText = (TextView) findViewById(R.id.textView_empty);
@@ -124,6 +139,35 @@ public class Contacts extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void ButPlus(View v){
+        Builder builder_insert = createAlertDialog(android.R.drawable.ic_dialog_alert, "添加联系人信息");
+        View view = getLayoutInflater().inflate(R.layout.dialog_insert, null);
+        final EditText et_name = (EditText) view.findViewById(R.id.editText_dialog_name);
+        final EditText et_number = (EditText) view.findViewById(R.id.editText_dialog_number);
+
+        builder_insert.setView(view);
+        builder_insert.setPositiveButton("确定", new OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String name = et_name.getText() + "";
+                String number = et_number.getText() + "";
+                if (name.equals("") || number.equals("")) {
+                    toast("输入信息为空");
+                } else {
+                    String sql = "insert into tb_mycontacts(username, phonenumber)values(?,?)";
+                    boolean flag = dbHelper.execData(sql, new Object[] { name, number });
+                    if (flag) {
+                        toast("新建成功！");
+                        reloadView();
+                    } else {
+                        toast("新建失败！");
+                    }
+                }
+            }
+        });
+        builder_insert.show();
     }
 
     @Override
