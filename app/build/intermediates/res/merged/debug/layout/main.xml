@@ -847,9 +847,21 @@
         android:background="@drawable/musicup_up"
         android:onClick="Butyinyuezen"
 
-        tools:layout_editor_absoluteY="432dp"
-        tools:layout_editor_absoluteX="635dp" />
+        app:layout_constraintLeft_toRightOf="@+id/yinyuejian_id"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/yinyuejian_id"
+        android:layout_marginBottom="0dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音量加"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/yinyuezen_id"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/yinyuezen_id" />
     <!-- 背景音乐按键递减-->
     <Button
         android:id="@+id/yinyuejian_id"
@@ -858,8 +870,21 @@
         android:background="@drawable/musicdown_up"
         android:onClick="Butyinyuejian"
 
-        tools:layout_editor_absoluteY="455dp"
-        tools:layout_editor_absoluteX="635dp" />
+        app:layout_constraintLeft_toRightOf="@+id/bt_contacts"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_contacts"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音量减"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/yinyuejian_id"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/yinyuejian_id" />
 
     <Button
         android:layout_width="wrap_content"

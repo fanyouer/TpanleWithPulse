@@ -25,9 +25,9 @@
             android:layout_weight="1"/>
 
         <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@android:drawable/ic_menu_add"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/plus"
             android:onClick="ButPlus"
             />
 

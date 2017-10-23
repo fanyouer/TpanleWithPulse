@@ -41,25 +41,13 @@ public class Contacts extends Activity {
     private ListView lv_main;
     private SimpleAdapter adapter = null;
     private List<Map<String, Object>> totalList = new ArrayList<Map<String, Object>>();
-
+    int RESULT_CODE=22;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacts);
-        /*
-        WindowManager m=getWindowManager();
-        Display d=m.getDefaultDisplay();
-        WindowManager.LayoutParams p=getWindow().getAttributes();
-        p.height=(int)(d.getHeight()*0.8);
-        p.width=(int)(d.getWidth()*0.3);
-        p.alpha=1.0f;
-        p.dimAmount=0.5f;
-        getWindow().setAttributes(p);
-*/
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
         dbHelper = new MySQLiteOpenHelper(this);
         lv_main = (ListView) findViewById(R.id.listView_main);
         emptyText = (TextView) findViewById(R.id.textView_empty);
@@ -80,10 +68,15 @@ public class Contacts extends Activity {
                 builder.setPositiveButton("拨打", new OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent();
-                        intent.setAction(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse("tel:" + number));
-                        startActivity(intent);
+                      //  Intent intent = new Intent();
+                       // intent.setAction(Intent.ACTION_CALL);
+                       // intent.setData(Uri.parse("tel:" + number));
+                       // startActivity(intent);
+                        Intent intent=new Intent();
+                        intent.putExtra("data",number);
+                        setResult(RESULT_CODE,intent);
+
+                        finish();
                     }
                 });
                 builder.show();
@@ -100,45 +93,6 @@ public class Contacts extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_insert:
-                Builder builder_insert = createAlertDialog(android.R.drawable.ic_dialog_alert, "添加联系人信息");
-                View view = getLayoutInflater().inflate(R.layout.dialog_insert, null);
-                final EditText et_name = (EditText) view.findViewById(R.id.editText_dialog_name);
-                final EditText et_number = (EditText) view.findViewById(R.id.editText_dialog_number);
-
-                builder_insert.setView(view);
-                builder_insert.setPositiveButton("确定", new OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String name = et_name.getText() + "";
-                        String number = et_number.getText() + "";
-                        if (name.equals("") || number.equals("")) {
-                            toast("输入信息为空");
-                        } else {
-                            String sql = "insert into tb_mycontacts(username, phonenumber)values(?,?)";
-                            boolean flag = dbHelper.execData(sql, new Object[] { name, number });
-                            if (flag) {
-                                toast("新建成功！");
-                                reloadView();
-                            } else {
-                                toast("新建失败！");
-                            }
-                        }
-                    }
-                });
-                builder_insert.show();
-                break;
-            case R.id.action_exit:
-                System.exit(0);
-            default:
-                break;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     public void ButPlus(View v){
