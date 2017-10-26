@@ -18,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import android_serialport_api.Modbus_Slav;
@@ -25,10 +26,13 @@ import android_serialport_api.Modbus_Slav1;
 
 public class NewProjectTpanelActivity extends Activity {
 
+    private static final String TAG = "test";
     //请求码，表明当前activity的身份
     int REQUEST_CODE=1;
     //结果返回码，表明返回数据来自哪个activity
     int RESULT_CODE=22;
+
+    private Switch pingBaoSwitch;
 
     private String callNumber=null;
     private byte[] phoneNumber;
@@ -197,14 +201,22 @@ public class NewProjectTpanelActivity extends Activity {
         modbus_save_1.setErasure((short) 0);
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.d(TAG, "dispatchTouchEvent: ");
+        return super.dispatchTouchEvent(ev);
+    }
+
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
         sharedSlaveAdd=this.getSharedPreferences("slaveAdd", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
         modbus_salve.start();
         modbus_save_1.start();
+
         ButStart_shuoshu = (Button) findViewById(R.id.shuoshu_start_id);
         ButStop_shuoshu = (Button) findViewById(R.id.shuoshu_stop_id);
         ButReset_shuoshu = (Button) findViewById(R.id.shuoshu_reset_id);
@@ -1719,6 +1731,9 @@ public class NewProjectTpanelActivity extends Activity {
         }else{
             modbus_save_1.setDuiJiangJian((short) 1);
         }
+
+        intent.setClass(this, PingBao.class);
+        startActivity(intent);
     }
 
     /***
@@ -1897,7 +1912,6 @@ public class NewProjectTpanelActivity extends Activity {
 
         intent.setClass(this, UnitMonitoringDataActivity.class);
         startActivity(intent);
-
     }
 
     @Override
