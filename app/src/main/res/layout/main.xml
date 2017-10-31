@@ -96,8 +96,8 @@
     <!-- 手术时间按钮 -->
     <Button
         android:id="@+id/shuoshu_start_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -107,7 +107,7 @@
         android:background="@drawable/start_up"
         android:onClick="ButStart_shuoshu"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -115,8 +115,8 @@
 
     <Button
         android:id="@+id/shuoshu_stop_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
 
@@ -127,7 +127,7 @@
         android:background="@drawable/stop_up"
         android:onClick="ButStop_shuoshu"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -135,8 +135,8 @@
 
     <Button
         android:id="@+id/shuoshu_reset_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
 
@@ -157,8 +157,8 @@
 
     <Button
         android:id="@+id/mazui_start_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
 
@@ -177,8 +177,8 @@
 
     <Button
         android:id="@+id/mazui_stop_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
 
@@ -189,7 +189,7 @@
         android:background="@drawable/stop_up"
         android:onClick="ButStop_mazui"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.856"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -197,8 +197,8 @@
 
     <Button
         android:id="@+id/mazui_reset_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
 
@@ -209,7 +209,7 @@
         android:background="@drawable/reset_up"
         android:onClick="ButReset_mazui"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -593,7 +593,7 @@
 
     <TextView
         android:id="@+id/tv_dianhuadisplay_id"
-        android:layout_width="302dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
@@ -603,11 +603,11 @@
         android:textColor="#FFFFFF"
         android:textSize="45px"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.560"
+        app:layout_constraintHorizontal_bias="0.550"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <!-- 拨号1 -->
 
@@ -1079,7 +1079,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="22dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/qitizhengchang"
         app:layout_constraintLeft_toLeftOf="@+id/eryanghuatanqi_normal_id"
         app:layout_constraintTop_toBottomOf="@+id/eryanghuatanqi_normal_id" />
@@ -1100,10 +1100,11 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/qitiqianya"
         app:layout_constraintLeft_toLeftOf="@+id/eryanghuatanqi_under_id"
         app:layout_constraintTop_toBottomOf="@+id/eryanghuatanqi_under_id" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -1112,18 +1113,18 @@
         android:textColor="#ffffff"
         android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="@+id/qitiqianya"
-        app:layout_constraintTop_toBottomOf="@+id/qitiqianya"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/qitiqianya" />
 
     <Button
         android:id="@+id/qitichaoya"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/qitichaoya"
         app:layout_constraintLeft_toLeftOf="@+id/eryanghuatanqi_over_id"
         app:layout_constraintTop_toBottomOf="@+id/eryanghuatanqi_over_id" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -1132,8 +1133,7 @@
         android:textColor="#ffffff"
         android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="@+id/qitichaoya"
-        app:layout_constraintTop_toBottomOf="@+id/qitichaoya"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/qitichaoya" />
 
     <!-- 氧气 -->
     <Button
@@ -1432,6 +1432,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.953" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="消音"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
     <!-- 照明1      -->
 
     <Button
@@ -1535,17 +1552,18 @@
         android:id="@+id/xiaoyin_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/jingyin"
         android:onClick="Butxiaoyin"
-        app:layout_constraintBottom_toBottomOf="@+id/beiyong_id"
-        app:layout_constraintHorizontal_bias="0.939"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
 
     <Button
         android:id="@+id/bt_loginInto_id"
