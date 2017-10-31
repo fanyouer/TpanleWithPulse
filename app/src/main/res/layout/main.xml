@@ -4,156 +4,155 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewProjectTpanelActivity"
     android:background="@drawable/background"
-    >
+    tools:context=".NewProjectTpanelActivity">
 
     <TextView
         android:id="@+id/tv_shoushu_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:typeface="monospace"
-        android:textSize="115px"
-        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="00:00:00"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
+        android:textSize="115px"
+        android:textStyle="bold"
+        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.036"
-        app:layout_constraintVertical_bias="0.271"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
     <TextView
         android:id="@+id/tv_beijing_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:typeface="monospace"
-        android:textSize="115px"
-        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="00:00:00"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
+        android:textSize="115px"
+        android:textStyle="bold"
+        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.271"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintHorizontal_bias="0.495" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
     <TextView
         android:id="@+id/tv_mazui_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:typeface="monospace"
-        android:textSize="115px"
-        android:textStyle="bold"
-        android:text="00:00:00"
-        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="00:00:00"
+        android:textColor="#FFFFFF"
+        android:textSize="115px"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.957"
-        app:layout_constraintVertical_bias="0.271"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintVertical_bias="0.271" />
 
     <TextView
         android:id="@+id/tv_calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40px"
+        android:layout_marginBottom="8dp"
 
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="2016年11月28日  星期三"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
+        android:textSize="40px"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.447"
         app:layout_constraintHorizontal_bias="0.517"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.447" />
 
     <!-- 手术时间按钮 -->
     <Button
         android:id="@+id/shuoshu_start_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/start_up"
         android:onClick="ButStart_shuoshu"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.03"
-        app:layout_constraintVertical_bias="0.448"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintVertical_bias="0.448" />
 
     <Button
         android:id="@+id/shuoshu_stop_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/stop_up"
         android:onClick="ButStop_shuoshu"
-
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.448"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
     <Button
         android:id="@+id/shuoshu_reset_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/reset_up"
         android:onClick="ButReset_shuoshu"
-
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.27"
-        app:layout_constraintVertical_bias="0.448"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
     <!-- 麻醉时间按钮-->
 
@@ -161,61 +160,61 @@
         android:id="@+id/mazui_start_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/start_up"
-        android:onClick="ButStart_mazui"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
 
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/start_up"
+        android:onClick="ButStart_mazui"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.730"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.730"
-        app:layout_constraintVertical_bias="0.448"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintVertical_bias="0.448" />
 
     <Button
         android:id="@+id/mazui_stop_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/stop_up"
         android:onClick="ButStop_mazui"
-
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintVertical_bias="0.448"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
     <Button
         android:id="@+id/mazui_reset_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/reset_up"
         android:onClick="ButReset_mazui"
-
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.961"
-        app:layout_constraintVertical_bias="0.448"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
     <!-- 温度调节按键 -->
 
@@ -223,21 +222,18 @@
         android:id="@+id/wendu_down_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/up_dijian"
         android:onClick="Butwendu_down"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintVertical_bias="0.628" />
-
-
-
 
 
     <Button
@@ -245,41 +241,41 @@
         android:id="@+id/wendu_up_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:layout_x="360dp"
         android:layout_y="655dp"
         android:background="@drawable/up_dizeng"
         android:onClick="Butwendu_up"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.628" />
 
     <TextView
         android:id="@+id/tv_wendudisplay_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:typeface="monospace"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:layout_x="164dp"
         android:layout_y="632dp"
-        android:textSize="45px"
-        android:textStyle="bold"
         android:text="00.0"
         android:textColor="#FFFFFF"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="45px"
+        android:textStyle="bold"
+        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
         app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.625" />
 
 
@@ -289,19 +285,19 @@
         android:id="@+id/shidu_down_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:layout_x="75dp"
         android:layout_y="732dp"
         android:background="@drawable/up_dijian"
         android:onClick="Butshidu_down"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintVertical_bias="0.705" />
 
 
@@ -310,34 +306,33 @@
         android:id="@+id/shidu_up_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/up_dizeng"
         android:onClick="Butshidu_up"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
         app:layout_constraintHorizontal_bias="0.190"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.705" />
 
     <TextView
         android:id="@+id/tv_shidudisplay_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:typeface="monospace"
+        android:layout_marginTop="17dp"
         android:layout_x="164dp"
         android:layout_y="712dp"
-        android:textSize="45px"
-        android:textStyle="bold"
         android:text="00.0"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="17dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wendudisplay_id"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_wendudisplay_id" />
-
+        android:textSize="45px"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_wendudisplay_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wendudisplay_id" />
 
 
     <!-- 压差调节按键 -->
@@ -347,55 +342,55 @@
         android:id="@+id/yacha_down_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:layout_x="75dp"
         android:layout_y="810dp"
         android:background="@drawable/up_dijian"
         android:onClick="Butyacha_down"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintVertical_bias="0.780" />
 
     <Button
         android:id="@+id/yacha_up_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:layout_x="360dp"
         android:layout_y="810dp"
         android:background="@drawable/up_dizeng"
         android:onClick="Butyacha_up"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.190"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.190"
         app:layout_constraintVertical_bias="0.780" />
+
     <TextView
         android:id="@+id/tv_yachadisplay_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:typeface="monospace"
+        android:layout_marginLeft="-17dp"
+        android:layout_marginTop="17dp"
         android:layout_x="164dp"
         android:layout_y="790dp"
-        android:textSize="45px"
-        android:textStyle="bold"
         android:text="00.0"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="17dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_shidudisplay_id"
-        android:layout_marginLeft="-17dp"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_shidudisplay_id" />
-
+        android:textSize="45px"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_shidudisplay_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shidudisplay_id" />
 
 
     <!--  机组起停-->
@@ -404,35 +399,35 @@
         android:id="@+id/jizhustart_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/jizustart_up"
         android:onClick="Butjizustart_stop"
-
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.030"
-        app:layout_constraintVertical_bias="0.837"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
     <!--值班运行  -->
     <Button
 
         android:id="@+id/zhibanstart_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/zhiban_up"
         android:onClick="zhibanstart_stop"
-
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/jizhustart_stop"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintLeft_toRightOf="@+id/jizhustart_stop"
         app:layout_constraintRight_toLeftOf="@+id/fuyastart_stop" />
 
@@ -443,17 +438,17 @@
         android:id="@+id/fuyastart_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/fuya_up"
         android:onClick="fuyastart_stop"
-
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/zhibanstart_stop"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
     <!-- 机组运行指示灯 -->
@@ -463,20 +458,20 @@
         android:id="@+id/jizuyunxing_led"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/init_ing"
-
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/init_ing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.237"
-        app:layout_constraintVertical_bias="0.605"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintVertical_bias="0.605" />
 
 
     <!-- 值班运行指示灯 -->
@@ -485,17 +480,17 @@
         android:id="@+id/zhibanyunxing_led"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/init_ing"
-
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/jizuyunxing_led"
+
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/init_ing"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.237" />
+        app:layout_constraintTop_toBottomOf="@+id/jizuyunxing_led" />
 
     <!-- 负压运行指示灯 -->
 
@@ -504,17 +499,17 @@
         android:id="@+id/fuyayunxing_led"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/init_ing"
-
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/zhibanyunxing_led"
-        app:layout_constraintLeft_toLeftOf="parent"
+
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/init_ing"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.237" />
+        app:layout_constraintTop_toBottomOf="@+id/zhibanyunxing_led" />
 
     <!-- 机组故障指示灯 -->
 
@@ -522,16 +517,16 @@
         android:id="@+id/jizuguzhang_led"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/init_ing"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/fuyayunxing_led"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/init_ing"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.237" />
+        app:layout_constraintTop_toBottomOf="@+id/fuyayunxing_led" />
 
     <!-- 高效指示灯 -->
 
@@ -539,18 +534,16 @@
         android:id="@+id/gaoxiao_led"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/init_ing"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/jizuguzhang_led"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/init_ing"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.237" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/jizuguzhang_led" />
 
 
     <!-- 电话机模块 -->
@@ -559,19 +552,19 @@
         android:id="@+id/tv_dianhuadisplay_id"
         android:layout_width="377dp"
         android:layout_height="50dp"
-        android:textSize="45px"
-        android:textColor="#FFFFFF"
-        android:gravity="right"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:textColor="#FFFFFF"
+        android:textSize="45px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.615"
-        app:layout_constraintHorizontal_bias="0.536" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
 
     <!-- 拨号1 -->
 
@@ -579,44 +572,42 @@
         android:id="@+id/bohao_1_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/up_1"
         android:onClick="Butbohao_1"
-
-        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintVertical_bias="0.694" />
     <!-- 拨号2 -->
     <Button
         android:id="@+id/bohao_2_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/up_2"
-        android:onClick="Butbohao_2"
-
-        app:layout_constraintLeft_toRightOf="@+id/bohao_1_id"
         android:layout_marginLeft="5dp"
+        android:background="@drawable/up_2"
+
+        android:onClick="Butbohao_2"
         app:layout_constraintBottom_toBottomOf="@+id/bohao_1_id"
-         />
+        app:layout_constraintLeft_toRightOf="@+id/bohao_1_id" />
 
     <!-- 拨号3 -->
     <Button
         android:id="@+id/bohao_3_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/up_3"
-        android:onClick="Butbohao_3"
-
-        app:layout_constraintLeft_toRightOf="@+id/bohao_2_id"
         android:layout_marginLeft="5dp"
+        android:background="@drawable/up_3"
+
+        android:onClick="Butbohao_3"
         app:layout_constraintBottom_toBottomOf="@+id/bohao_2_id"
-        />
+        app:layout_constraintLeft_toRightOf="@+id/bohao_2_id" />
 
 
     <!-- 拨号4 -->
@@ -624,14 +615,14 @@
         android:id="@+id/bohao_4_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
         android:background="@drawable/up_4"
         android:onClick="Butbohao_4"
-
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/bohao_1_id"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
         app:layout_constraintVertical_bias="0.740" />
 
     <!-- 拨号5 -->
@@ -639,15 +630,15 @@
         android:id="@+id/bohao_5_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginTop="8dp"
         android:background="@drawable/up_5"
         android:onClick="Butbohao_5"
-
-        app:layout_constraintLeft_toRightOf="@+id/bohao_4_id"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/bohao_4_id"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.740" />
 
     <!-- 拨号6 -->
@@ -655,29 +646,29 @@
         android:id="@+id/bohao_6_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginTop="8dp"
         android:background="@drawable/up_6"
         android:onClick="Butbohao_6"
-
-        app:layout_constraintLeft_toRightOf="@+id/bohao_5_id"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/bohao_5_id"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.740" />
     <!-- 拨号7 -->
     <Button
         android:id="@+id/bohao_7_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+
         android:background="@drawable/up_7"
         android:onClick="Butbohao_7"
-
-        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/bohao_4_id"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
         app:layout_constraintVertical_bias="0.785" />
 
     <!-- 拨号8-->
@@ -685,15 +676,15 @@
         android:id="@+id/bohao_8_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/up_8"
-        android:onClick="Butbohao_8"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
 
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/bohao_7_id"
-        android:layout_marginLeft="5dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/up_8"
+        android:onClick="Butbohao_8"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/bohao_7_id"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.785" />
 
     <!-- 拨号9 -->
@@ -701,15 +692,15 @@
         android:id="@+id/bohao_9_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginTop="8dp"
         android:background="@drawable/up_9"
         android:onClick="Butbohao_9"
-
-        app:layout_constraintLeft_toRightOf="@+id/bohao_8_id"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/bohao_8_id"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.785" />
 
     <!-- 拨号* -->
@@ -717,15 +708,15 @@
         android:id="@+id/bohaoxing_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/xing_up"
-        android:onClick="Butbohaoxing"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
 
         android:layout_marginTop="8dp"
+        android:background="@drawable/xing_up"
+        android:onClick="Butbohaoxing"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/bohao_7_id"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
         app:layout_constraintVertical_bias="0.828" />
 
     <!-- 拨号0-->
@@ -733,15 +724,15 @@
         android:id="@+id/bohao_0_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/up_0"
-        android:onClick="Butbohao_0"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
 
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/bohaoxing_id"
-        android:layout_marginLeft="5dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/up_0"
+        android:onClick="Butbohao_0"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/bohaoxing_id"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.828" />
 
     <!-- 拨号# -->
@@ -749,15 +740,15 @@
         android:id="@+id/bohaojing_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/up_jinghao"
-        android:onClick="Butbohaojing"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
 
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/bohao_0_id"
-        android:layout_marginLeft="5dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/up_jinghao"
+        android:onClick="Butbohaojing"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/bohao_0_id"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.828" />
 
 
@@ -766,18 +757,18 @@
         android:id="@+id/bohao_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/phone_up"
         android:onClick="Butbohao"
-
-        android:layout_marginLeft="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.690" />
 
 
@@ -786,49 +777,48 @@
         android:id="@+id/duijiang_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/duijiang_up"
-        android:onClick="Butduijiang"
-
-        app:layout_constraintLeft_toRightOf="@+id/bohao_id"
         android:layout_marginLeft="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bohao_id" />
+        android:background="@drawable/duijiang_up"
+
+        android:onClick="Butduijiang"
+        app:layout_constraintBottom_toBottomOf="@+id/bohao_id"
+        app:layout_constraintLeft_toRightOf="@+id/bohao_id" />
 
     <!-- 背景音乐按键  -->
     <Button
         android:id="@+id/beijingyinyue_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/music_up"
-        android:onClick="Butbeijingyinyue"
-
-        app:layout_constraintLeft_toRightOf="@+id/duijiang_id"
         android:layout_marginLeft="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/duijiang_id" />
+        android:background="@drawable/music_up"
+
+        android:onClick="Butbeijingyinyue"
+        app:layout_constraintBottom_toBottomOf="@+id/duijiang_id"
+        app:layout_constraintLeft_toRightOf="@+id/duijiang_id" />
 
     <!-- 背景音乐按键递增 -->
     <Button
         android:id="@+id/yinyuezen_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/musicup_up"
-        android:onClick="Butyinyuezen"
-
-        app:layout_constraintLeft_toRightOf="@+id/yinyuedongdai_id"
         android:layout_marginLeft="30dp"
-        app:layout_constraintTop_toTopOf="@+id/yinyuedongdai_id"
-         />
+        android:background="@drawable/musicup_up"
+
+        android:onClick="Butyinyuezen"
+        app:layout_constraintLeft_toRightOf="@+id/yinyuedongdai_id"
+        app:layout_constraintTop_toTopOf="@+id/yinyuedongdai_id" />
 
     <!-- 背景音乐按键递减-->
     <Button
         android:id="@+id/yinyuejian_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/musicdown_up"
-        android:onClick="Butyinyuejian"
-
-        app:layout_constraintLeft_toRightOf="@+id/yinyuedongdai_id"
         android:layout_marginLeft="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/yinyuedongdai_id" />
+        android:background="@drawable/musicdown_up"
+
+        android:onClick="Butyinyuejian"
+        app:layout_constraintBottom_toBottomOf="@+id/yinyuedongdai_id"
+        app:layout_constraintLeft_toRightOf="@+id/yinyuedongdai_id" />
 
 
     <!-- 背景音乐动态效果图 -->
@@ -836,12 +826,11 @@
         android:id="@+id/yinyuedongdai_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/music_display1"
-
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/bohao_id"
+
+        android:background="@drawable/music_display1"
         app:layout_constraintLeft_toLeftOf="@+id/bohao_id"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/bohao_id" />
 
     <!-- 照明1      -->
 
@@ -849,21 +838,21 @@
         android:id="@+id/zhaoming_1_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/led_on"
-        android:onClick="Butzhaoming_1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
 
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
-        app:layout_constraintVertical_bias="0.970"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginTop="8dp"
+        android:background="@drawable/led_on"
+        android:onClick="Butzhaoming_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.970" />
 
 
     <!-- 照明2     -->
@@ -871,49 +860,49 @@
         android:id="@+id/zhaoming_2_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/led_on"
         android:onClick="Butzhaoming_2"
-
         app:layout_constraintBottom_toBottomOf="@+id/zhaoming_1_id"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.265"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <!-- 无影灯    -->
     <Button
         android:id="@+id/wuyingdeng_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/led_on"
         android:onClick="Butwuyingdeng"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/zhaoming_2_id"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.389"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <!-- 术中灯   -->
     <Button
         android:id="@+id/shuzhongdeng_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/led_on"
         android:onClick="Butshuzhongdeng"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/wuyingdeng_id"
         app:layout_constraintHorizontal_bias="0.515"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/wuyingdeng_id" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
     <!-- 观片灯   -->
@@ -921,17 +910,17 @@
         android:id="@+id/guanpiandeng_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/led_on"
         android:onClick="Butguanpiandeng"
-
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/shuzhongdeng_id"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.633"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
     <!-- 备用  -->
@@ -940,17 +929,17 @@
         android:id="@+id/beiyong_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/led_on"
         android:onClick="Butbeiyong"
-
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/guanpiandeng_id"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.760"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
     <!-- 消音   -->
@@ -958,225 +947,225 @@
         android:id="@+id/xiaoyin_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/jingyin"
         android:onClick="Butxiaoyin"
         app:layout_constraintBottom_toBottomOf="@+id/beiyong_id"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.939"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="5dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/bt_loginInto_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/login_into"
         android:onClick="loginInto"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.299"
-        app:layout_constraintVertical_bias="0.543"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543" />
 
     <Button
         android:id="@+id/bt_login_gasset_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/login_into"
         android:onClick="loginIntoGasSet"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.701"
-        app:layout_constraintVertical_bias="0.546"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546" />
 
     <TextView
         android:id="@+id/tv_yangqidisplay"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="0.000Mpa"
-        android:textSize="25dp"
-        android:gravity="center_horizontal"
-        android:textColor="#ffffff"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="0.000Mpa"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.635" />
 
     <TextView
         android:id="@+id/tv_yasuokongqi"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="0.000Mpa"
-        android:textSize="25dp"
-        android:gravity="center_horizontal"
-        android:textColor="#FFFFFF"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="0.000Mpa"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.635" />
 
     <TextView
         android:id="@+id/tv_xiaoqi"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="0.000Mpa"
-        android:textSize="25dp"
-        android:gravity="center_horizontal"
-        android:textColor="#FFFFFF"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="0.000Mpa"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.635" />
 
     <TextView
         android:id="@+id/tv_eryanghuatan"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="0.000Mpa"
-        android:textSize="25dp"
-        android:gravity="center_horizontal"
-        android:textColor="#FFFFFF"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="0.000Mpa"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.710" />
 
     <TextView
         android:id="@+id/tv_fuyaxiyin"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="0.000Mpa"
-        android:textSize="25dp"
-        android:gravity="center_horizontal"
-        android:textColor="#FFFFFF"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="0.000Mpa"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.710" />
 
     <Button
-        android:onClick="light1up"
         android:id="@+id/bt_zhaoming1_up"
         android:layout_width="75dp"
         android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        android:onClick="light1up"
         android:text="亮度 +"
-        android:textSize="22dp"
-        android:background="#000000"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.218"
-        app:layout_constraintVertical_bias="0.932"
-        android:textColor="@drawable/button_font_style" />
-
-    <Button
-        android:onClick="light1down"
-        android:id="@+id/bt_zhaoming1_down"
-        android:layout_width="75dp"
-        android:layout_height="35dp"
-        android:text="亮度 -"
-        android:textSize="22dp"
         android:textColor="@drawable/button_font_style"
-        android:background="#000000"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.218"
-        app:layout_constraintVertical_bias="0.966" />
-
-    <Button
-        android:onClick="light2up"
-        android:id="@+id/bt_zhaoming2_up"
-        android:layout_width="75dp"
-        android:layout_height="35dp"
-        android:text="亮度 +"
         android:textSize="22dp"
-        android:textColor="@drawable/button_font_style"
-        android:background="#000000"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.340"
         app:layout_constraintVertical_bias="0.932" />
 
     <Button
-        android:onClick="light2down"
+        android:id="@+id/bt_zhaoming1_down"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        android:onClick="light1down"
+        android:text="亮度 -"
+        android:textColor="@drawable/button_font_style"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966" />
+
+    <Button
+        android:id="@+id/bt_zhaoming2_up"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        android:onClick="light2up"
+        android:text="亮度 +"
+        android:textColor="@drawable/button_font_style"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.340"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932" />
+
+    <Button
         android:id="@+id/bt_zhaoming2_down"
         android:layout_width="75dp"
         android:layout_height="35dp"
-        android:text="亮度 -"
-        android:textSize="22dp"
-        android:textColor="@drawable/button_font_style"
-        android:background="#000000"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        android:onClick="light2down"
+        android:text="亮度 -"
+        android:textColor="@drawable/button_font_style"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.340"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.340"
         app:layout_constraintVertical_bias="0.966" />
 
 </android.support.constraint.ConstraintLayout>

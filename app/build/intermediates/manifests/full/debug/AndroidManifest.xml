@@ -15,6 +15,7 @@
         android:value="26.0.0-alpha1" />
 
     <application
+        android:debuggable="true"
         android:icon="@drawable/yueyao_logo"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar" >

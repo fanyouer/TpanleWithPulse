@@ -59,18 +59,31 @@
        
        <!-- 水阀开度 -->
     <TextView 
-               android:id="@+id/tv_wateropening_id"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:typeface="monospace"
-               android:layout_x="1050dp"
-               android:layout_y="520dp"
-               android:textSize="25px"
-               android:textStyle="bold"
-               android:text="00.0%"      
-               android:textColor="#FFFFFF"
+            android:id="@+id/tv_coldwateropening_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="monospace"
+            android:layout_x="1310dp"
+            android:layout_y="520dp"
+            android:textSize="25px"
+            android:textStyle="bold"
+            android:text="00.0%"
+            android:textColor="#FFFFFF"
         />
-       
+
+    <TextView
+            android:id="@+id/tv_hotwateropening_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="monospace"
+            android:layout_x="1040dp"
+            android:layout_y="520dp"
+            android:textSize="25px"
+            android:textStyle="bold"
+            android:text="00.0%"
+            android:textColor="#FFFFFF"
+        />
+
     <!-- 电加热 -->
       <TextView 
             

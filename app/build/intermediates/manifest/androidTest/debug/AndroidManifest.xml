@@ -13,7 +13,7 @@
         android:label="Tests for it.ma.tpanel.action"
         android:targetPackage="it.ma.tpanel.action" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

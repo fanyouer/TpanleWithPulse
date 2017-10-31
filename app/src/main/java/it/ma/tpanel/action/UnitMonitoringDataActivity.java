@@ -48,7 +48,8 @@ public class UnitMonitoringDataActivity extends Activity {
 
     int flow_temp;
 
-    TextView tv_wateropening;
+    TextView tv_hotwateropening;
+    TextView tv_coldwateropening;
     TextView tv_humidifieOpening;
 
     int fengjilun_temp = 0;
@@ -75,7 +76,8 @@ public class UnitMonitoringDataActivity extends Activity {
         bt_fengji = (Button) findViewById(R.id.bt_fengji_id);
         bt_zhiban = (Button) findViewById(R.id.bt_zhiban_id);
         bt_dianjiare = (Button) findViewById(R.id.bt_dianjiare_id);
-        tv_wateropening = (TextView) findViewById(R.id.tv_wateropening_id);
+        tv_hotwateropening = (TextView) findViewById(R.id.tv_hotwateropening_id);
+        tv_coldwateropening = (TextView) findViewById(R.id.tv_coldwateropening_id);
         tv_humidifieOpening = (TextView) findViewById(R.id.tv_HumidifieOpening_id);
         bt_fengjilun = (Button) findViewById(R.id.bt_fengjilun_id);
 
@@ -446,25 +448,34 @@ public class UnitMonitoringDataActivity extends Activity {
                         bt_yuanchengcontrol.setBackgroundResource(R.drawable.init_ing);
                     }
 
+
+
                     if (WinrerInSummer == 1) {
 
                         bt_coldwater.setBackgroundResource(R.drawable.running);
                         bt_hotwater.setBackgroundResource(R.drawable.init_ing);
-                        String bai = "0" + ColdWaterValveOpening / 100;
-                        String shi = "0" + ColdWaterValveOpening / 10 % 10;
-                        String ge = "0" + ColdWaterValveOpening % 10;
 
-                        tv_wateropening.setText(bai.substring(bai.length() - 1, bai.length()) + shi.substring(shi.length() - 1, shi.length()) + "." + ge.substring(ge.length() - 1, ge.length()) + "%");
 
                     } else {
                         bt_coldwater.setBackgroundResource(R.drawable.init_ing);
                         bt_hotwater.setBackgroundResource(R.drawable.running);
-                        String bai = "0" + HotWaterValveOpening / 100;
-                        String shi = "0" + HotWaterValveOpening / 10 % 10;
-                        String ge = "0" + HotWaterValveOpening % 10;
 
-                        tv_wateropening.setText(bai.substring(bai.length() - 1, bai.length()) + shi.substring(shi.length() - 1, shi.length()) + "." + ge.substring(ge.length() - 1, ge.length()) + "%");
                     }
+
+                    String cold_bai = "0" + ColdWaterValveOpening / 100;
+                    String cold_shi = "0" + ColdWaterValveOpening / 10 % 10;
+                    String cold_ge = "0" + ColdWaterValveOpening % 10;
+
+                    tv_coldwateropening.setText(cold_bai.substring(cold_bai.length() - 1, cold_bai.length()) + cold_shi.substring(cold_shi.length() - 1, cold_shi.length()) + "." + cold_ge.substring(cold_ge.length() - 1, cold_ge.length()) + "%");
+
+                    String hot_bai = "0" + HotWaterValveOpening / 100;
+                    String hot_shi = "0" + HotWaterValveOpening / 10 % 10;
+                    String hot_ge = "0" + HotWaterValveOpening % 10;
+
+                    tv_hotwateropening.setText(hot_bai.substring(hot_bai.length() - 1, hot_bai.length()) + hot_shi.substring(hot_shi.length() - 1, hot_shi.length()) + "." + hot_ge.substring(hot_ge.length() - 1, hot_ge.length()) + "%");
+
+
+
                     if (UpperComputerSterilizationMonitoringPoint == 1) {
                         bt_xiaodu.setBackgroundResource(R.drawable.running);
                     } else {
