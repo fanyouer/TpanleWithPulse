@@ -1074,12 +1074,12 @@
         app:layout_constraintVertical_bias="0.737" />
 
 
-
-
     <Button
         android:id="@+id/qitizhengchang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/qitizhengchang"
         app:layout_constraintLeft_toLeftOf="@+id/eryanghuatanqi_normal_id"
         app:layout_constraintTop_toBottomOf="@+id/eryanghuatanqi_normal_id" />
@@ -1087,46 +1087,50 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="6dp"
         android:text="正常"
         android:textColor="#ffffff"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="@+id/qitizhengchang"
         app:layout_constraintTop_toBottomOf="@+id/qitizhengchang" />
 
 
     <Button
         android:id="@+id/qitiqianya"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/qitiqianya"
         app:layout_constraintLeft_toLeftOf="@+id/eryanghuatanqi_under_id"
         app:layout_constraintTop_toBottomOf="@+id/eryanghuatanqi_under_id" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="6dp"
         android:text="欠压"
         android:textColor="#ffffff"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="@+id/qitiqianya"
         app:layout_constraintTop_toBottomOf="@+id/qitiqianya"
         />
 
     <Button
         android:id="@+id/qitichaoya"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/qitichaoya"
         app:layout_constraintLeft_toLeftOf="@+id/eryanghuatanqi_over_id"
         app:layout_constraintTop_toBottomOf="@+id/eryanghuatanqi_over_id" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="6dp"
         android:text="超压"
         android:textColor="#ffffff"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="@+id/qitichaoya"
         app:layout_constraintTop_toBottomOf="@+id/qitichaoya"
         />
