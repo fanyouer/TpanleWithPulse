@@ -165,6 +165,7 @@ public class NewProjectTpanelActivity extends Activity {
 
     SharedPreferences sharedPreferences;
     SharedPreferences sharedGasLimit;
+    SharedPreferences sharedSlaveAdd;
     Editor gasLimitEditor;
     String data;
 
@@ -183,6 +184,7 @@ public class NewProjectTpanelActivity extends Activity {
         setContentView(R.layout.main);
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
         sharedGasLimit=this.getSharedPreferences("gaslimit",this.MODE_WORLD_READABLE);
+        sharedSlaveAdd=this.getSharedPreferences("slaveAdd", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
 
         gasLimitEditor = sharedGasLimit.edit();
         blinkTemp=new boolean[7];
@@ -1227,7 +1229,7 @@ public class NewProjectTpanelActivity extends Activity {
 
                     editor.commit();//提交修改
 
-
+                    modbus_salve.SLAV_addr= (short) Integer.parseInt(sharedSlaveAdd.getString("从机地址","1"));
                 }
 
             });

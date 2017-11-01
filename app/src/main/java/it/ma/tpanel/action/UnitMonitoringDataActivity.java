@@ -9,8 +9,10 @@ import android.content.Intent;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -57,6 +59,9 @@ public class UnitMonitoringDataActivity extends Activity {
     Intent intent = new Intent();
     Timer unit_time = new Timer();
     SharedPreferences sharedPreferences;
+    SharedPreferences sharedSlaveAdd;
+    SharedPreferences.Editor editorSlaveAdd;
+    EditText slaveAddEdit;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,7 +104,19 @@ public class UnitMonitoringDataActivity extends Activity {
 
 
         sharedPreferences = getSharedPreferences("ljq", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
+        sharedSlaveAdd=this.getSharedPreferences("slaveAdd", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
+        editorSlaveAdd=sharedSlaveAdd.edit();
+        slaveAddEdit=findViewById(R.id.et_slave_add);
+        slaveAddEdit.setText(sharedSlaveAdd.getString("从机地址","1"));
 
+        slaveAddEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                editorSlaveAdd.putString("从机地址",slaveAddEdit.getText().toString());
+                editorSlaveAdd.commit();
+                return false;
+            }
+        });
 
         unit_time.schedule(unitTime, 100, 100);
 

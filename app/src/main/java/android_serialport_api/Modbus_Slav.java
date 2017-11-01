@@ -30,7 +30,7 @@ public class Modbus_Slav extends Thread {
 
     OutputStream mOutputStream = null;
     InputStream mInputStream = null;
-    public short SLAV_addr = 1;
+    public short SLAV_addr = 3;
     private short jiZuStartStop = 0;
     private short zhiBanStartStop = 0;
     private short fuYaStartStop = 0;
