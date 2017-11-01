@@ -405,6 +405,18 @@ public class UnitMonitoringDataActivity extends Activity {
                         bt_fengji.setBackgroundResource(R.drawable.running);
                     }else {
                         bt_fengji.setBackgroundResource(R.drawable.init_ing);
+                        bt_jinfengflow1.setBackgroundResource(0);
+                        bt_jinfengflow2.setBackgroundResource(0);
+                        bt_jinfengflow3.setBackgroundResource(0);
+                        bt_jinfengflow4.setBackgroundResource(0);
+                        bt_jinfengflow5.setBackgroundResource(0);
+                        bt_jinfengflow6.setBackgroundResource(0);
+                        bt_jinfengflow7.setBackgroundResource(0);
+                        bt_jinfengflow8.setBackgroundResource(0);
+                        bt_jinfengflow9.setBackgroundResource(0);
+                        bt_jinfengflow10.setBackgroundResource(0);
+                        bt_jinfengflow11.setBackgroundResource(0);
+                        bt_jinfengflow12.setBackgroundResource(0);
                     }
 
                     if (UpperComputerChuXiaoMonitoringPoint == 1) {
