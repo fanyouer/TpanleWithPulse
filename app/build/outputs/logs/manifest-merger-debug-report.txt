@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:1-66:16
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:1-66:16
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:1-66:16
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:1-66:16
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:1-66:16
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:1-66:16
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:1-66:16
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:1-66:16
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\b37ed63fd098b576174be8e9bc1556fc\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\K\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\23cd43a3435a6316fd827c086637108f\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\bde3e98ec80b93c38b54b7184fd33bc2\AndroidManifest.xml:17:1-28:12
@@ -14,29 +14,29 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\K\.gra
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\313f295cc18809a9acfcb9b9d621597c\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\1c1093aec0a4616cfc5acb85889766d8\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\0d669b805e08552c9000cc623d6d62c1\AndroidManifest.xml:17:1-31:12
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:1-66:16
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:1-66:16
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:1-66:16
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:1-66:16
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:1-66:16
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:1-66:16
 	package
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:4:5-34
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:4:5-34
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:6:5-30
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:6:5-30
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:5:5-28
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:5:5-28
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:8:5-44
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:8:5-44
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:8:5-44
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:8:5-44
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:8:5-44
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:8:5-44
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\b37ed63fd098b576174be8e9bc1556fc\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\b37ed63fd098b576174be8e9bc1556fc\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\K\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\23cd43a3435a6316fd827c086637108f\AndroidManifest.xml:5:5-7:41
@@ -57,24 +57,24 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\K\.grad
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\1c1093aec0a4616cfc5acb85889766d8\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\0d669b805e08552c9000cc623d6d62c1\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\0d669b805e08552c9000cc623d6d62c1\AndroidManifest.xml:21:5-23:58
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:8:5-44
-INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:8:5-44
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:8:5-44
+INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:8:5-44
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\b37ed63fd098b576174be8e9bc1556fc\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:8:5-44
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:8:5-44
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:8:15-41
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:8:15-41
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:9:5-81
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:9:22-78
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:11:5-64:15
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:11:5-64:15
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\b37ed63fd098b576174be8e9bc1556fc\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\b37ed63fd098b576174be8e9bc1556fc\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\K\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\23cd43a3435a6316fd827c086637108f\AndroidManifest.xml:9:5-20
@@ -96,67 +96,67 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\K\.grad
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\0d669b805e08552c9000cc623d6d62c1\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\0d669b805e08552c9000cc623d6d62c1\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:13:9-41
 	android:icon
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:12:9-45
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:12:9-45
 	android:theme
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:14:9-56
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:14:9-56
 activity#it.ma.tpanel.action.NewProjectTpanelActivity
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:16:1-27:12
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:16:1-27:12
 	android:label
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:17:5-37
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:17:5-37
 	android:theme
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:19:5-63
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:19:5-63
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:18:5-45
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:18:5-45
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:22:5-26:21
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:22:5-26:21
 action#android.intent.action.MAIN
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:23:9-61
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:23:9-61
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:23:17-58
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:23:17-58
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:25:9-69
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:25:9-69
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:25:19-66
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:25:19-66
 activity#it.ma.tpanel.action.GasSet
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:29:1-33:12
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:29:1-33:12
 	android:theme
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:30:5-39
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:30:5-39
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:29:11-33
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:29:11-33
 activity#it.ma.tpanel.action.TimeSet
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:35:1-39:12
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:35:1-39:12
 	android:theme
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:36:5-39
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:36:5-39
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:35:11-34
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:35:11-34
 activity#it.ma.tpanel.action.UnitMonitoringDataActivity
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:41:1-47:12
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:41:1-47:12
 	android:label
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:43:5-39
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:43:5-39
 	android:theme
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:45:5-63
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:45:5-63
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:44:5-47
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:44:5-47
 receiver#it.ma.guangbo.BootRestartReceiver
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:52:1-62:12
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:52:1-62:12
 	android:enabled
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:54:5-27
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:54:5-27
 	android:permission
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:55:5-67
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:55:5-67
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:53:5-53
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:53:5-53
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.category.DEFAULT
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:58:5-61:21
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:58:5-61:21
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:59:9-70
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:59:9-70
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:59:17-68
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:59:17-68
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:60:9-68
+ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:60:9-68
 	android:name
-		ADDED from C:\Users\K\Desktop\TpanleWithPulseBeiFen\app\src\main\AndroidManifest.xml:60:19-65
+		ADDED from C:\Users\K\AndroidStudioProjects\TpanleWithPulse\app\src\main\AndroidManifest.xml:60:19-65
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\b37ed63fd098b576174be8e9bc1556fc\AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\K\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\bde3e98ec80b93c38b54b7184fd33bc2\AndroidManifest.xml:22:5-24:41
