@@ -1,8 +1,6 @@
 package it.ma.tpanel.action;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -11,11 +9,7 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.util.Calendar;
-
-import android_serialport_api.SystemDateTime;
 
 /**
  * Created by K on 2017/11/6.
