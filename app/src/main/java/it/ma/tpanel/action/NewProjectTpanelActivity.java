@@ -2050,4 +2050,9 @@ public class NewProjectTpanelActivity extends Activity {
             modbus_save_1.setPhone_dial_miantiJian((short) 1);
         }
     }
+
+    public void timeset(View view) {
+        intent.setClass(this,TimeSet.class);
+        startActivity(intent);
+    }
 }
