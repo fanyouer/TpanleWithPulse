@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\stop_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\stop_up.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\musicup_down.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\musicup_down.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\stop_up.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\stop_up.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\bohao4_press.png",
@@ -96,12 +96,12 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\fengshanlu2.png"
     },
     {
-        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\musicdown_up.png",
-        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\musicdown_up.png"
-    },
-    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\zhaoming1.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\zhaoming1.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\musicdown_up.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\musicdown_up.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\flow_3.png",
@@ -212,6 +212,10 @@
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\waring.png"
     },
     {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\bohao1_press.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\bohao1_press.png"
+    },
+    {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\bohaoxinghao_press.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\bohaoxinghao_press.png"
     },
@@ -242,6 +246,10 @@
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
         "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\timesetback.png",
+        "source": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\drawable-ldpi\\timesetback.png"
     },
     {
         "merged": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\down_3.png",

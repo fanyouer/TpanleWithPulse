@@ -42,7 +42,11 @@ android:theme="@android:style/Theme.NoTitleBar"
     -->
 </activity>
 
+<activity android:name=".TimeSet"
+    android:theme="@style/dialogstyle"
+    >
 
+</activity>
 
 
 <receiver

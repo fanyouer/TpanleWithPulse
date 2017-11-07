@@ -11649,6 +11649,27 @@
                         "endOffset": 128408
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 1917,
+                    "startColumn": 4,
+                    "startOffset": 140465,
+                    "endLine": 1934,
+                    "endColumn": 12,
+                    "endOffset": 141263
+                },
+                "from": {
+                    "file": "C:\\Users\\K\\AndroidStudioProjects\\TpanleWithPulse\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 854
+                    }
+                }
             }
         ]
     }

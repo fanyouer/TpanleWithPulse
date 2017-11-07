@@ -43,6 +43,10 @@
     </intent-filter>
             -->
         </activity>
+        <activity
+            android:name="it.ma.tpanel.action.TimeSet"
+            android:theme="@style/dialogstyle" >
+        </activity>
 
         <receiver
             android:name="it.ma.guangbo.BootRestartReceiver"

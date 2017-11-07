@@ -121,7 +121,7 @@ public class Modbus_Slav extends Thread {
                 byte[] reBuf = new byte[100];
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
-                Log.d("rebuf", "run: "+Arrays.toString(reBuf));
+              //  Log.d("rebuf", "run: "+Arrays.toString(reBuf));
                 if (size > 0) {
                     if (size == 32) {
                         System.arraycopy(reBuf, 0, txDataTemp, 0, size);
@@ -185,7 +185,7 @@ public class Modbus_Slav extends Thread {
           //  Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
           //  Log.d("size", "onDataReceived: " + size);
         if (size==13){
-            Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
+          //  Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
         }
             if (size <= 3)
                 return;
