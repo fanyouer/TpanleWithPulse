@@ -1,4 +1,4 @@
-package it.ma.tpanel.action;
+package shyueyao.action;
 
 /**
  * Created by K on 2017/10/21.
@@ -6,15 +6,10 @@ package it.ma.tpanel.action;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Display;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +18,6 @@ import java.util.Map;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.content.DialogInterface.OnClickListener;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;

@@ -5,7 +5,7 @@ android {
     buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "it.ma.tpanel.action"
+        applicationId "shyueyao.action"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

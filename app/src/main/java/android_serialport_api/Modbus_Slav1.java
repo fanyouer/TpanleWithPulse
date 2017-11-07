@@ -1,6 +1,6 @@
 package android_serialport_api;
 
-import it.ma.crc.CRC_16;
+import shyueyao.crc.CRC_16;
 
 import java.io.File;
 import java.io.IOException;

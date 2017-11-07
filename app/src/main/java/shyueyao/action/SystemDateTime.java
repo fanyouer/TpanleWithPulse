@@ -1,4 +1,4 @@
-package it.ma.tpanel.action;
+package shyueyao.action;
 
 /**
  * Created by K on 2017/11/6.
@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.Calendar;
 
 import android.os.SystemClock;
+import android.util.Log;
 
 public class SystemDateTime {
 
@@ -30,6 +31,7 @@ public class SystemDateTime {
         long when = c.getTimeInMillis();
 
         if (when / 1000 < Integer.MAX_VALUE) {
+            Log.d(TAG, "setDateTime: "+when);
             SystemClock.setCurrentTimeMillis(when);
         }
 

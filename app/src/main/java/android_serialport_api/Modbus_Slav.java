@@ -2,19 +2,14 @@ package android_serialport_api;
 
 import android.util.Log;
 
-import it.ma.crc.CRC_16;
+import shyueyao.crc.CRC_16;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.Array;
 import java.security.InvalidParameterException;
 import java.util.Arrays;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * 串口UTRA5
@@ -121,7 +116,7 @@ public class Modbus_Slav extends Thread {
                 byte[] reBuf = new byte[100];
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
-                Log.d("rebuf", "run: "+Arrays.toString(reBuf));
+               // Log.d("rebuf", "run: "+Arrays.toString(reBuf));
                 if (size > 0) {
                     if (size == 32) {
                         System.arraycopy(reBuf, 0, txDataTemp, 0, size);
@@ -185,7 +180,7 @@ public class Modbus_Slav extends Thread {
           //  Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
           //  Log.d("size", "onDataReceived: " + size);
         if (size==13){
-            Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
+           // Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
         }
             if (size <= 3)
                 return;

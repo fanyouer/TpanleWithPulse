@@ -1,6 +1,6 @@
-package it.ma.guangbo;
+package shyueyao.guangbo;
 
-import it.ma.tpanel.action.NewProjectTpanelActivity;
+import shyueyao.action.NewProjectTpanelActivity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
