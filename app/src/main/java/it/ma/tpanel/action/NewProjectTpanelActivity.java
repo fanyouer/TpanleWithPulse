@@ -201,639 +201,15 @@ public class NewProjectTpanelActivity extends Activity {
         sharedSlaveAdd=this.getSharedPreferences("slaveAdd", Context.MODE_WORLD_READABLE + Context.MODE_WORLD_WRITEABLE);
         modbus_salve.start();
         modbus_save_1.start();
-        ButStart_shuoshu = (Button) findViewById(R.id.shuoshu_start_id);
-        ButStop_shuoshu = (Button) findViewById(R.id.shuoshu_stop_id);
-        ButReset_shuoshu = (Button) findViewById(R.id.shuoshu_reset_id);
-        ButStart_mazui = (Button) findViewById(R.id.mazui_start_id);
-        ButStop_mazui = (Button) findViewById(R.id.mazui_stop_id);
-        ButReset_mazui = (Button) findViewById(R.id.mazui_reset_id);
-        tv_BeiJing = (TextView) findViewById(R.id.tv_beijing_id);
-        tv_ShouShu = (TextView) findViewById(R.id.tv_shoushu_id);
-        tv_MaZui = (TextView) findViewById(R.id.tv_mazui_id);
-        tv_Calendar = (TextView) findViewById(R.id.tv_calendar);
 
-        ButDown_wendu = (Button) findViewById(R.id.wendu_down_id);
-        ButUp_wendu = (Button) findViewById(R.id.wendu_up_id);
-        ButDown_shidu = (Button) findViewById(R.id.shidu_down_id);
-        ButUp_shidu = (Button) findViewById(R.id.shidu_up_id);
-
-        ButDown_Yacha = (Button) findViewById(R.id.yacha_down_id);
-        ButUp_yacha = (Button) findViewById(R.id.yacha_up_id);
-        ButJizu_start_stop = (Button) findViewById(R.id.jizhustart_stop);
-        ButZhiban_start_stop = (Button) findViewById(R.id.zhibanstart_stop);
-        ButFuya_start_stop = (Button) findViewById(R.id.fuyastart_stop);
-
-        ButJizhuyunxing_led = (Button) findViewById(R.id.jizuyunxing_led);
-        ButZhibanyunxing_led = (Button) findViewById(R.id.zhibanyunxing_led);
-        ButFuyayunxing_led = (Button) findViewById(R.id.fuyayunxing_led);
-        ButJizhuGuzhang_led = (Button) findViewById(R.id.jizuguzhang_led);
-        ButGaoXiao_led = (Button) findViewById(R.id.gaoxiao_led);
-        Telephone_display = (TextView) findViewById(R.id.tv_dianhuadisplay_id);
-        ButBoHao_1 = (Button) findViewById(R.id.bohao_1_id);
-        ButBoHao_2 = (Button) findViewById(R.id.bohao_2_id);
-        ButBoHao_3 = (Button) findViewById(R.id.bohao_3_id);
-        ButBoHao_4 = (Button) findViewById(R.id.bohao_4_id);
-        ButBoHao_5 = (Button) findViewById(R.id.bohao_5_id);
-        ButBoHao_6 = (Button) findViewById(R.id.bohao_6_id);
-        ButBoHao_7 = (Button) findViewById(R.id.bohao_7_id);
-        ButBoHao_8 = (Button) findViewById(R.id.bohao_8_id);
-        ButBoHao_9 = (Button) findViewById(R.id.bohao_9_id);
-        ButBoHao_xinghao = (Button) findViewById(R.id.bohaoxing_id);
-        ButBoHao_jinghao = (Button) findViewById(R.id.bohaojing_id);
-        ButBoHao_0 = (Button) findViewById(R.id.bohao_0_id);
-        ButMianTi = (Button) findViewById(R.id.bohao_id);
-        ButDuiJiang = (Button) findViewById(R.id.duijiang_id);
-        ButMusic_start_stop = (Button) findViewById(R.id.beijingyinyue_id);
-        ButMusic_dizeng = (Button) findViewById(R.id.yinyuezen_id);
-        ButMusic_dijian = (Button) findViewById(R.id.yinyuejian_id);
-        ButMusic_dongTai = (Button) findViewById(R.id.yinyuedongdai_id);
-        tv_WenduDispay = (TextView) findViewById(R.id.tv_wendudisplay_id);
-        tv_ShiduDispay = (TextView) findViewById(R.id.tv_shidudisplay_id);
-        tv_YaChaDispay = (TextView) findViewById(R.id.tv_yachadisplay_id);
-
-
-        /***
-         * 氧气
-         */
-
-        ButOxygen_Display_normal = (Button) findViewById(R.id.yangqi_normal_id);
-        ButOxygen_Display_under = (Button) findViewById(R.id.yangqi_under_id);
-        ButOxygen_Display_over = (Button) findViewById(R.id.yangqi_over_id);
-
-        /***
-         * 笑气
-         */
-
-        ButLaughingGas_Display_normal = (Button) findViewById(R.id.xiaoqi_normal_id);
-        ButLaughingGas_Display_under = (Button) findViewById(R.id.xiaoqi_under_id);
-        ButLaughingGas_Display_over = (Button) findViewById(R.id.xiaoqi_over_id);
-        /***
-         * 氩气
-         */
-        ButArgonGas_Display_normal = (Button) findViewById(R.id.yaqi_normal_id);
-        ButArgonGas_Display_under = (Button) findViewById(R.id.yaqi_under_id);
-        ButArgonGas_Display_over = (Button) findViewById(R.id.yaqi_over_id);
-
-        /***
-         * 氮气
-         */
-        ButNitrogenGas_Display_normal = (Button) findViewById(R.id.danqi_normal_id);
-        ButNitrogenGas_Display_under = (Button) findViewById(R.id.danqi_under_id);
-        ButNitrogenGas_Display_over = (Button) findViewById(R.id.danqi_over_id);
-
-
-        /***
-         * 负压气体
-         */
-        ButNegativePressure_Display_normal = (Button) findViewById(R.id.fuyaqi_normal_id);
-        ButNegativePressure_Display_under = (Button) findViewById(R.id.fuyaqi_under_id);
-        ButNegativePressure_Display_over = (Button) findViewById(R.id.fuyaqi_over_id);
-
-
-        /***
-         * 压缩空气
-         */
-        ButPressAirGas_Display_normal = (Button) findViewById(R.id.yasuoqi_normal_id);
-        ButPressAirGas_Display_under = (Button) findViewById(R.id.yasuoqi_under_id);
-        ButPressAirGas_Display_over = (Button) findViewById(R.id.yasuoqi_over_id);
-
-
-        /***
-         * 二氧化碳气体
-         */
-        ButCarbon_Display_normal = (Button) findViewById(R.id.eryanghuatanqi_normal_id);
-        ButCarbon_Display_under = (Button) findViewById(R.id.eryanghuatanqi_under_id);
-        ButCarbon_Display_over = (Button) findViewById(R.id.eryanghuatanqi_over_id);
-
-        /***
-         * 照明1,2
-         */
-        ButLightling_1 = (Button) findViewById(R.id.zhaoming_1_id);
-        ButLightling_2 = (Button) findViewById(R.id.zhaoming_2_id);
-        /***
-         * 无影灯
-         */
-        ButShadowless_Lamp = (Button) findViewById(R.id.wuyingdeng_id);
-        /***
-         * 术中灯
-         */
-        ButIntraoperative_Lamp = (Button) findViewById(R.id.shuzhongdeng_id);
-        /***
-         * 观片灯
-         */
-        But_OfLightThe_Lamp = (Button) findViewById(R.id.guanpiandeng_id);
-        /***
-         * 备用
-         */
-        ButPrepare = (Button) findViewById(R.id.beiyong_id);
-        /***
-         * 消音
-         */
-        ButErasure = (Button) findViewById(R.id.xiaoyin_id);
 
         //   Typeface   tf=Typeface.createFromAsset(getAssets(), "fonts/DS-DIGIB.TTF");
         //        tv_ShouShu.setTypeface(tf);
         //        tv_BeiJing.setTypeface(tf);
         //       tv_MaZui.setTypeface(tf);
 
-        ButStart_shuoshu.setOnTouchListener(new OnTouchListener() {
+        initOnTouchListener();
 
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.start_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.start_up);
-                }
-
-                return false;
-            }
-        });
-
-
-        ButStop_shuoshu.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.stop_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.stop_up);
-                }
-
-                return false;
-            }
-        });
-
-
-        ButReset_shuoshu.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.reset_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.reset_up);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButStart_mazui.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.start_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.start_up);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButStop_mazui.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.stop_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.stop_up);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButReset_mazui.setOnTouchListener(new OnTouchListener() {
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.reset_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.reset_up);
-                }
-
-                return false;
-            }
-        });
-
-        ButDown_wendu.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.dijian_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_dijian);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButUp_wendu.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.dizeng_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_dizeng);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButDown_shidu.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.dijian_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_dijian);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButUp_shidu.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.dizeng_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_dizeng);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButDown_Yacha.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.dijian_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_dijian);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButUp_yacha.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.dizeng_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_dizeng);
-                }
-
-
-                return false;
-            }
-        });
-
-        ButJizu_start_stop.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.jizustart_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.jizustart_up);
-                }
-
-
-                return false;
-            }
-        });
-
-        ButZhiban_start_stop.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.zhiban_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.zhiban_up);
-
-                }
-                return false;
-            }
-        });
-
-
-        ButFuya_start_stop.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.fuya_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.fuya_up);
-
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_1.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao_1_press);
-                   // modbus_save_1.setPhone_dial_1((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_1);
-                   // modbus_save_1.setPhone_dial_1((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_2.setOnTouchListener(new OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao2_press);
-                   // modbus_save_1.setPhone_dial_2((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_2);
-                   // modbus_save_1.setPhone_dial_2((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_3.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao3_press);
-                  //  modbus_save_1.setPhone_dial_3((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_3);
-                  //  modbus_save_1.setPhone_dial_3((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_4.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao4_press);
-                   // modbus_save_1.setPhone_dial_4((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_4);
-                  //  modbus_save_1.setPhone_dial_4((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_5.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao5_press);
-                   // modbus_save_1.setPhone_dial_5((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_5);
-                   // modbus_save_1.setPhone_dial_5((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_6.setOnTouchListener(new OnTouchListener() {
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao6_press);
-                 //   modbus_save_1.setPhone_dial_6((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_6);
-                 //   modbus_save_1.setPhone_dial_6((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_7.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao7_press);
-                //    modbus_save_1.setPhone_dial_7((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_7);
-                 //   modbus_save_1.setPhone_dial_7((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_8.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao8_press);
-                 //   modbus_save_1.setPhone_dial_8((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_8);
-                 //   modbus_save_1.setPhone_dial_8((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_9.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao9_press);
-                 //   modbus_save_1.setPhone_dial_9((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_9);
-                 //   modbus_save_1.setPhone_dial_9((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_xinghao.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohaoxinghao_press);
-                //    modbus_save_1.setPhone_dial_miHao((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.xing_up);
-                 //   modbus_save_1.setPhone_dial_miHao((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_jinghao.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohaojinghao_press);
-                 //   modbus_save_1.setPhone_dial_jingHao((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_jinghao);
-                 //   modbus_save_1.setPhone_dial_jingHao((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButBoHao_0.setOnTouchListener(new OnTouchListener() {
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.bohao0_press);
-                 //   modbus_save_1.setPhone_dial_0((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.up_0);
-                 //   modbus_save_1.setPhone_dial_0((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButMianTi.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.phone_down);
-              //      modbus_save_1.setPhone_dial_miantiJian((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.phone_up);
-              //      modbus_save_1.setPhone_dial_miantiJian((short) 0);
-                }
-                return false;
-            }
-        });
-
-
-        ButDuiJiang.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.duijiang_down);
-                   // modbus_save_1.setDuiJiangJian((short) 1);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.duijiang_up);
-                   // modbus_save_1.setDuiJiangJian((short) 0);
-                }
-
-
-                return false;
-            }
-        });
-
-
-        ButMusic_start_stop.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.music_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.music_up);
-
-                }
-
-                return false;
-            }
-        });
-
-
-        ButMusic_dizeng.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.musicup_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.musicup_up);
-
-                }
-                return false;
-            }
-        });
-
-        ButMusic_dijian.setOnTouchListener(new OnTouchListener() {
-
-
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    v.setBackgroundResource(R.drawable.musicdown_down);
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    v.setBackgroundResource(R.drawable.musicdown_up);
-
-                }
-                return false;
-            }
-        });
         df = new SimpleDateFormat("HH:mm:ss");
         df_data = new SimpleDateFormat("yyyy年MM月dd日     EE");
     }
@@ -859,6 +235,7 @@ public class NewProjectTpanelActivity extends Activity {
 
                         //机组起停，值班起停，负压起停的脉冲模式
                         //按下相应按键，跳变到高电平，持续7s，跳变回低电平
+                        /*
                         if (modbus_salve.getJiZuStartStop() == 1) {
                             jiZuQiTingCount++;
                         }
@@ -882,7 +259,7 @@ public class NewProjectTpanelActivity extends Activity {
                             fuYaQiTingCount = 0;
                             modbus_salve.setFuYaStartStop((short) 0);
                         }
-
+                        */
 
                         beijing = df.format(new Date());
                         data = df_data.format(new Date());
@@ -1459,7 +836,7 @@ public class NewProjectTpanelActivity extends Activity {
      * @param v
      */
     public void Butjizustart_stop(View v) {
-        /*  常规按键翻转
+        //  常规按键翻转
         if(modbus_salve.getJiZuStartStop()==1)
         {
             modbus_salve.setJiZuStartStop((short)0);
@@ -1469,10 +846,10 @@ public class NewProjectTpanelActivity extends Activity {
         {
             modbus_salve.setJiZuStartStop((short)1);
         }
-        */
+
 
         //脉冲模式
-        modbus_salve.setJiZuStartStop((short) 1);
+      //  modbus_salve.setJiZuStartStop((short) 1);
 
     }
 
@@ -1481,7 +858,7 @@ public class NewProjectTpanelActivity extends Activity {
      * @param v
      */
     public void zhibanstart_stop(View v) {
-        /*
+
         if(modbus_salve.getZhiBanStartStop()==1)
         {
             modbus_salve.setZhiBanStartStop((short)0);
@@ -1490,8 +867,8 @@ public class NewProjectTpanelActivity extends Activity {
         {
             modbus_salve.setZhiBanStartStop((short)1);
         }
-        */
-        modbus_salve.setZhiBanStartStop((short) 1);
+
+      //  modbus_salve.setZhiBanStartStop((short) 1);
     }
 
     /***
@@ -1500,7 +877,7 @@ public class NewProjectTpanelActivity extends Activity {
      */
 
     public void fuyastart_stop(View v) {
-        /*
+
         if( modbus_salve.getFuYaStartStop()==1)
         {
             modbus_salve.setFuYaStartStop((short)0);
@@ -1509,8 +886,8 @@ public class NewProjectTpanelActivity extends Activity {
         {
             modbus_salve.setFuYaStartStop((short)1);
         }
-        */
-        modbus_salve.setFuYaStartStop((short) 1);
+
+       // modbus_salve.setFuYaStartStop((short) 1);
     }
 
     /***
@@ -1907,4 +1284,636 @@ public class NewProjectTpanelActivity extends Activity {
         intent.setClass(this,TimeSet.class);
         startActivity(intent);
     }//时间设置
+
+    private void initOnTouchListener(){
+        ButStart_shuoshu.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.start_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.start_up);
+                }
+
+                return false;
+            }
+        });
+
+
+        ButStop_shuoshu.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.stop_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.stop_up);
+                }
+
+                return false;
+            }
+        });
+
+
+        ButReset_shuoshu.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.reset_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.reset_up);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButStart_mazui.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.start_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.start_up);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButStop_mazui.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.stop_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.stop_up);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButReset_mazui.setOnTouchListener(new OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.reset_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.reset_up);
+                }
+
+                return false;
+            }
+        });
+
+        ButDown_wendu.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.dijian_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_dijian);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButUp_wendu.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.dizeng_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_dizeng);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButDown_shidu.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.dijian_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_dijian);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButUp_shidu.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.dizeng_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_dizeng);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButDown_Yacha.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.dijian_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_dijian);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButUp_yacha.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.dizeng_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_dizeng);
+                }
+
+
+                return false;
+            }
+        });
+
+        ButJizu_start_stop.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.jizustart_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.jizustart_up);
+                }
+
+
+                return false;
+            }
+        });
+
+        ButZhiban_start_stop.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.zhiban_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.zhiban_up);
+
+                }
+                return false;
+            }
+        });
+
+
+        ButFuya_start_stop.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.fuya_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.fuya_up);
+
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_1.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao_1_press);
+                    // modbus_save_1.setPhone_dial_1((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_1);
+                    // modbus_save_1.setPhone_dial_1((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_2.setOnTouchListener(new OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao2_press);
+                    // modbus_save_1.setPhone_dial_2((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_2);
+                    // modbus_save_1.setPhone_dial_2((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_3.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao3_press);
+                    //  modbus_save_1.setPhone_dial_3((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_3);
+                    //  modbus_save_1.setPhone_dial_3((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_4.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao4_press);
+                    // modbus_save_1.setPhone_dial_4((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_4);
+                    //  modbus_save_1.setPhone_dial_4((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_5.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao5_press);
+                    // modbus_save_1.setPhone_dial_5((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_5);
+                    // modbus_save_1.setPhone_dial_5((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_6.setOnTouchListener(new OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao6_press);
+                    //   modbus_save_1.setPhone_dial_6((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_6);
+                    //   modbus_save_1.setPhone_dial_6((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_7.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao7_press);
+                    //    modbus_save_1.setPhone_dial_7((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_7);
+                    //   modbus_save_1.setPhone_dial_7((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_8.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao8_press);
+                    //   modbus_save_1.setPhone_dial_8((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_8);
+                    //   modbus_save_1.setPhone_dial_8((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_9.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao9_press);
+                    //   modbus_save_1.setPhone_dial_9((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_9);
+                    //   modbus_save_1.setPhone_dial_9((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_xinghao.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohaoxinghao_press);
+                    //    modbus_save_1.setPhone_dial_miHao((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.xing_up);
+                    //   modbus_save_1.setPhone_dial_miHao((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_jinghao.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohaojinghao_press);
+                    //   modbus_save_1.setPhone_dial_jingHao((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_jinghao);
+                    //   modbus_save_1.setPhone_dial_jingHao((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButBoHao_0.setOnTouchListener(new OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.bohao0_press);
+                    //   modbus_save_1.setPhone_dial_0((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.up_0);
+                    //   modbus_save_1.setPhone_dial_0((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButMianTi.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.phone_down);
+                    //      modbus_save_1.setPhone_dial_miantiJian((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.phone_up);
+                    //      modbus_save_1.setPhone_dial_miantiJian((short) 0);
+                }
+                return false;
+            }
+        });
+
+
+        ButDuiJiang.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.duijiang_down);
+                    // modbus_save_1.setDuiJiangJian((short) 1);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.duijiang_up);
+                    // modbus_save_1.setDuiJiangJian((short) 0);
+                }
+
+
+                return false;
+            }
+        });
+
+
+        ButMusic_start_stop.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.music_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.music_up);
+
+                }
+
+                return false;
+            }
+        });
+
+
+        ButMusic_dizeng.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.musicup_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.musicup_up);
+
+                }
+                return false;
+            }
+        });
+
+        ButMusic_dijian.setOnTouchListener(new OnTouchListener() {
+
+
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.musicdown_down);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    v.setBackgroundResource(R.drawable.musicdown_up);
+
+                }
+                return false;
+            }
+        });
+    }
+    private void initView(){
+        ButStart_shuoshu = (Button) findViewById(R.id.shuoshu_start_id);
+        ButStop_shuoshu = (Button) findViewById(R.id.shuoshu_stop_id);
+        ButReset_shuoshu = (Button) findViewById(R.id.shuoshu_reset_id);
+        ButStart_mazui = (Button) findViewById(R.id.mazui_start_id);
+        ButStop_mazui = (Button) findViewById(R.id.mazui_stop_id);
+        ButReset_mazui = (Button) findViewById(R.id.mazui_reset_id);
+        tv_BeiJing = (TextView) findViewById(R.id.tv_beijing_id);
+        tv_ShouShu = (TextView) findViewById(R.id.tv_shoushu_id);
+        tv_MaZui = (TextView) findViewById(R.id.tv_mazui_id);
+        tv_Calendar = (TextView) findViewById(R.id.tv_calendar);
+
+        ButDown_wendu = (Button) findViewById(R.id.wendu_down_id);
+        ButUp_wendu = (Button) findViewById(R.id.wendu_up_id);
+        ButDown_shidu = (Button) findViewById(R.id.shidu_down_id);
+        ButUp_shidu = (Button) findViewById(R.id.shidu_up_id);
+
+        ButDown_Yacha = (Button) findViewById(R.id.yacha_down_id);
+        ButUp_yacha = (Button) findViewById(R.id.yacha_up_id);
+        ButJizu_start_stop = (Button) findViewById(R.id.jizhustart_stop);
+        ButZhiban_start_stop = (Button) findViewById(R.id.zhibanstart_stop);
+        ButFuya_start_stop = (Button) findViewById(R.id.fuyastart_stop);
+
+        ButJizhuyunxing_led = (Button) findViewById(R.id.jizuyunxing_led);
+        ButZhibanyunxing_led = (Button) findViewById(R.id.zhibanyunxing_led);
+        ButFuyayunxing_led = (Button) findViewById(R.id.fuyayunxing_led);
+        ButJizhuGuzhang_led = (Button) findViewById(R.id.jizuguzhang_led);
+        ButGaoXiao_led = (Button) findViewById(R.id.gaoxiao_led);
+        Telephone_display = (TextView) findViewById(R.id.tv_dianhuadisplay_id);
+        ButBoHao_1 = (Button) findViewById(R.id.bohao_1_id);
+        ButBoHao_2 = (Button) findViewById(R.id.bohao_2_id);
+        ButBoHao_3 = (Button) findViewById(R.id.bohao_3_id);
+        ButBoHao_4 = (Button) findViewById(R.id.bohao_4_id);
+        ButBoHao_5 = (Button) findViewById(R.id.bohao_5_id);
+        ButBoHao_6 = (Button) findViewById(R.id.bohao_6_id);
+        ButBoHao_7 = (Button) findViewById(R.id.bohao_7_id);
+        ButBoHao_8 = (Button) findViewById(R.id.bohao_8_id);
+        ButBoHao_9 = (Button) findViewById(R.id.bohao_9_id);
+        ButBoHao_xinghao = (Button) findViewById(R.id.bohaoxing_id);
+        ButBoHao_jinghao = (Button) findViewById(R.id.bohaojing_id);
+        ButBoHao_0 = (Button) findViewById(R.id.bohao_0_id);
+        ButMianTi = (Button) findViewById(R.id.bohao_id);
+        ButDuiJiang = (Button) findViewById(R.id.duijiang_id);
+        ButMusic_start_stop = (Button) findViewById(R.id.beijingyinyue_id);
+        ButMusic_dizeng = (Button) findViewById(R.id.yinyuezen_id);
+        ButMusic_dijian = (Button) findViewById(R.id.yinyuejian_id);
+        ButMusic_dongTai = (Button) findViewById(R.id.yinyuedongdai_id);
+        tv_WenduDispay = (TextView) findViewById(R.id.tv_wendudisplay_id);
+        tv_ShiduDispay = (TextView) findViewById(R.id.tv_shidudisplay_id);
+        tv_YaChaDispay = (TextView) findViewById(R.id.tv_yachadisplay_id);
+
+
+        /***
+         * 氧气
+         */
+
+        ButOxygen_Display_normal = (Button) findViewById(R.id.yangqi_normal_id);
+        ButOxygen_Display_under = (Button) findViewById(R.id.yangqi_under_id);
+        ButOxygen_Display_over = (Button) findViewById(R.id.yangqi_over_id);
+
+        /***
+         * 笑气
+         */
+
+        ButLaughingGas_Display_normal = (Button) findViewById(R.id.xiaoqi_normal_id);
+        ButLaughingGas_Display_under = (Button) findViewById(R.id.xiaoqi_under_id);
+        ButLaughingGas_Display_over = (Button) findViewById(R.id.xiaoqi_over_id);
+        /***
+         * 氩气
+         */
+        ButArgonGas_Display_normal = (Button) findViewById(R.id.yaqi_normal_id);
+        ButArgonGas_Display_under = (Button) findViewById(R.id.yaqi_under_id);
+        ButArgonGas_Display_over = (Button) findViewById(R.id.yaqi_over_id);
+
+        /***
+         * 氮气
+         */
+        ButNitrogenGas_Display_normal = (Button) findViewById(R.id.danqi_normal_id);
+        ButNitrogenGas_Display_under = (Button) findViewById(R.id.danqi_under_id);
+        ButNitrogenGas_Display_over = (Button) findViewById(R.id.danqi_over_id);
+
+
+        /***
+         * 负压气体
+         */
+        ButNegativePressure_Display_normal = (Button) findViewById(R.id.fuyaqi_normal_id);
+        ButNegativePressure_Display_under = (Button) findViewById(R.id.fuyaqi_under_id);
+        ButNegativePressure_Display_over = (Button) findViewById(R.id.fuyaqi_over_id);
+
+
+        /***
+         * 压缩空气
+         */
+        ButPressAirGas_Display_normal = (Button) findViewById(R.id.yasuoqi_normal_id);
+        ButPressAirGas_Display_under = (Button) findViewById(R.id.yasuoqi_under_id);
+        ButPressAirGas_Display_over = (Button) findViewById(R.id.yasuoqi_over_id);
+
+
+        /***
+         * 二氧化碳气体
+         */
+        ButCarbon_Display_normal = (Button) findViewById(R.id.eryanghuatanqi_normal_id);
+        ButCarbon_Display_under = (Button) findViewById(R.id.eryanghuatanqi_under_id);
+        ButCarbon_Display_over = (Button) findViewById(R.id.eryanghuatanqi_over_id);
+
+        /***
+         * 照明1,2
+         */
+        ButLightling_1 = (Button) findViewById(R.id.zhaoming_1_id);
+        ButLightling_2 = (Button) findViewById(R.id.zhaoming_2_id);
+        /***
+         * 无影灯
+         */
+        ButShadowless_Lamp = (Button) findViewById(R.id.wuyingdeng_id);
+        /***
+         * 术中灯
+         */
+        ButIntraoperative_Lamp = (Button) findViewById(R.id.shuzhongdeng_id);
+        /***
+         * 观片灯
+         */
+        But_OfLightThe_Lamp = (Button) findViewById(R.id.guanpiandeng_id);
+        /***
+         * 备用
+         */
+        ButPrepare = (Button) findViewById(R.id.beiyong_id);
+        /***
+         * 消音
+         */
+        ButErasure = (Button) findViewById(R.id.xiaoyin_id);
+    }
 }
