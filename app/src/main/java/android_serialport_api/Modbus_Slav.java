@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.Array;
 import java.security.InvalidParameterException;
 import java.util.Arrays;
 import java.util.Timer;
@@ -23,7 +22,11 @@ import static android.content.ContentValues.TAG;
  */
 public class Modbus_Slav extends Thread {
 
+    private int receivePlus=0;
+
     int[] regHodingBuf = new int[1024];
+
+    private byte[] txDataTemp = new byte[1024];
 
     public boolean allowWriteShiDuSet = true;
     public boolean allowWriteWenDuSet = true;
@@ -81,11 +84,39 @@ public class Modbus_Slav extends Thread {
     private short upperComputerCompressorFourBreakdownMonitoringPoint;//上位机压缩机4故障监控点
     private short WinterInSummer = 0;//冬夏季
 
-   // Timer timer10ms=new Timer();
-
     private SerialPort mserialPort = null;
 
+    private Timer timer;
+
+    private void startTimer() {
+
+        timer=new Timer();
+        timer.schedule(new java.util.TimerTask() {
+
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                    if(timer!=null){
+                        timer.cancel();
+                    }
+                    byte[] reBuf = new byte[receivePlus];
+                    System.arraycopy(txDataTemp,0,reBuf,0,receivePlus);
+
+                    Log.d(TAG, "run: "+receivePlus);
+                    Log.d(TAG, "run: "+Arrays.toString(reBuf));
+
+
+                    onDataReceived(reBuf,receivePlus);
+                    receivePlus=0;
+            }
+        }, 30, 30);
+    }
+
     public Modbus_Slav() {
+
+        if(timer!=null){
+            timer.cancel();
+        }
         try {
             try {
                 mserialPort = getSerialPort();
@@ -94,7 +125,6 @@ public class Modbus_Slav extends Thread {
                 e.printStackTrace();
             }
         } catch (InvalidParameterException e) {
-
             e.printStackTrace();
         } catch (SecurityException e) {
 
@@ -111,8 +141,6 @@ public class Modbus_Slav extends Thread {
 
     public void run() {
 
-        byte[] txDataTemp = new byte[1024];
-        boolean txDataFlag = false;
         super.run();
         while (!isInterrupted()) {
 
@@ -121,23 +149,19 @@ public class Modbus_Slav extends Thread {
                 byte[] reBuf = new byte[100];
                 if (mInputStream == null) return;
                 size = mInputStream.read(reBuf);
-              //  Log.d("rebuf", "run: "+Arrays.toString(reBuf));
+
                 if (size > 0) {
-                    if (size == 32) {
-                        System.arraycopy(reBuf, 0, txDataTemp, 0, size);
-                        txDataFlag = true;
-                    } else {
-                        if (txDataFlag) {
-                            txDataFlag = false;
-                            System.arraycopy(reBuf, 0, txDataTemp, 32, size);
-                            byte[] temp2 = new byte[size + 32];
-                            System.arraycopy(txDataTemp, 0, temp2, 0, size + 32);
-                            onDataReceived(temp2, size + 32);
-                        } else {
-                            onDataReceived(reBuf, size);
-                         //   Log.d("test", "run: " + Arrays.toString(reBuf));
-                        }
+
+                    if (receivePlus>992){
+                        receivePlus=0;
                     }
+                    System.arraycopy(reBuf, 0, txDataTemp, receivePlus, size);
+                    receivePlus+=size;
+
+                    if(timer!=null){
+                        timer.cancel();
+                    }
+                    startTimer();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -178,14 +202,6 @@ public class Modbus_Slav extends Thread {
 
         if (!(SLAV_addr == reBuf[0])) {
             return;
-        }
-          //  byte[] txDataTemp = new byte[size];
-         //   System.arraycopy(reBuf, 0, txDataTemp, 0, size);
-
-          //  Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
-          //  Log.d("size", "onDataReceived: " + size);
-        if (size==13){
-          //  Log.d("reBuf", "onDataReceived: " + Arrays.toString(reBuf));
         }
             if (size <= 3)
                 return;

@@ -30,6 +30,8 @@ public class NewProjectTpanelActivity extends Activity {
     private short wenDuSetTemp=250;//温度设置缓存，在设置温度时只会改变这个值，跳回温度显示时，这个值会传给setWenDuSet
     private short shiDuSetTemp=500;//湿度设置缓存
 
+    private int musicValue=8;
+
     private Button ButStart_shuoshu;
     private Button ButStop_shuoshu;
     private Button ButReset_shuoshu;
@@ -164,14 +166,14 @@ public class NewProjectTpanelActivity extends Activity {
     private int shidu_DisplaySet_Change = 0;
     private int yacha_DisplaySet_Change = 0;
 
-    Timer timer1 = new Timer();
-    Timer timer2 = new Timer();
-    Timer timer4 = new Timer();
+    private Timer timer1 = new Timer();
+    private Timer timer2 = new Timer();
+    private Timer timer4 = new Timer();
 
 
-    TimerTask task1;
-    TimerTask task2;
-    TimerTask task4;
+    private TimerTask task1;
+    private TimerTask task2;
+    private TimerTask task4;
 
     Intent intent = new Intent();
     Modbus_Slav modbus_salve = new Modbus_Slav();
@@ -1721,10 +1723,21 @@ public class NewProjectTpanelActivity extends Activity {
      */
 
     public void Butbeijingyinyue(View v) {
+        /*
+
         if (modbus_save_1.getBackMusic() == 0) {
             modbus_save_1.setBackMusic((short) 1);
         } else {
             modbus_save_1.setBackMusic((short) 0);
+        }
+
+        */
+
+        if (modbus_save_1.getBackMusic_upDown()!=0){
+            musicValue = modbus_save_1.getBackMusic_upDown();
+            modbus_save_1.setBackMusic_upDown((short) 0);
+        }else{
+            modbus_save_1.setBackMusic_upDown((short) musicValue);
         }
     }
 
@@ -1735,8 +1748,8 @@ public class NewProjectTpanelActivity extends Activity {
 
     public void Butyinyuezen(View v) {
         music_UpDown++;
-        if (music_UpDown > 7) {
-            music_UpDown = 7;
+        if (music_UpDown > 8) {
+            music_UpDown = 8;
         }
         modbus_save_1.setBackMusic_upDown(music_UpDown);
     }
